@@ -1,1 +1,8 @@
-Hola Ara como estas?
+#include <iostream>
+using namespacestd;
+
+int main(){
+
+	cout<<"Hola mundo"<<endl;
+
+}
