@@ -12,7 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -22,20 +22,32 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QMenuBar *menubar;
+    QPushButton *Usuarios_button;
+    QPushButton *Habitacions_button;
+    QPushButton *pushButton_4;
+    QPushButton *Registros_button;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(484, 379);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        Usuarios_button = new QPushButton(centralwidget);
+        Usuarios_button->setObjectName(QString::fromUtf8("Usuarios_button"));
+        Usuarios_button->setGeometry(QRect(40, 60, 141, 91));
+        Habitacions_button = new QPushButton(centralwidget);
+        Habitacions_button->setObjectName(QString::fromUtf8("Habitacions_button"));
+        Habitacions_button->setGeometry(QRect(40, 210, 141, 91));
+        pushButton_4 = new QPushButton(centralwidget);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(290, 210, 141, 91));
+        Registros_button = new QPushButton(centralwidget);
+        Registros_button->setObjectName(QString::fromUtf8("Registros_button"));
+        Registros_button->setGeometry(QRect(290, 60, 141, 91));
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
@@ -48,6 +60,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        Usuarios_button->setText(QCoreApplication::translate("MainWindow", "Usuarios", nullptr));
+        Habitacions_button->setText(QCoreApplication::translate("MainWindow", "Habitaciones", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "Reportes", nullptr));
+        Registros_button->setText(QCoreApplication::translate("MainWindow", "Registros", nullptr));
     } // retranslateUi
 
 };

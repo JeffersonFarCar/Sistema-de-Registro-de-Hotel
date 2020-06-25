@@ -16,15 +16,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    estadohab.cpp \
+    gui_registro.cpp \
+    habitacion.cpp \
     main.cpp \
     mainwindow.cpp \
-    registro.cpp
+    registro.cpp \
+    tipohabitacion.cpp
 
 HEADERS += \
+    estadohab.h \
+    gui_registro.h \
+    habitacion.h \
     mainwindow.h \
-    registro.h
+    registro.h \
+    tipohabitacion.h
 
 FORMS += \
+    gui_registro.ui \
     mainwindow.ui
 
 # Default rules for deployment.
