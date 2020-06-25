@@ -16,21 +16,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    empleado.cpp \
     estadohab.cpp \
     gui_empleado.cpp \
     gui_registro.cpp \
     habitacion.cpp \
     main.cpp \
     mainwindow.cpp \
+    persona.cpp \
     registro.cpp \
     tipohabitacion.cpp
 
 HEADERS += \
+    empleado.h \
     estadohab.h \
     gui_empleado.h \
     gui_registro.h \
     habitacion.h \
     mainwindow.h \
+    persona.h \
     registro.h \
     tipohabitacion.h
 

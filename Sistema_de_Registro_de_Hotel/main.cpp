@@ -9,11 +9,29 @@
 #include "tipohabitacion.h"
 #include "estadohab.h"
 #include "habitacion.h"
+#include "empleado.h"
 using namespace std;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    //Prueba Clase Empleado -> Inicio
+    int idEmpleado=2;
+    string nombre="Juan", apellido="Perez", direccion="Paucarpata 321", email="juanPerez12@gmail.com";
+    double sueldo=1400.10; string ocupacion="Seguridad", fecha="12-10-2019";
+    Empleado empleado(idEmpleado,nombre,apellido,direccion,email,sueldo,ocupacion,fecha);
+
+    cout<<"EMPLEADO"<<endl;
+    cout<<"Id de Empleado: "<<empleado.getId()<<endl;
+    cout<<"Nombre del Empleado: "<<empleado.getNombre()<<endl;
+    cout<<"Apellido del Empleado: "<<empleado.getApellido()<<endl;
+    cout<<"Direccion del Empleado: "<<empleado.getDireccion()<<endl;
+    cout<<"Email del Empleado: "<<empleado.getEmail()<<endl;
+    cout<<"Sueldo del Empleado: "<<empleado.getSueldo()<<endl;
+    cout<<"Ocupacion del Empleado: "<<empleado.getOcupacion()<<endl;
+    cout<<"Fecha de Contratacion del Empleado: "<<empleado.getFechaContratacion()<<endl;
+    //Prueba Clase Empleado -> Fin
 
     //Prueba Clase Habitacion, Tipo, EstadoHabitacion -> Inicio
     int idTipoH=1; string descripcion="Simple"; float precio=95;
@@ -24,16 +42,13 @@ int main(int argc, char *argv[])
 
     int idH=10, numH=102, numP=3;
     Habitacion habitacion(idH, tipoH.getIdTipoHa(), numH, numP, estadoH.getIdEstado());
-    cout<<"HABITACION"<<endl;
+    cout<<"\nHABITACION"<<endl;
     cout<<"Id Habitacion: "<<habitacion.getIdHabitacion()<<endl;
     cout<<"Tipo Habitacion: "<<tipoH.getDescripcion()<<endl;
     cout<<"Numero Habitacion: "<<habitacion.getIdHabitacion()<<endl;
     cout<<"Numero Piso: "<<habitacion.getNumPiso()<<endl;
     cout<<"Estado: "<<estadoH.getDescripcion()<<endl;
-
     //Prueba Clase Habitacion, Tipo, EstadoHabitacion -> Fin
-
-
 
     //Prueba Clase Registro -> Inicio
     int idR=20, idC=18, cant=3;
