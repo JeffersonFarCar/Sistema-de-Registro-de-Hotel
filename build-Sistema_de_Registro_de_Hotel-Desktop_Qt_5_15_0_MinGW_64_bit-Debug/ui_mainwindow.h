@@ -24,7 +24,7 @@ public:
     QWidget *centralwidget;
     QPushButton *Usuarios_button;
     QPushButton *Habitacions_button;
-    QPushButton *pushButton_4;
+    QPushButton *Empleados_button;
     QPushButton *Registros_button;
     QStatusBar *statusbar;
 
@@ -41,9 +41,9 @@ public:
         Habitacions_button = new QPushButton(centralwidget);
         Habitacions_button->setObjectName(QString::fromUtf8("Habitacions_button"));
         Habitacions_button->setGeometry(QRect(40, 210, 141, 91));
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(290, 210, 141, 91));
+        Empleados_button = new QPushButton(centralwidget);
+        Empleados_button->setObjectName(QString::fromUtf8("Empleados_button"));
+        Empleados_button->setGeometry(QRect(290, 210, 141, 91));
         Registros_button = new QPushButton(centralwidget);
         Registros_button->setObjectName(QString::fromUtf8("Registros_button"));
         Registros_button->setGeometry(QRect(290, 60, 141, 91));
@@ -62,7 +62,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         Usuarios_button->setText(QCoreApplication::translate("MainWindow", "Usuarios", nullptr));
         Habitacions_button->setText(QCoreApplication::translate("MainWindow", "Habitaciones", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "Reportes", nullptr));
+        Empleados_button->setText(QCoreApplication::translate("MainWindow", "Empleados", nullptr));
         Registros_button->setText(QCoreApplication::translate("MainWindow", "Registros", nullptr));
     } // retranslateUi
 

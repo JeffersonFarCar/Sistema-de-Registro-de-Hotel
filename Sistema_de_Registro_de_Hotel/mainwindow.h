@@ -22,6 +22,8 @@ private slots:
 
     void on_Habitacions_button_clicked();
 
+    void on_Empleados_button_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     estadohab.cpp \
+    gui_empleado.cpp \
     gui_registro.cpp \
     habitacion.cpp \
     main.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
 
 HEADERS += \
     estadohab.h \
+    gui_empleado.h \
     gui_registro.h \
     habitacion.h \
     mainwindow.h \
@@ -33,6 +35,7 @@ HEADERS += \
     tipohabitacion.h
 
 FORMS += \
+    gui_empleado.ui \
     gui_registro.ui \
     mainwindow.ui
 

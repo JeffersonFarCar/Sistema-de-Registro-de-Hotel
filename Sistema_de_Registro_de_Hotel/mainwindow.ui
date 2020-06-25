@@ -40,7 +40,7 @@
      <string>Habitaciones</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="Empleados_button">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -50,7 +50,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Reportes</string>
+     <string>Empleados</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Registros_button">
