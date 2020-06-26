@@ -1,6 +1,7 @@
 debug/cliente.o
 debug/empleado.o
 debug/estadohab.o
+debug/factura.o
 debug/gui_cliente.o
 debug/gui_empleado.o
 debug/gui_registro.o

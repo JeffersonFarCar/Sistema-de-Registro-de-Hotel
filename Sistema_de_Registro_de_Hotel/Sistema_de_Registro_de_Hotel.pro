@@ -19,6 +19,7 @@ SOURCES += \
     cliente.cpp \
     empleado.cpp \
     estadohab.cpp \
+    factura.cpp \
     gui_cliente.cpp \
     gui_empleado.cpp \
     gui_registro.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     cliente.h \
     empleado.h \
     estadohab.h \
+    factura.h \
     gui_cliente.h \
     gui_empleado.h \
     gui_registro.h \
