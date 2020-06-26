@@ -23,7 +23,6 @@
     </rect>
    </property>
    <property name="title">
-    <string>Registro Empleado</string>
     <string>Registro Cliente</string>
    </property>
    <widget class="QLabel" name="label">
