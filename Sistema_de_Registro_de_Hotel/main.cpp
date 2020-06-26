@@ -36,11 +36,11 @@ int main(int argc, char *argv[])
 
     //Prueba Clase Cliente -> Inicio
     int idCliente=2;
-    string nombreC="Henry", apellidoC="Rojas Aquino", direccionC="Perales, Tres manzanos N°12",
+    string nombreC="Henry", apellidoC="Rojas Aquino", direccionC="Perales, Tres manzanos N12",
           emailC="henry_12@gmail.com", ciudadaniaC = "Cusco";
     Cliente cliente(idCliente,nombreC,apellidoC,direccionC,emailC,ciudadaniaC);
 
-    cout<<"CLIENTE"<<endl;
+    cout<<"\nCLIENTE"<<endl;
     cout<<"Id de Cliente: "<<cliente.getId()<<endl;
     cout<<"Nombre del Cliente: "<<cliente.getNombre()<<endl;
     cout<<"Apellido del Cliente: "<<cliente.getApellido()<<endl;
