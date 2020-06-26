@@ -16,8 +16,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cliente.cpp \
     empleado.cpp \
     estadohab.cpp \
+    gui_cliente.cpp \
     gui_empleado.cpp \
     gui_registro.cpp \
     habitacion.cpp \
@@ -28,8 +30,10 @@ SOURCES += \
     tipohabitacion.cpp
 
 HEADERS += \
+    cliente.h \
     empleado.h \
     estadohab.h \
+    gui_cliente.h \
     gui_empleado.h \
     gui_registro.h \
     habitacion.h \
@@ -39,6 +43,7 @@ HEADERS += \
     tipohabitacion.h
 
 FORMS += \
+    gui_cliente.ui \
     gui_empleado.ui \
     gui_registro.ui \
     mainwindow.ui

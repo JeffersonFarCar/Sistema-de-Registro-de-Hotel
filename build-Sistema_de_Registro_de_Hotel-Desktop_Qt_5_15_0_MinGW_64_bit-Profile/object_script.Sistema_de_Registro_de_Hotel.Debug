@@ -1,0 +1,14 @@
+debug/cliente.o
+debug/empleado.o
+debug/estadohab.o
+debug/gui_empleado.o
+debug/gui_registro.o
+debug/habitacion.o
+debug/main.o
+debug/mainwindow.o
+debug/persona.o
+debug/registro.o
+debug/tipohabitacion.o
+debug/moc_gui_empleado.o
+debug/moc_gui_registro.o
+debug/moc_mainwindow.o

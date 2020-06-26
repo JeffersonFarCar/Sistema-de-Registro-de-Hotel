@@ -3,7 +3,7 @@
 
 #include "gui_registro.h"
 #include "gui_empleado.h"
-
+#include "gui_cliente.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -19,7 +19,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Usuarios_button_clicked()
 {
-
+    Gui_Cliente guiC;
+    guiC.setModal(true);
+    guiC.exec();
 }
 
 void MainWindow::on_Registros_button_clicked()

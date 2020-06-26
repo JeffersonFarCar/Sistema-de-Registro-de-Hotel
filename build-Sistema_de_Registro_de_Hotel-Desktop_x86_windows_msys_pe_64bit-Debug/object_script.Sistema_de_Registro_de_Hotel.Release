@@ -1,0 +1,16 @@
+release/cliente.o
+release/empleado.o
+release/estadohab.o
+release/gui_cliente.o
+release/gui_empleado.o
+release/gui_registro.o
+release/habitacion.o
+release/main.o
+release/mainwindow.o
+release/persona.o
+release/registro.o
+release/tipohabitacion.o
+release/moc_gui_cliente.o
+release/moc_gui_empleado.o
+release/moc_gui_registro.o
+release/moc_mainwindow.o

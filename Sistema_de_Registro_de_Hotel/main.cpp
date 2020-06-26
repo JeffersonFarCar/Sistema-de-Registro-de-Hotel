@@ -10,6 +10,7 @@
 #include "estadohab.h"
 #include "habitacion.h"
 #include "empleado.h"
+#include "cliente.h"
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -32,6 +33,21 @@ int main(int argc, char *argv[])
     cout<<"Ocupacion del Empleado: "<<empleado.getOcupacion()<<endl;
     cout<<"Fecha de Contratacion del Empleado: "<<empleado.getFechaContratacion()<<endl;
     //Prueba Clase Empleado -> Fin
+
+    //Prueba Clase Cliente -> Inicio
+    int idCliente=2;
+    string nombreC="Henry", apellidoC="Rojas Aquino", direccionC="Perales, Tres manzanos N°12",
+          emailC="henry_12@gmail.com", ciudadaniaC = "Cusco";
+    Cliente cliente(idCliente,nombreC,apellidoC,direccionC,emailC,ciudadaniaC);
+
+    cout<<"CLIENTE"<<endl;
+    cout<<"Id de Cliente: "<<cliente.getId()<<endl;
+    cout<<"Nombre del Cliente: "<<cliente.getNombre()<<endl;
+    cout<<"Apellido del Cliente: "<<cliente.getApellido()<<endl;
+    cout<<"Direccion del Cliente: "<<cliente.getDireccion()<<endl;
+    cout<<"Email del Cliente: "<<cliente.getEmail()<<endl;
+    cout<<"Ciudadania del Cliente: "<<cliente.getCiudadania()<<endl;
+    //Prueba Clase Cliente -> Fin
 
     //Prueba Clase Habitacion, Tipo, EstadoHabitacion -> Inicio
     int idTipoH=1; string descripcion="Simple"; float precio=95;
