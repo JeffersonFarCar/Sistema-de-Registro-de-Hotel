@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Usuarios</string>
+     <string>Clientes</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Habitacions_button">
