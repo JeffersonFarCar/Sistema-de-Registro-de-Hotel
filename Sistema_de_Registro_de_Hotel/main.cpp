@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     //Prueba Clase Empleado -> Inicio
+
     int idEmpleado=2;
     string nombre="Juan", apellido="Perez", direccion="Paucarpata 321", email="juanPerez12@gmail.com";
     double sueldo=1400.10; string ocupacion="Seguridad", fecha="12-10-2019";
