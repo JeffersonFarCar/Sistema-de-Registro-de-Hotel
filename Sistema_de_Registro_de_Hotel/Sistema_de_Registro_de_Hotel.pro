@@ -22,7 +22,10 @@ SOURCES += \
     factura.cpp \
     gui_cliente.cpp \
     gui_empleado.cpp \
+    gui_estado_habitacion.cpp \
+    gui_habitacion.cpp \
     gui_registro.cpp \
+    gui_tipo_habitacion.cpp \
     habitacion.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -37,7 +40,10 @@ HEADERS += \
     factura.h \
     gui_cliente.h \
     gui_empleado.h \
+    gui_estado_habitacion.h \
+    gui_habitacion.h \
     gui_registro.h \
+    gui_tipo_habitacion.h \
     habitacion.h \
     mainwindow.h \
     persona.h \
@@ -47,7 +53,10 @@ HEADERS += \
 FORMS += \
     gui_cliente.ui \
     gui_empleado.ui \
+    gui_estado_habitacion.ui \
+    gui_habitacion.ui \
     gui_registro.ui \
+    gui_tipo_habitacion.ui \
     mainwindow.ui
 
 # Default rules for deployment.

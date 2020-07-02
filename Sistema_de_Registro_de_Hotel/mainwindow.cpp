@@ -4,6 +4,7 @@
 #include "gui_registro.h"
 #include "gui_empleado.h"
 #include "gui_cliente.h"
+#include "gui_habitacion.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -27,6 +28,7 @@ void MainWindow::on_Usuarios_button_clicked()
 void MainWindow::on_Registros_button_clicked()
 {
 
+   // Gui_Registro guiR;
     Gui_Registro guiR;
     guiR.setModal(true);
     guiR.exec();
@@ -36,6 +38,9 @@ void MainWindow::on_Registros_button_clicked()
 void MainWindow::on_Habitacions_button_clicked()
 {
 
+     gui_habitacion guiH;
+     guiH.setModal(true);
+     guiH.exec();
 }
 
 void MainWindow::on_Empleados_button_clicked()
