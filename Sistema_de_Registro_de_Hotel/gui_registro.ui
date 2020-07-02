@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Nuevo Registro</string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
@@ -151,6 +151,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="text">
      <string>Registrar</string>
     </property>
@@ -174,7 +177,7 @@
      <string>Cancelar</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="Cliente_cmbox">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -184,7 +187,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_2">
+   <widget class="QComboBox" name="Habitacion_cmbox">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -194,7 +197,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="LineEdit_idRegis">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -204,7 +207,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="LineEdite_idCliente">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -214,7 +217,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="LineEdit_Nper">
     <property name="geometry">
      <rect>
       <x>160</x>

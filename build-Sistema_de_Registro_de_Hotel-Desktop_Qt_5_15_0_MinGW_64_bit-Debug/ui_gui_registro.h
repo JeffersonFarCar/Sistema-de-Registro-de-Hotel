@@ -36,11 +36,11 @@ public:
     QDateEdit *dateEdit_2;
     QPushButton *Registrar_button;
     QPushButton *Cancelar_button;
-    QComboBox *comboBox;
-    QComboBox *comboBox_2;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit_3;
+    QComboBox *Cliente_cmbox;
+    QComboBox *Habitacion_cmbox;
+    QLineEdit *LineEdit_idRegis;
+    QLineEdit *LineEdite_idCliente;
+    QLineEdit *LineEdit_Nper;
 
     void setupUi(QDialog *Gui_Registro)
     {
@@ -84,25 +84,26 @@ public:
         font.setBold(true);
         font.setWeight(75);
         Registrar_button->setFont(font);
+        Registrar_button->setAutoFillBackground(false);
         Cancelar_button = new QPushButton(groupBox);
         Cancelar_button->setObjectName(QString::fromUtf8("Cancelar_button"));
         Cancelar_button->setGeometry(QRect(200, 320, 101, 41));
         Cancelar_button->setFont(font);
-        comboBox = new QComboBox(groupBox);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(160, 160, 161, 21));
-        comboBox_2 = new QComboBox(groupBox);
-        comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
-        comboBox_2->setGeometry(QRect(160, 100, 161, 21));
-        lineEdit = new QLineEdit(groupBox);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(160, 30, 161, 21));
-        lineEdit_2 = new QLineEdit(groupBox);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(160, 130, 161, 20));
-        lineEdit_3 = new QLineEdit(groupBox);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        lineEdit_3->setGeometry(QRect(160, 190, 161, 20));
+        Cliente_cmbox = new QComboBox(groupBox);
+        Cliente_cmbox->setObjectName(QString::fromUtf8("Cliente_cmbox"));
+        Cliente_cmbox->setGeometry(QRect(160, 160, 161, 21));
+        Habitacion_cmbox = new QComboBox(groupBox);
+        Habitacion_cmbox->setObjectName(QString::fromUtf8("Habitacion_cmbox"));
+        Habitacion_cmbox->setGeometry(QRect(160, 100, 161, 21));
+        LineEdit_idRegis = new QLineEdit(groupBox);
+        LineEdit_idRegis->setObjectName(QString::fromUtf8("LineEdit_idRegis"));
+        LineEdit_idRegis->setGeometry(QRect(160, 30, 161, 21));
+        LineEdite_idCliente = new QLineEdit(groupBox);
+        LineEdite_idCliente->setObjectName(QString::fromUtf8("LineEdite_idCliente"));
+        LineEdite_idCliente->setGeometry(QRect(160, 130, 161, 20));
+        LineEdit_Nper = new QLineEdit(groupBox);
+        LineEdit_Nper->setObjectName(QString::fromUtf8("LineEdit_Nper"));
+        LineEdit_Nper->setGeometry(QRect(160, 190, 161, 20));
 
         retranslateUi(Gui_Registro);
 
@@ -111,7 +112,7 @@ public:
 
     void retranslateUi(QDialog *Gui_Registro)
     {
-        Gui_Registro->setWindowTitle(QCoreApplication::translate("Gui_Registro", "Dialog", nullptr));
+        Gui_Registro->setWindowTitle(QCoreApplication::translate("Gui_Registro", "Nuevo Registro", nullptr));
         groupBox->setTitle(QCoreApplication::translate("Gui_Registro", "Registro Hospedaje Formulario", nullptr));
         label->setText(QCoreApplication::translate("Gui_Registro", "ID-Registro", nullptr));
         label_2->setText(QCoreApplication::translate("Gui_Registro", "Habitaci\303\263n", nullptr));

@@ -15,6 +15,11 @@ public:
     explicit Gui_Registro(QWidget *parent = nullptr);
     ~Gui_Registro();
 
+private slots:
+    void on_Registrar_button_clicked();
+
+    void on_Cancelar_button_clicked();
+
 private:
     Ui::Gui_Registro *ui;
 };
