@@ -103,14 +103,14 @@ public:
     {
         Gui_Cliente->setWindowTitle(QCoreApplication::translate("Gui_Cliente", "Dialog", nullptr));
         groupBox->setTitle(QCoreApplication::translate("Gui_Cliente", "Registro Cliente", nullptr));
-        label->setText(QCoreApplication::translate("Gui_Cliente", "ID Empleado", nullptr));
+        label->setText(QCoreApplication::translate("Gui_Cliente", "ID Cliente", nullptr));
         label_2->setText(QCoreApplication::translate("Gui_Cliente", "Nombre", nullptr));
         label_3->setText(QCoreApplication::translate("Gui_Cliente", "Apellido", nullptr));
         label_4->setText(QCoreApplication::translate("Gui_Cliente", "Direccion", nullptr));
         label_5->setText(QCoreApplication::translate("Gui_Cliente", "Ciudadania", nullptr));
         label_6->setText(QCoreApplication::translate("Gui_Cliente", "Email", nullptr));
         lineEdit_6->setText(QString());
-        Aceptar_button->setText(QCoreApplication::translate("Gui_Cliente", "Aceptar", nullptr));
+        Aceptar_button->setText(QCoreApplication::translate("Gui_Cliente", "Registrar", nullptr));
         Cancel_button->setText(QCoreApplication::translate("Gui_Cliente", "Cancelar", nullptr));
     } // retranslateUi
 

@@ -35,7 +35,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>ID Empleado</string>
+     <string>ID Cliente</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
@@ -182,7 +182,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Aceptar</string>
+     <string>Registrar</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Cancel_button">

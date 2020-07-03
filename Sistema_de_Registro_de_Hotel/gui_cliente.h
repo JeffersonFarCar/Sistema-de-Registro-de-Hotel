@@ -14,6 +14,12 @@ class Gui_Cliente : public QDialog
 public:
     explicit Gui_Cliente(QWidget *parent = nullptr);
     ~Gui_Cliente();
+private slots:
+    void on_groupBox_clicked();
+
+    void on_Aceptar_button_clicked();
+
+    void on_Cancel_button_clicked();
 
 private:
     Ui::Gui_Cliente *ui;
