@@ -38,7 +38,7 @@
      <string>ID Empleado</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_idEmpleado">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -139,7 +139,7 @@
      <string>Fecha Contrato</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="lineEdit_nombreE">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -149,7 +149,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="lineEdit_apellidoE">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -159,7 +159,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="lineEdit_direccionE">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -169,7 +169,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="lineEdit_emailE">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -179,7 +179,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="lineEdit_sueldoE">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -192,7 +192,7 @@
      <string>S/.</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
+   <widget class="QLineEdit" name="lineEdit_ocupacionE">
     <property name="geometry">
      <rect>
       <x>160</x>
