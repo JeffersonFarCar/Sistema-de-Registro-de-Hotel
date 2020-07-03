@@ -38,8 +38,10 @@ void Gui_Cliente::on_Aceptar_button_clicked()
         string direccion = direccion_str.toStdString();
         string ciudadania = ciudadania_str.toStdString();
         string email = email_str.toStdString();
-        QMessageBox::information(this, "Mensaje", "Se registró un nuevo cliente.");
-         close();
+        if(nombre!="" && apellido!="" && direccion!="" && ciudadania!="" && email!=""){
+            QMessageBox::information(this, "Mensaje", "Se registró un nuevo cliente.");
+            close();
+        }
     } catch (invalid_argument const &e) {
         QMessageBox::warning(this, "Advertencia", "El ID de Cliente debe ser númerico.");
     }
