@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/imagenes">
+        <file>imagenes/habitacion_pressed.png</file>
+        <file>imagenes/habitacion_unpressed.png</file>
+        <file>imagenes/cliente_pressed.png</file>
+        <file>imagenes/cliente_unpressed.png</file>
+        <file>imagenes/empleado_pressed.png</file>
+        <file>imagenes/empleado_unpressed.png</file>
+        <file>imagenes/registro_pressed.png</file>
+        <file>imagenes/registro_unpressed.png</file>
+    </qresource>
+</RCC>
