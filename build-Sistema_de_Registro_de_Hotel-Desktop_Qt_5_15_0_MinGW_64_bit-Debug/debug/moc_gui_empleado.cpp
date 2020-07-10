@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Gui_Empleado_t {
     QByteArrayData data[4];
-    char stringdata0[67];
+    char stringdata0[65];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,11 +35,11 @@ static const qt_meta_stringdata_Gui_Empleado_t qt_meta_stringdata_Gui_Empleado =
 QT_MOC_LITERAL(0, 0, 12), // "Gui_Empleado"
 QT_MOC_LITERAL(1, 13, 25), // "on_Aceptar_button_clicked"
 QT_MOC_LITERAL(2, 39, 0), // ""
-QT_MOC_LITERAL(3, 40, 26) // "on_Cancelar_button_clicked"
+QT_MOC_LITERAL(3, 40, 24) // "on_Cancel_button_clicked"
 
     },
     "Gui_Empleado\0on_Aceptar_button_clicked\0"
-    "\0on_Cancelar_button_clicked"
+    "\0on_Cancel_button_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -74,7 +74,7 @@ void Gui_Empleado::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_Aceptar_button_clicked(); break;
-        case 1: _t->on_Cancelar_button_clicked(); break;
+        case 1: _t->on_Cancel_button_clicked(); break;
         default: ;
         }
     }

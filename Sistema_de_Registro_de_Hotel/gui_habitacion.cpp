@@ -35,11 +35,6 @@ void gui_habitacion::on_pushButton_clicked()
 
 }
 
-void gui_habitacion::on_pushButton_5_clicked()
-{
-
-}
-
 void gui_habitacion::on_pushButton_2_clicked()
 {
     gui_estado_habitacion guiEH;

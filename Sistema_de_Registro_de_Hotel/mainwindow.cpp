@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "gui_registro.h"
+#include "gui_index_registro.h"
 #include "gui_empleado.h"
 #include "gui_cliente.h"
 #include "gui_habitacion.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -29,12 +30,9 @@ void MainWindow::on_Usuarios_button_clicked()
 
 void MainWindow::on_Registros_button_clicked()
 {
-
-   // Gui_Registro guiR;
-    Gui_Registro guiR;
-    guiR.setModal(true);
-    guiR.exec();
-
+    Gui_Index_Registro guiIR;
+    guiIR.setModal(true);
+    guiIR.exec();
 }
 
 void MainWindow::on_Habitacions_button_clicked()
