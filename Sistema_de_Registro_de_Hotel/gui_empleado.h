@@ -18,7 +18,6 @@ public:
 
 private slots:
     void on_Aceptar_button_clicked();
-
     void on_Cancel_button_clicked();
 
 private:
