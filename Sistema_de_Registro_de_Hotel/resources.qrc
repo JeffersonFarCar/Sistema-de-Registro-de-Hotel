@@ -14,5 +14,6 @@
         <file>imagenes/edit_unpressed.png</file>
         <file>imagenes/view_pressed.png</file>
         <file>imagenes/view_unpressed.png</file>
+        <file>imagenes/buscar_pressed.png</file>
     </qresource>
 </RCC>

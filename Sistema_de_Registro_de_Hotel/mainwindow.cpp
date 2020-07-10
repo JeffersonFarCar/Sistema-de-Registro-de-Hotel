@@ -3,7 +3,7 @@
 
 #include "gui_registro.h"
 #include "gui_empleado.h"
-#include "gui_cliente.h"
+#include "gui_menu_cliente.h"
 #include "gui_habitacion.h"
 #include "gui_indexhabitacion.h"
 #include "gui_index_registro.h"
@@ -26,7 +26,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Usuarios_button_clicked()
 {
-    Gui_Cliente guiC;
+    Gui_Menu_Cliente guiC;
     guiC.setModal(true);
     guiC.exec();
 }

@@ -9,6 +9,7 @@ debug/gui_habitacion.o
 debug/gui_index_empleado.o
 debug/gui_index_registro.o
 debug/gui_indexhabitacion.o
+debug/gui_menu_cliente.o
 debug/gui_registro.o
 debug/gui_tipo_habitacion.o
 debug/habitacion.o
@@ -25,6 +26,7 @@ debug/moc_gui_habitacion.o
 debug/moc_gui_index_empleado.o
 debug/moc_gui_index_registro.o
 debug/moc_gui_indexhabitacion.o
+debug/moc_gui_menu_cliente.o
 debug/moc_gui_registro.o
 debug/moc_gui_tipo_habitacion.o
 debug/moc_mainwindow.o
