@@ -6,6 +6,8 @@
 #include "gui_cliente.h"
 #include "gui_habitacion.h"
 
+#include "gui_indexhabitacion.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -38,9 +40,9 @@ void MainWindow::on_Registros_button_clicked()
 void MainWindow::on_Habitacions_button_clicked()
 {
 
-     gui_habitacion guiH;
-     guiH.setModal(true);
-     guiH.exec();
+     gui_indexHabitacion guiIH;
+     guiIH.setModal(true);
+     guiIH.exec();
 }
 
 void MainWindow::on_Empleados_button_clicked()
