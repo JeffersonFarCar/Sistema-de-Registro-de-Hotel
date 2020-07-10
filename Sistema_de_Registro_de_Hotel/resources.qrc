@@ -8,5 +8,8 @@
         <file>imagenes/empleado_unpressed.png</file>
         <file>imagenes/registro_pressed.png</file>
         <file>imagenes/registro_unpressed.png</file>
+        <file>imagenes/eye.png</file>
+        <file>imagenes/edit.png</file>
+        <file>imagenes/eliminar.png</file>
     </qresource>
 </RCC>
