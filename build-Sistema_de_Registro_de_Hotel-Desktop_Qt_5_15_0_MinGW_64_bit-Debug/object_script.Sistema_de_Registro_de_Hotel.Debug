@@ -6,6 +6,7 @@ debug/gui_cliente.o
 debug/gui_empleado.o
 debug/gui_estado_habitacion.o
 debug/gui_habitacion.o
+debug/gui_index_empleado.o
 debug/gui_index_registro.o
 debug/gui_indexhabitacion.o
 debug/gui_registro.o
@@ -21,6 +22,7 @@ debug/moc_gui_cliente.o
 debug/moc_gui_empleado.o
 debug/moc_gui_estado_habitacion.o
 debug/moc_gui_habitacion.o
+debug/moc_gui_index_empleado.o
 debug/moc_gui_index_registro.o
 debug/moc_gui_indexhabitacion.o
 debug/moc_gui_registro.o
