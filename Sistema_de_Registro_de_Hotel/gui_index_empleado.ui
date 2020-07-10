@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>532</width>
+    <width>776</width>
     <height>383</height>
    </rect>
   </property>
@@ -32,8 +32,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>40</y>
+     <x>680</x>
+     <y>50</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -45,22 +45,22 @@
     <string>Accciones</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="edit_registros_button">
+  <widget class="QPushButton" name="edit_empleado_button">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>170</y>
+     <x>700</x>
+     <y>160</y>
      <width>51</width>
      <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">#edit_registros_button{
+    <string notr="true">#edit_empleado_button{
 	background-color: transparent;
 	border-image: url(:/imagenes/imagenes/edit_unpressed.png);
 }
 
-#edit_registros_button:pressed{
+#edit_empleado_button:pressed{
 	background-color: transparent;
 	border-image: url(:/imagenes/imagenes/edit_pressed.png);
 }</string>
@@ -88,7 +88,7 @@
   <widget class="QPushButton" name="view_registros_button">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>700</x>
      <y>90</y>
      <width>51</width>
      <height>51</height>
@@ -186,28 +186,238 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="delete_registros_button">
+  <widget class="QPushButton" name="delete_empleado_button">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>260</y>
+     <x>700</x>
+     <y>240</y>
      <width>51</width>
      <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">#delete_registros_button{
+    <string notr="true">#delete_empleado_button{
 	background-color: transparent;
 	border-image: url(:/imagenes/imagenes/delete_unpressed.png);
 }
 
-#delete_registros_button:pressed{
+#delete_empleado_button:pressed{
 	background-color: transparent;
 	border-image: url(:/imagenes/imagenes/delete_pressed.png);
 }</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditNombreModi">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>100</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditApellidoModi">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>130</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditDireccionModi">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>160</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditEmailModi">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>190</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditOcupacionModi">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>220</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditSueldoModi">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>250</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>100</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Nombres:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>130</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Apellidos:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>186</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Email:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>220</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Ocupacion:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>250</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Sueldo:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>160</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Direccion:</string>
    </property>
   </widget>
  </widget>

@@ -25,8 +25,19 @@ Gui_Index_Empleado::~Gui_Index_Empleado()
     delete ui;
 }
 void Gui_Index_Empleado::on_CargarDatos_button_clicked(){
+    u++;
+    QByteArray d;
+    d.append(QString::number(u));
 
     ui->tableWidget->insertRow(ui->tableWidget->rowCount());
+
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-4,0,new QTableWidgetItem(d.constData()));
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-4,1,new QTableWidgetItem("USUARIO"));
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-4,2,new QTableWidgetItem("APELLIDO"));
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-4,3,new QTableWidgetItem("direccion"));
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-4,4,new QTableWidgetItem("ciudadania"));
+    ui->tableWidget->setItem(ui->tableWidget->rowCount()-4,5,new QTableWidgetItem("unknow@gmail.com"));
+
 
     ui->tableWidget->setItem(ui->tableWidget->rowCount()-3,0,new QTableWidgetItem("0003"));
     ui->tableWidget->setItem(ui->tableWidget->rowCount()-3,1,new QTableWidgetItem("Juana"));
@@ -55,9 +66,6 @@ void Gui_Index_Empleado::on_CargarDatos_button_clicked(){
     ui->tableWidget->setItem(ui->tableWidget->rowCount()-1,5,new QTableWidgetItem("1200"));
     ui->tableWidget->setItem(ui->tableWidget->rowCount()-1,6,new QTableWidgetItem("Seguridad"));
     ui->tableWidget->setItem(ui->tableWidget->rowCount()-1,7,new QTableWidgetItem("12-09-2019"));
-
-
-
 
 
 }
@@ -93,14 +101,50 @@ void Gui_Index_Empleado::on_Nuevo_Button_clicked()
     guiE.setModal(true);
     guiE.exec();
 }
-/*
+
 void Gui_Index_Empleado::on_delete_empleado_button_clicked()
 {
-    ui->tableWidget->removeRow(f);
+
+    QMessageBox::StandardButton action;
+    action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa borrar el dato?");
+    if(action == QMessageBox::Yes)
+        ui->tableWidget->removeRow(f);
 }
 
 void Gui_Index_Empleado::on_tableWidget_itemClicked(QTableWidgetItem *item)
 {
+    //Almacena el entero de la fila seleccionada, para borrar o modificar
     f = item->row();
+
+    //Cpaturar datos para poder modificarlo
+    QTableWidgetItem *nombre = ui->tableWidget->item(f,1);
+    QTableWidgetItem *apellido = ui->tableWidget->item(f,2);
+    QTableWidgetItem *direccion = ui->tableWidget->item(f,3);
+    QTableWidgetItem *email = ui->tableWidget->item(f,4);
+    QTableWidgetItem *sueldo = ui->tableWidget->item(f,5);
+    QTableWidgetItem *ocupacion = ui->tableWidget->item(f,5);
+
+    //Recuperar datos de la tabla a los texedit para modificar
+    ui->lineEditNombreModi->setText(nombre->text());
+    ui->lineEditApellidoModi->setText(apellido->text());
+    ui->lineEditDireccionModi->setText(direccion->text());
+    ui->lineEditEmailModi->setText(email->text());
+    ui->lineEditSueldoModi->setText(sueldo->text());
+    ui->lineEditOcupacionModi->setText(ocupacion->text());
 }
-*/
+
+
+void Gui_Index_Empleado::on_edit_empleado_button_clicked()
+{
+    QMessageBox::StandardButton action;
+    action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa editar el dato?");
+    if(action == QMessageBox::Yes){
+        ui->tableWidget->setItem(f,1,new QTableWidgetItem(ui->lineEditNombreModi->text()));
+        ui->tableWidget->setItem(f,2,new QTableWidgetItem(ui->lineEditApellidoModi->text()));
+        ui->tableWidget->setItem(f,3,new QTableWidgetItem(ui->lineEditDireccionModi->text()));
+        ui->tableWidget->setItem(f,4,new QTableWidgetItem(ui->lineEditEmailModi->text()));
+        ui->tableWidget->setItem(f,5,new QTableWidgetItem(ui->lineEditSueldoModi->text()));
+        ui->tableWidget->setItem(f,6,new QTableWidgetItem(ui->lineEditOcupacionModi->text()));
+    }
+    QMessageBox::information(this,"Mensaje","Se edito correctamente");
+}

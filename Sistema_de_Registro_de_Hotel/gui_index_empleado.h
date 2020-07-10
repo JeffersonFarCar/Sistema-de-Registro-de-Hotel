@@ -26,9 +26,11 @@ private slots:
 
     void on_Nuevo_Button_clicked();
 
-    //void on_delete_empleado_button_clicked();
+  void on_delete_empleado_button_clicked();
 
-    //void on_tableWidget_itemClicked(QTableWidgetItem *item);
+    void on_tableWidget_itemClicked(QTableWidgetItem *item);
+
+    void on_edit_empleado_button_clicked();
 
 private:
     Ui::Gui_Index_Empleado *ui;
