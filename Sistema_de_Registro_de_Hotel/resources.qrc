@@ -8,8 +8,11 @@
         <file>imagenes/empleado_unpressed.png</file>
         <file>imagenes/registro_pressed.png</file>
         <file>imagenes/registro_unpressed.png</file>
-        <file>imagenes/eye.png</file>
-        <file>imagenes/edit.png</file>
-        <file>imagenes/eliminar.png</file>
+        <file>imagenes/delete_pressed.png</file>
+        <file>imagenes/delete_unpressed.png</file>
+        <file>imagenes/edit_pressed.png</file>
+        <file>imagenes/edit_unpressed.png</file>
+        <file>imagenes/view_pressed.png</file>
+        <file>imagenes/view_unpressed.png</file>
     </qresource>
 </RCC>

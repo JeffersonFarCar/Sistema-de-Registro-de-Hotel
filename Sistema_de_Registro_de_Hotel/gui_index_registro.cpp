@@ -46,3 +46,8 @@ void Gui_Index_Registro::on_delete_registros_button_clicked()
         delete ui->list_Registros->currentItem();
 
 }
+
+void Gui_Index_Registro::on_Regresar__clicked()
+{
+    close();//Permite cerra la ventana actual abierta
+}

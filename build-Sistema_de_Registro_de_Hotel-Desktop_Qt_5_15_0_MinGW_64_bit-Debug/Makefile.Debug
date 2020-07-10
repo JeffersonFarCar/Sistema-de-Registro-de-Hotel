@@ -185,13 +185,16 @@ compiler_rcc_clean:
 debug/qrc_resources.cpp: ../Sistema_de_Registro_de_Hotel/resources.qrc \
 		C:/Qt/5.15.0/mingw81_64/bin/rcc.exe \
 		../Sistema_de_Registro_de_Hotel/imagenes/habitacion_unpressed.png \
+		../Sistema_de_Registro_de_Hotel/imagenes/delete_unpressed.png \
+		../Sistema_de_Registro_de_Hotel/imagenes/view_pressed.png \
 		../Sistema_de_Registro_de_Hotel/imagenes/empleado_unpressed.png \
-		../Sistema_de_Registro_de_Hotel/imagenes/eliminar.png \
+		../Sistema_de_Registro_de_Hotel/imagenes/edit_unpressed.png \
 		../Sistema_de_Registro_de_Hotel/imagenes/cliente_unpressed.png \
-		../Sistema_de_Registro_de_Hotel/imagenes/edit.png \
+		../Sistema_de_Registro_de_Hotel/imagenes/delete_pressed.png \
+		../Sistema_de_Registro_de_Hotel/imagenes/view_unpressed.png \
 		../Sistema_de_Registro_de_Hotel/imagenes/registro_unpressed.png \
-		../Sistema_de_Registro_de_Hotel/imagenes/eye.png \
 		../Sistema_de_Registro_de_Hotel/imagenes/habitacion_pressed.png \
+		../Sistema_de_Registro_de_Hotel/imagenes/edit_pressed.png \
 		../Sistema_de_Registro_de_Hotel/imagenes/empleado_pressed.png \
 		../Sistema_de_Registro_de_Hotel/imagenes/cliente_pressed.png \
 		../Sistema_de_Registro_de_Hotel/imagenes/registro_pressed.png
@@ -2686,7 +2689,8 @@ debug/mainwindow.o: ../Sistema_de_Registro_de_Hotel/mainwindow.cpp ../Sistema_de
 		../Sistema_de_Registro_de_Hotel/gui_empleado.h \
 		../Sistema_de_Registro_de_Hotel/gui_cliente.h \
 		../Sistema_de_Registro_de_Hotel/gui_habitacion.h \
-		../Sistema_de_Registro_de_Hotel/gui_indexhabitacion.h
+		../Sistema_de_Registro_de_Hotel/gui_indexhabitacion.h \
+		../Sistema_de_Registro_de_Hotel/gui_index_registro.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\Sistema_de_Registro_de_Hotel\mainwindow.cpp
 
 debug/persona.o: ../Sistema_de_Registro_de_Hotel/persona.cpp ../Sistema_de_Registro_de_Hotel/persona.h

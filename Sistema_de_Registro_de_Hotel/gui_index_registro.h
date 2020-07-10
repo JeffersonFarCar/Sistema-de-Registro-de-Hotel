@@ -24,6 +24,8 @@ private slots:
 
     void on_delete_registros_button_clicked();
 
+    void on_Regresar__clicked();
+
 private:
     Ui::Gui_Index_Registro *ui;
 };

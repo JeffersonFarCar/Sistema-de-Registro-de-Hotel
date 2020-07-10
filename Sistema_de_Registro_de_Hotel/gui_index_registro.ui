@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>532</width>
-    <height>318</height>
+    <height>322</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,32 +17,35 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>250</y>
+     <y>260</y>
      <width>101</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 16pt &quot;Times New Roman&quot;;</string>
+   </property>
    <property name="text">
-    <string>New</string>
+    <string>Registrar</string>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>20</y>
+     <y>40</y>
      <width>371</width>
-     <height>221</height>
+     <height>211</height>
     </rect>
    </property>
    <property name="title">
-    <string>Index Registros</string>
+    <string/>
    </property>
    <widget class="QListWidget" name="list_Registros">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>10</y>
       <width>351</width>
       <height>192</height>
      </rect>
@@ -53,52 +56,120 @@
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>250</y>
+     <y>260</y>
      <width>101</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 16pt &quot;Times New Roman&quot;;</string>
+   </property>
    <property name="text">
-    <string>Regresar</string>
+    <string>Cancelar</string>
    </property>
   </widget>
   <widget class="QPushButton" name="view_registros_button">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>50</y>
-     <width>71</width>
-     <height>41</height>
+     <x>440</x>
+     <y>90</y>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#view_registros_button{
+	background-color: transparent;
+	border-image: url(:/imagenes/imagenes/view_unpressed.png);
+}
+
+#view_registros_button:pressed{
+	background-color: transparent;
+	border-image: url(:/imagenes/imagenes/view_pressed.png);
+}</string>
+   </property>
    <property name="text">
-    <string>View</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="edit_registros_button">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>110</y>
-     <width>71</width>
-     <height>41</height>
+     <x>440</x>
+     <y>170</y>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#edit_registros_button{
+	background-color: transparent;
+	border-image: url(:/imagenes/imagenes/edit_unpressed.png);
+}
+
+#edit_registros_button:pressed{
+	background-color: transparent;
+	border-image: url(:/imagenes/imagenes/edit_pressed.png);
+}</string>
+   </property>
    <property name="text">
-    <string>Edit</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="delete_registros_button">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>170</y>
-     <width>71</width>
-     <height>41</height>
+     <x>440</x>
+     <y>250</y>
+     <width>51</width>
+     <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#delete_registros_button{
+	background-color: transparent;
+	border-image: url(:/imagenes/imagenes/delete_unpressed.png);
+}
+
+#delete_registros_button:pressed{
+	background-color: transparent;
+	border-image: url(:/imagenes/imagenes/delete_pressed.png);
+}</string>
+   </property>
    <property name="text">
-    <string>Delete</string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>40</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Accciones</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>10</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 20pt &quot;Times New Roman&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Registros</string>
    </property>
   </widget>
  </widget>

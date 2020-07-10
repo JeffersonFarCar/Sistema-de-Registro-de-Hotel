@@ -45,7 +45,7 @@ public:
         gui_indexHabitacion->setFont(font);
         groupBox = new QGroupBox(gui_indexHabitacion);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(10, 20, 541, 301));
+        groupBox->setGeometry(QRect(20, 10, 541, 301));
         QFont font1;
         font1.setPointSize(10);
         font1.setBold(false);
@@ -53,58 +53,70 @@ public:
         groupBox->setFont(font1);
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(440, 40, 101, 21));
+        label_2->setGeometry(QRect(420, 40, 81, 21));
+        label_2->setStyleSheet(QString::fromUtf8("font: 75 14pt \"Times New Roman\";"));
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(430, 70, 71, 31));
+        pushButton->setGeometry(QRect(440, 70, 51, 51));
         pushButton->setStyleSheet(QString::fromUtf8("#pushButton{\n"
 "	background-color: transparent;\n"
-"	border-image: url(:/imagenes/imagenes/eye.png);\n"
+"	border-image: url(:/imagenes/imagenes/view_unpressed.png);\n"
 "}\n"
 "\n"
 "#pushButton:pressed{\n"
-"	border-image: url(:/imagenes/imagenes/eye.png);\n"
+"	border-image: url(:/imagenes/imagenes/view_pressed.png);\n"
 "}"));
         pushButton_2 = new QPushButton(groupBox);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(430, 120, 81, 41));
+        pushButton_2->setGeometry(QRect(440, 140, 51, 51));
         pushButton_2->setFont(font1);
         pushButton_2->setStyleSheet(QString::fromUtf8("#pushButton_2{\n"
 "	background-color: transparent;\n"
-"	border-image: url(:/imagenes/imagenes/edit.png);\n"
+"	border-image: url(:/imagenes/imagenes/edit_unpressed.png);\n"
 "}\n"
 "\n"
 "#pushButton_2:pressed{\n"
-"	border-image: url(:/imagenes/imagenes/edit.png);\n"
+"	border-image: url(:/imagenes/imagenes/edit_pressed.png);\n"
 "}"));
         pushButton_3 = new QPushButton(groupBox);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(430, 190, 75, 23));
+        pushButton_3->setGeometry(QRect(440, 210, 51, 51));
         pushButton_3->setFont(font1);
         pushButton_3->setStyleSheet(QString::fromUtf8("#pushButton_3{\n"
 "	background-color: transparent;\n"
-"	border-image: url(:/imagenes/imagenes/eliminar.png);\n"
+"	border-image: url(:/imagenes/imagenes/delete_unpressed.png);\n"
 "}\n"
 "\n"
 "#pushButton_3:pressed{\n"
-"	border-image: url(:/imagenes/imagenes/eliminar.png);\n"
+"	border-image: url(:/imagenes/imagenes/delete_pressed.png);\n"
 "}"));
         pushButton_4 = new QPushButton(groupBox);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(150, 250, 71, 31));
-        pushButton_4->setFont(font1);
+        pushButton_4->setGeometry(QRect(130, 250, 91, 31));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Times New Roman"));
+        font2.setPointSize(16);
+        font2.setBold(false);
+        font2.setItalic(false);
+        font2.setWeight(9);
+        pushButton_4->setFont(font2);
+        pushButton_4->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
         pushButton_5 = new QPushButton(groupBox);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(250, 250, 71, 31));
-        pushButton_5->setFont(font1);
+        pushButton_5->setGeometry(QRect(250, 250, 91, 31));
+        pushButton_5->setFont(font2);
+        pushButton_5->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
         label = new QLabel(groupBox);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(150, 20, 131, 21));
-        QFont font2;
-        font2.setPointSize(14);
-        font2.setBold(false);
-        font2.setWeight(50);
-        label->setFont(font2);
+        label->setGeometry(QRect(150, 20, 141, 21));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Times New Roman"));
+        font3.setPointSize(20);
+        font3.setBold(false);
+        font3.setItalic(false);
+        font3.setWeight(9);
+        label->setFont(font3);
+        label->setStyleSheet(QString::fromUtf8("font: 75 20pt \"Times New Roman\";"));
         listView = new QListView(groupBox);
         listView->setObjectName(QString::fromUtf8("listView"));
         listView->setGeometry(QRect(20, 50, 371, 191));
