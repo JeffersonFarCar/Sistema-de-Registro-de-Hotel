@@ -48,7 +48,7 @@ void Gui_Empleado::on_Aceptar_button_clicked(){
         }
 }
 
-void Gui_Empleado::on_Cancelar_button_clicked()
+void Gui_Empleado::on_Cancel_button_clicked()
 {
     close();//Permite cerra la ventana actual abierta
 }
