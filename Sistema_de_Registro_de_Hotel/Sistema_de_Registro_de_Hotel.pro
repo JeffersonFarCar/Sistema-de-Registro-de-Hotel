@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     cliente.cpp \
+    conexion.cpp \
     empleado.cpp \
     estadohab.cpp \
     factura.cpp \
@@ -39,6 +40,7 @@ SOURCES += \
 
 HEADERS += \
     cliente.h \
+    conexion.h \
     empleado.h \
     estadohab.h \
     factura.h \

@@ -1,6 +1,7 @@
 #include "gui_cliente.h"
 #include "ui_gui_cliente.h"
-
+#include "conexion.h"
+#include "cliente.h"
 #include <QMessageBox>
 #include <iostream>
 #include <string>
@@ -25,6 +26,8 @@ void Gui_Cliente::on_groupBox_clicked()
 
 void Gui_Cliente::on_Aceptar_button_clicked()
 {
+    Conexion conect;
+    conect.Conectar();
     QString id_str = ui->lineEdit->text();
     QString nombre_str = ui->lineEdit_2->text();
     QString apellido_str = ui->lineEdit_3->text();
@@ -38,6 +41,10 @@ void Gui_Cliente::on_Aceptar_button_clicked()
         string direccion = direccion_str.toStdString();
         string ciudadania = ciudadania_str.toStdString();
         string email = email_str.toStdString();
+        Cliente cliente;
+        cliente.setNombre(nombre); cliente.setApellido(apellido); cliente.setDireccion(direccion);
+        cliente.setEmail(email); cliente.setCiudadania(ciudadania);
+        conect.addCliente(cliente);
         if(nombre!="" && apellido!="" && direccion!="" && ciudadania!="" && email!=""){
             QMessageBox::information(this, "Mensaje", "Se registró un nuevo cliente.");
             close();
