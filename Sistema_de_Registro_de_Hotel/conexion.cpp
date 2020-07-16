@@ -29,7 +29,7 @@ void Conexion::addCliente(Cliente a){
     QString direccion=QString::fromLocal8Bit(a.getDireccion().c_str());
     QString email=QString::fromLocal8Bit(a.getEmail().c_str());
     QString ciudadania=QString::fromLocal8Bit(a.getCiudadania().c_str());
-    QString consulta="insert into clientes (id, nombre, apellido, direccion, email, ciudadania) values ("+QString::number(1)+",'"+nombre+"','"+apellido+"','"+direccion+"','"+email+"','"+ciudadania+"');";
+    QString consulta="insert into clientes3 (id, nombre, apellido, direccion, email, ciudadania) values ("+QString::number(1)+",'"+nombre+"','"+apellido+"','"+direccion+"','"+email+"','"+ciudadania+"');";
     cout<<consulta.toUtf8().constData();
     query.exec(consulta);
     query.isActive();

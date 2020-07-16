@@ -14,7 +14,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -31,14 +30,20 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(650, 400);
-        MainWindow->setStyleSheet(QString::fromUtf8(""));
+        MainWindow->resize(649, 400);
+        MainWindow->setStyleSheet(QString::fromUtf8("#centralwidget{\n"
+"	border-image: url(:/imagenes/imagenes/background_hotel.png);\n"
+"}\n"
+"QLabel{\n"
+"	background-color:transparent;\n"
+"	color: rgb(255, 255, 255);\n"
+"	font: 75 28pt \"Times New Roman\";\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Usuarios_button = new QPushButton(centralwidget);
@@ -55,7 +60,7 @@ public:
 "}"));
         Habitacions_button = new QPushButton(centralwidget);
         Habitacions_button->setObjectName(QString::fromUtf8("Habitacions_button"));
-        Habitacions_button->setGeometry(QRect(110, 230, 131, 91));
+        Habitacions_button->setGeometry(QRect(110, 220, 131, 91));
         Habitacions_button->setCursor(QCursor(Qt::PointingHandCursor));
         Habitacions_button->setStyleSheet(QString::fromUtf8("#Habitacions_button{\n"
 "	background-color: transparent;\n"
@@ -67,7 +72,7 @@ public:
 "}"));
         Empleados_button = new QPushButton(centralwidget);
         Empleados_button->setObjectName(QString::fromUtf8("Empleados_button"));
-        Empleados_button->setGeometry(QRect(430, 220, 101, 101));
+        Empleados_button->setGeometry(QRect(430, 210, 101, 101));
         Empleados_button->setCursor(QCursor(Qt::PointingHandCursor));
         Empleados_button->setStyleSheet(QString::fromUtf8("#Empleados_button{\n"
 "	background-color: transparent;\n"
@@ -79,7 +84,7 @@ public:
 "}"));
         Registros_button = new QPushButton(centralwidget);
         Registros_button->setObjectName(QString::fromUtf8("Registros_button"));
-        Registros_button->setGeometry(QRect(430, 50, 111, 101));
+        Registros_button->setGeometry(QRect(440, 40, 101, 101));
         Registros_button->setCursor(QCursor(Qt::PointingHandCursor));
         Registros_button->setStyleSheet(QString::fromUtf8("#Registros_button{\n"
 "	background-color: transparent;\n"
@@ -91,24 +96,21 @@ public:
 "}"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(420, 320, 141, 41));
-        label->setStyleSheet(QString::fromUtf8("font: 75 24pt \"Times New Roman\";"));
+        label->setGeometry(QRect(400, 320, 161, 41));
+        label->setStyleSheet(QString::fromUtf8(""));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(420, 140, 121, 41));
-        label_2->setStyleSheet(QString::fromUtf8("font: 75 24pt \"Times New Roman\";"));
+        label_2->setGeometry(QRect(410, 150, 141, 41));
+        label_2->setStyleSheet(QString::fromUtf8(""));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(120, 140, 111, 41));
-        label_3->setStyleSheet(QString::fromUtf8("font: 75 24pt \"Times New Roman\";"));
+        label_3->setGeometry(QRect(100, 150, 121, 41));
+        label_3->setStyleSheet(QString::fromUtf8(""));
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(90, 320, 171, 41));
-        label_4->setStyleSheet(QString::fromUtf8("font: 75 24pt \"Times New Roman\";"));
+        label_4->setGeometry(QRect(70, 320, 191, 41));
+        label_4->setStyleSheet(QString::fromUtf8(""));
         MainWindow->setCentralWidget(centralwidget);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
