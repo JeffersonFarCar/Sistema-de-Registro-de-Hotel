@@ -7,6 +7,7 @@
 #include <QString>
 #include <QtSql/QSqlDatabase>
 #include <QDebug>
+#include <QtSql>
 using namespace std;
 Conexion::Conexion()
 {
