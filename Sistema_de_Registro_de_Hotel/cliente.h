@@ -15,8 +15,6 @@ public:
    //Getters and setters
 
    void setCiudadania(string _ciud);
-
-   int  getIdCliente();
    string getCiudadania();
 
     //Metods of BD

@@ -41,11 +41,13 @@ void Gui_Cliente::on_Aceptar_button_clicked()
         string direccion = direccion_str.toStdString();
         string ciudadania = ciudadania_str.toStdString();
         string email = email_str.toStdString();
-        Cliente cliente;
-        cliente.setNombre(nombre); cliente.setApellido(apellido); cliente.setDireccion(direccion);
-        cliente.setEmail(email); cliente.setCiudadania(ciudadania);
-        conect.addCliente(cliente);
-        if(nombre!="" && apellido!="" && direccion!="" && ciudadania!="" && email!=""){
+
+        if(id_C>=0 && nombre!="" && apellido!="" && direccion!="" && ciudadania!="" && email!=""){
+            Cliente cliente;
+            cliente.setId(id_C);
+            cliente.setNombre(nombre); cliente.setApellido(apellido); cliente.setDireccion(direccion);
+            cliente.setEmail(email); cliente.setCiudadania(ciudadania);
+            conect.addCliente(cliente);
             QMessageBox::information(this, "Mensaje", "Se registró un nuevo cliente.");
             close();
         }

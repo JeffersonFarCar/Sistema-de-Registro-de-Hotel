@@ -13,6 +13,7 @@ public:
     string getApellido();
     string getDireccion();
     string getEmail();
+    void setId(int _id);
     void setNombre(string _nombre);
     void setApellido(string _apellido);
     void setDireccion(string _direccion);
