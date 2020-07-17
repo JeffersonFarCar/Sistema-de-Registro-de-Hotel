@@ -64,7 +64,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="Aceptar_button">
+   <widget class="QPushButton" name="Agregar_button">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -86,7 +86,7 @@
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="autoFillBackground">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
      <string notr="true">#Aceptar_button{
@@ -260,46 +260,12 @@ Nuevo</string>
      <bool>false</bool>
     </attribute>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="autoFillBackground">
-     <bool>true</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#pushButton{
-	border-color: rgb(85, 170, 127);
-alternate-background-color: rgb(85, 170, 127);
-	background-color: rgb(85, 170, 127);
-}</string>
-    </property>
-    <property name="text">
-     <string>Preparar Tabla</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>440</x>
       <y>180</y>
-      <width>141</width>
+      <width>121</width>
       <height>23</height>
      </rect>
     </property>
@@ -315,7 +281,7 @@ alternate-background-color: rgb(85, 170, 127);
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="autoFillBackground">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
      <string notr="true">#pushButton_2{
@@ -325,14 +291,14 @@ alternate-background-color: rgb(85, 170, 127);
 }</string>
     </property>
     <property name="text">
-     <string>Agregar Registro Nuevo</string>
+     <string>Agregar Registro</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonB3">
     <property name="geometry">
      <rect>
       <x>470</x>
-      <y>270</y>
+      <y>230</y>
       <width>51</width>
       <height>41</height>
      </rect>
@@ -353,40 +319,6 @@ alternate-background-color: rgb(85, 170, 127);
     </property>
     <property name="text">
      <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonB4">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>340</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="autoFillBackground">
-     <bool>true</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#pushButtonB4{
-	border-color: rgb(85, 170, 127);
-alternate-background-color: rgb(85, 170, 127);
-	background-color: rgb(85, 170, 127);
-}</string>
-    </property>
-    <property name="text">
-     <string>Borrar Todo</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditNOMBRE">
@@ -534,8 +466,8 @@ alternate-background-color: rgb(85, 170, 127);
    <widget class="QPushButton" name="pushButtoMODIFICAR">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>430</y>
+      <x>470</x>
+      <y>300</y>
       <width>51</width>
       <height>31</height>
      </rect>
@@ -560,30 +492,6 @@ alternate-background-color: rgb(85, 170, 127);
 #pushButtoMODIFICAR:pressed{
 	background-color: transparent;
 	border-image: url(:/imagenes/imagenes/edit_pressed.png);
-}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonVIEW">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>220</y>
-      <width>51</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#pushButtonVIEW{
-	background-color: transparent;
-	border-image: url(:/imagenes/imagenes/view_unpressed.png);
-}
-
-#pushButtonVIEW:pressed{
-	background-color: transparent;
-	border-image: url(:/imagenes/imagenes/view_pressed.png);
 }</string>
     </property>
     <property name="text">

@@ -26,6 +26,9 @@ string Persona::getDireccion(){
 string Persona::getEmail(){
     return email;
 }
+void Persona::setId(int _id){
+    id_persona=_id;
+}
 void Persona::setNombre(string _nombre){
     nombre=_nombre;
 }

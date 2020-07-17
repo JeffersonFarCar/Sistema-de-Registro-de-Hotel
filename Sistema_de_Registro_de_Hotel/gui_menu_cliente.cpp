@@ -11,9 +11,24 @@ Gui_Menu_Cliente::Gui_Menu_Cliente(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gui_Menu_Cliente)
 {
+    //Definicion de variables
     ui->setupUi(this);
     u = 0;
     fila = -1;
+
+  /*----Preparacion de la tabla----*/
+    ui->tablaMenuC->setColumnCount(6);
+    QStringList l;
+    l<<"ID"<<"Nombre"<<"Apellido"<<"Direccion"<<"Ciudadania"<<"Email";
+
+    ui->tablaMenuC->setHorizontalHeaderLabels(l);
+    ui->tablaMenuC->setColumnWidth(0,50);
+    ui->tablaMenuC->setColumnWidth(1,150);
+    ui->tablaMenuC->setColumnWidth(2,150);
+    ui->tablaMenuC->setColumnWidth(3,170);
+    ui->tablaMenuC->setColumnWidth(4,80);
+    ui->tablaMenuC->setColumnWidth(5,130);
+  /*----Fin preparacion de la tabla----*/
 }
 
 Gui_Menu_Cliente::~Gui_Menu_Cliente()
@@ -21,37 +36,7 @@ Gui_Menu_Cliente::~Gui_Menu_Cliente()
     delete ui;
 }
 
-/*
-void Gui_Menu_Cliente::recibNuevosDatos(Cliente cliente)
-{
-        u++;
-    printf("\n",cliente.getNombre().c_str());
-    //Registramos
-    ui->tablaMenuC->insertRow(ui->tablaMenuC->rowCount());
 
-    //ui->tablaMenuC->setItem(ui->tablaMenuC->rowCount()-1,0,new QTableWidgetItem(d.constData()));
-    ui->tablaMenuC->setItem(ui->tablaMenuC->rowCount()-1,0,new QTableWidgetItem(cliente.getIdCliente()));
-    ui->tablaMenuC->setItem(ui->tablaMenuC->rowCount()-1,1,new QTableWidgetItem(cliente.getNombre().c_str()));
-    ui->tablaMenuC->setItem(ui->tablaMenuC->rowCount()-1,2,new QTableWidgetItem(cliente.getApellido().c_str()));
-    ui->tablaMenuC->setItem(ui->tablaMenuC->rowCount()-1,3,new QTableWidgetItem(cliente.getDireccion().c_str()));
-    ui->tablaMenuC->setItem(ui->tablaMenuC->rowCount()-1,4,new QTableWidgetItem(cliente.getCiudadania().c_str()));
-    ui->tablaMenuC->setItem(ui->tablaMenuC->rowCount()-1,5,new QTableWidgetItem(cliente.getEmail().c_str()));
-}*/
-
-void Gui_Menu_Cliente::on_pushButton_clicked()
-{
-    ui->tablaMenuC->setColumnCount(6);
-    QStringList l;
-    l<<"ID"<<"Nombre"<<"Apellido"<<"Direccion"<<"Ciudadania"<<"Email";
-
-    ui->tablaMenuC->setHorizontalHeaderLabels(l);
-    ui->tablaMenuC->setColumnWidth(0,30);
-    ui->tablaMenuC->setColumnWidth(1,150);
-    ui->tablaMenuC->setColumnWidth(2,150);
-    ui->tablaMenuC->setColumnWidth(3,170);
-    ui->tablaMenuC->setColumnWidth(4,80);
-    ui->tablaMenuC->setColumnWidth(5,130);
-}
 
 void Gui_Menu_Cliente::on_pushButton_2_clicked()
 {
@@ -89,12 +74,6 @@ void Gui_Menu_Cliente::on_pushButtonB3_clicked()
      ui->tablaMenuC->removeRow(fila);
 }
 
-void Gui_Menu_Cliente::on_pushButtonB4_clicked()
-{
-    ui->tablaMenuC->setRowCount(0);
-}
-
-
 
 void Gui_Menu_Cliente::on_tablaMenuC_itemClicked(QTableWidgetItem *item)
 {
@@ -125,7 +104,7 @@ void Gui_Menu_Cliente::on_pushButtoMODIFICAR_clicked()
     ui->tablaMenuC->setItem(fila,5,new QTableWidgetItem(ui->lineEditEMAIL->text()));
 }
 
-void Gui_Menu_Cliente::on_Aceptar_button_clicked()
+void Gui_Menu_Cliente::on_Agregar_button_clicked()
 {
     Gui_Cliente guiC;
     guiC.setModal(true);

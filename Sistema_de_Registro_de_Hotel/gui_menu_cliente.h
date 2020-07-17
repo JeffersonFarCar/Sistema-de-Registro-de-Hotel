@@ -19,26 +19,21 @@ public:
     ~Gui_Menu_Cliente();
 
 private slots:
-    void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
 
     void on_pushButtonB3_clicked();
 
-    void on_pushButtonB4_clicked();
-
-
     void on_tablaMenuC_itemClicked(QTableWidgetItem *item);
 
     void on_pushButtoMODIFICAR_clicked();
 
-    void on_Aceptar_button_clicked();
+    void on_Agregar_button_clicked();
 
 private:
     Ui::Gui_Menu_Cliente *ui;
     int u;
     int fila;
-   // Cliente *cliente;
 };
 
 #endif // GUI_MENU_CLIENTE_H

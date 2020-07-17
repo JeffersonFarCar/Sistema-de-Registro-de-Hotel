@@ -26,13 +26,11 @@ class Ui_Gui_Menu_Cliente
 public:
     QGroupBox *groupBox;
     QLineEdit *lineEdit_buscar;
-    QPushButton *Aceptar_button;
+    QPushButton *Agregar_button;
     QPushButton *Buscar_button;
     QTableWidget *tablaMenuC;
-    QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButtonB3;
-    QPushButton *pushButtonB4;
     QLineEdit *lineEditNOMBRE;
     QLineEdit *lineEditAPELLIDO;
     QLineEdit *lineEditDIRECCION;
@@ -44,7 +42,6 @@ public:
     QLabel *label_4;
     QLabel *label_5;
     QPushButton *pushButtoMODIFICAR;
-    QPushButton *pushButtonVIEW;
     QLabel *label_6;
     QLabel *label_7;
 
@@ -70,17 +67,17 @@ public:
         lineEdit_buscar->setTabletTracking(false);
         lineEdit_buscar->setFrame(false);
         lineEdit_buscar->setDragEnabled(false);
-        Aceptar_button = new QPushButton(groupBox);
-        Aceptar_button->setObjectName(QString::fromUtf8("Aceptar_button"));
-        Aceptar_button->setEnabled(true);
-        Aceptar_button->setGeometry(QRect(450, 140, 101, 31));
+        Agregar_button = new QPushButton(groupBox);
+        Agregar_button->setObjectName(QString::fromUtf8("Agregar_button"));
+        Agregar_button->setEnabled(true);
+        Agregar_button->setGeometry(QRect(450, 140, 101, 31));
         QFont font1;
         font1.setBold(true);
         font1.setWeight(75);
-        Aceptar_button->setFont(font1);
-        Aceptar_button->setCursor(QCursor(Qt::PointingHandCursor));
-        Aceptar_button->setAutoFillBackground(true);
-        Aceptar_button->setStyleSheet(QString::fromUtf8("#Aceptar_button{\n"
+        Agregar_button->setFont(font1);
+        Agregar_button->setCursor(QCursor(Qt::PointingHandCursor));
+        Agregar_button->setAutoFillBackground(false);
+        Agregar_button->setStyleSheet(QString::fromUtf8("#Aceptar_button{\n"
 "	border-color: rgb(85, 170, 127);\n"
 "alternate-background-color: rgb(85, 170, 127);\n"
 "	background-color: rgb(85, 170, 127);\n"
@@ -143,28 +140,17 @@ public:
         tablaMenuC->verticalHeader()->setDefaultSectionSize(29);
         tablaMenuC->verticalHeader()->setProperty("showSortIndicator", QVariant(false));
         tablaMenuC->verticalHeader()->setStretchLastSection(false);
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(20, 80, 91, 21));
+        pushButton_2 = new QPushButton(groupBox);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(440, 180, 121, 23));
         QFont font3;
         font3.setFamily(QString::fromUtf8("Times New Roman"));
         font3.setPointSize(10);
         font3.setBold(true);
         font3.setWeight(75);
-        pushButton->setFont(font3);
-        pushButton->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton->setAutoFillBackground(true);
-        pushButton->setStyleSheet(QString::fromUtf8("#pushButton{\n"
-"	border-color: rgb(85, 170, 127);\n"
-"alternate-background-color: rgb(85, 170, 127);\n"
-"	background-color: rgb(85, 170, 127);\n"
-"}"));
-        pushButton_2 = new QPushButton(groupBox);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(430, 180, 141, 23));
         pushButton_2->setFont(font3);
         pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_2->setAutoFillBackground(true);
+        pushButton_2->setAutoFillBackground(false);
         pushButton_2->setStyleSheet(QString::fromUtf8("#pushButton_2{\n"
 "	border-color: rgb(85, 170, 127);\n"
 "alternate-background-color: rgb(85, 170, 127);\n"
@@ -172,7 +158,7 @@ public:
 "}"));
         pushButtonB3 = new QPushButton(groupBox);
         pushButtonB3->setObjectName(QString::fromUtf8("pushButtonB3"));
-        pushButtonB3->setGeometry(QRect(470, 270, 51, 41));
+        pushButtonB3->setGeometry(QRect(470, 230, 51, 41));
         pushButtonB3->setCursor(QCursor(Qt::PointingHandCursor));
         pushButtonB3->setStyleSheet(QString::fromUtf8("#pushButtonB3{\n"
 "	background-color: transparent;\n"
@@ -182,17 +168,6 @@ public:
 "#pushButtonB3:pressed{\n"
 "	background-color: transparent;\n"
 "	border-image: url(:/imagenes/imagenes/delete_pressed.png);\n"
-"}"));
-        pushButtonB4 = new QPushButton(groupBox);
-        pushButtonB4->setObjectName(QString::fromUtf8("pushButtonB4"));
-        pushButtonB4->setGeometry(QRect(450, 340, 91, 21));
-        pushButtonB4->setFont(font3);
-        pushButtonB4->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButtonB4->setAutoFillBackground(true);
-        pushButtonB4->setStyleSheet(QString::fromUtf8("#pushButtonB4{\n"
-"	border-color: rgb(85, 170, 127);\n"
-"alternate-background-color: rgb(85, 170, 127);\n"
-"	background-color: rgb(85, 170, 127);\n"
 "}"));
         lineEditNOMBRE = new QLineEdit(groupBox);
         lineEditNOMBRE->setObjectName(QString::fromUtf8("lineEditNOMBRE"));
@@ -237,7 +212,7 @@ public:
         label_5->setFont(font5);
         pushButtoMODIFICAR = new QPushButton(groupBox);
         pushButtoMODIFICAR->setObjectName(QString::fromUtf8("pushButtoMODIFICAR"));
-        pushButtoMODIFICAR->setGeometry(QRect(420, 430, 51, 31));
+        pushButtoMODIFICAR->setGeometry(QRect(470, 300, 51, 31));
         QFont font6;
         font6.setFamily(QString::fromUtf8("Times New Roman"));
         font6.setPointSize(10);
@@ -253,18 +228,6 @@ public:
 "#pushButtoMODIFICAR:pressed{\n"
 "	background-color: transparent;\n"
 "	border-image: url(:/imagenes/imagenes/edit_pressed.png);\n"
-"}"));
-        pushButtonVIEW = new QPushButton(groupBox);
-        pushButtonVIEW->setObjectName(QString::fromUtf8("pushButtonVIEW"));
-        pushButtonVIEW->setGeometry(QRect(460, 220, 51, 31));
-        pushButtonVIEW->setStyleSheet(QString::fromUtf8("#pushButtonVIEW{\n"
-"	background-color: transparent;\n"
-"	border-image: url(:/imagenes/imagenes/view_unpressed.png);\n"
-"}\n"
-"\n"
-"#pushButtonVIEW:pressed{\n"
-"	background-color: transparent;\n"
-"	border-image: url(:/imagenes/imagenes/view_pressed.png);\n"
 "}"));
         label_6 = new QLabel(groupBox);
         label_6->setObjectName(QString::fromUtf8("label_6"));
@@ -287,20 +250,17 @@ public:
     {
         Gui_Menu_Cliente->setWindowTitle(QCoreApplication::translate("Gui_Menu_Cliente", "LISTA DE CLIENTES", nullptr));
         groupBox->setTitle(QCoreApplication::translate("Gui_Menu_Cliente", "Lista_de_clientes", nullptr));
-        Aceptar_button->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Registrar \n"
+        Agregar_button->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Registrar \n"
 "Nuevo", nullptr));
         Buscar_button->setText(QString());
-        pushButton->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Preparar Tabla", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Agregar Registro Nuevo", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Agregar Registro", nullptr));
         pushButtonB3->setText(QString());
-        pushButtonB4->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Borrar Todo", nullptr));
         label->setText(QCoreApplication::translate("Gui_Menu_Cliente", "NOMBRE", nullptr));
         label_2->setText(QCoreApplication::translate("Gui_Menu_Cliente", "APELLIDO", nullptr));
         label_3->setText(QCoreApplication::translate("Gui_Menu_Cliente", "DIRECCION", nullptr));
         label_4->setText(QCoreApplication::translate("Gui_Menu_Cliente", "CIUDADANIA", nullptr));
         label_5->setText(QCoreApplication::translate("Gui_Menu_Cliente", "EMAIL", nullptr));
         pushButtoMODIFICAR->setText(QString());
-        pushButtonVIEW->setText(QString());
         label_6->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Clientes", nullptr));
         label_7->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Accciones", nullptr));
     } // retranslateUi

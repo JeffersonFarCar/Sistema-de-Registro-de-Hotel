@@ -10,10 +10,6 @@ Cliente::Cliente(int id_persona,string nombre,string apellido,string direccion,s
   ciudadania = _ciudadania;
 }
 
-int Cliente::getIdCliente(){
-    return getId();
-}
-
 void Cliente::setCiudadania(string _ciud){
     ciudadania = _ciud;
 }
