@@ -66,8 +66,8 @@ void Gui_Index_Empleado::mostrarDatos()
         ui->tableWidget->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
         ui->tableWidget->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(4).toByteArray().constData()));
         ui->tableWidget->setItem(fila, 5, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
-        ui->tableWidget->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
-        ui->tableWidget->setItem(fila, 7, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
+        ui->tableWidget->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(6).toByteArray().constData()));
+        ui->tableWidget->setItem(fila, 7, new QTableWidgetItem(query_consulta.value(7).toByteArray().constData()));
 
         fila++;
     }

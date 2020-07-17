@@ -16,7 +16,7 @@ Conexion::Conexion()
 }
 void Conexion::Conectar(){
     db=QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/Del/Documents/PSPROYECTO/Sistema-de-Registro-de-Hotel/build-Sistema_de_Registro_de_Hotel-nuevo-Debug/databasesol.db");
+    db.setDatabaseName("D:/ProyectoPS/BD-Cliente-Empleado/Sistema-de-Registro-de-Hotel/build-Sistema_de_Registro_de_Hotel-nuevo-Debug/databasesol.db");
     if(db.open())
         qDebug()<<"se conecto";
     else
