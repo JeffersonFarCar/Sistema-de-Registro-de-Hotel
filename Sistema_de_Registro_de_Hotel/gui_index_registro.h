@@ -2,6 +2,7 @@
 #define GUI_INDEX_REGISTRO_H
 
 #include <QDialog>
+#include <QTableWidget>
 
 namespace Ui {
 class Gui_Index_Registro;
@@ -26,8 +27,15 @@ private slots:
 
     void on_Regresar__clicked();
 
+    void on_cargarTablaRegistro_clicked();
+
+    void on_cargarDatoRegistro_clicked();
+
+    void on_tableListRegistros_itemClicked(QTableWidgetItem *item);
+
 private:
     Ui::Gui_Index_Registro *ui;
+    int f;
 };
 
 #endif // GUI_INDEX_REGISTRO_H

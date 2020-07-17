@@ -1,4 +1,5 @@
 debug/cliente.o
+debug/conexion.o
 debug/empleado.o
 debug/estadohab.o
 debug/factura.o

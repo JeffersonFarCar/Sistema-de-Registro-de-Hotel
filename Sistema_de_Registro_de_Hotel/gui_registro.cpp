@@ -10,6 +10,7 @@ Gui_Registro::Gui_Registro(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gui_Registro)
 {
+    this->setFixedSize(QSize(397, 432)); //646, 395
     ui->setupUi(this);
 }
 

@@ -1,4 +1,5 @@
 release/cliente.o
+release/conexion.o
 release/empleado.o
 release/estadohab.o
 release/factura.o
