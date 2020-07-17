@@ -1,6 +1,7 @@
 #include "conexion.h"
 #include "cliente.h"
 #include "empleado.h"
+#include "habitacion.h"
 #include <iostream>
 #include <QtSql>
 #include <QtSql/QSqlQuery>
@@ -15,7 +16,7 @@ Conexion::Conexion()
 }
 void Conexion::Conectar(){
     db=QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("D:/ProyectoPS/BD/Sistema-de-Registro-de-Hotel/build-Sistema_de_Registro_de_Hotel-nuevo-Debug/databasesol.db");
+    db.setDatabaseName("C:/Users/Del/Documents/PSPROYECTO/Sistema-de-Registro-de-Hotel/build-Sistema_de_Registro_de_Hotel-nuevo-Debug/databasesol.db");
     if(db.open())
         qDebug()<<"se conecto";
     else
@@ -56,4 +57,17 @@ void Conexion::addEmpleado(Empleado e){
     query.exec(consulta);
     query.isActive();
 
+}
+
+void Conexion::addHabitacion(Habitacion a){
+    QSqlQuery query;
+     // int id =a.getIdHabitacion();
+     // int nh =a.getNumHabitacion();
+      //int np =a.getNumPiso();
+
+
+    QString consulta="insert into habitacion (id, Numero_Habitacion, Numero_Piso) values ("+QString::number(3)+",'"+QString::number(2)+"','"+QString::number(2)+"');";
+    cout<<consulta.toUtf8().constData();
+    query.exec(consulta);
+    query.isActive();
 }

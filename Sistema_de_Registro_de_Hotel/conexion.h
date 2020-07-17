@@ -2,6 +2,7 @@
 #define CONEXION_H
 #include "cliente.h"
 #include "empleado.h"
+#include "habitacion.h"
 #include <QtSql/QSqlQuery>
 #include <QString>
 #include <QtSql/QSqlDatabase>
@@ -14,6 +15,7 @@ public:
     void Cerrar();
     void addCliente(Cliente a);
     void addEmpleado(Empleado e);
+    void addHabitacion(Habitacion a);
 };
 
 #endif // CONEXION_H

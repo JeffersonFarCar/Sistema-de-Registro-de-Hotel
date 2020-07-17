@@ -71,7 +71,7 @@ public:
         label_5->setGeometry(QRect(30, 160, 71, 21));
         label_6 = new QLabel(groupBox);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(30, 190, 71, 21));
+        label_6->setGeometry(QRect(30, 190, 131, 21));
         label_7 = new QLabel(groupBox);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(30, 220, 71, 21));
@@ -125,10 +125,10 @@ public:
         label_3->setText(QCoreApplication::translate("Gui_Empleado", "Apellido", nullptr));
         label_4->setText(QCoreApplication::translate("Gui_Empleado", "Direccion", nullptr));
         label_5->setText(QCoreApplication::translate("Gui_Empleado", "Email", nullptr));
-        label_6->setText(QCoreApplication::translate("Gui_Empleado", "Sueldo", nullptr));
+        label_6->setText(QCoreApplication::translate("Gui_Empleado", "Sueldo                            S/.", nullptr));
         label_7->setText(QCoreApplication::translate("Gui_Empleado", "Ocupacion", nullptr));
         label_8->setText(QCoreApplication::translate("Gui_Empleado", "Fecha Contrato", nullptr));
-        lineEdit_sueldoE->setText(QCoreApplication::translate("Gui_Empleado", "S/.", nullptr));
+        lineEdit_sueldoE->setText(QString());
         Aceptar_button->setText(QCoreApplication::translate("Gui_Empleado", "Aceptar", nullptr));
         Cancel_button->setText(QCoreApplication::translate("Gui_Empleado", "Cancelar", nullptr));
     } // retranslateUi

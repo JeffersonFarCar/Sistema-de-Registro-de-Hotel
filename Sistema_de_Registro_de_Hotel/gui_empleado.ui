@@ -105,12 +105,12 @@
      <rect>
       <x>30</x>
       <y>190</y>
-      <width>71</width>
+      <width>131</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Sueldo</string>
+     <string>Sueldo                            S/.</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
@@ -189,7 +189,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>S/.</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_ocupacionE">
