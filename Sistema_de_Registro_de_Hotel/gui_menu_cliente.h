@@ -15,12 +15,11 @@ class Gui_Menu_Cliente : public QDialog
 
 public:
     explicit Gui_Menu_Cliente(QWidget *parent = nullptr);
-   // void recibNuevosDatos(Cliente cliente);
+    void mostrarDatos();
     ~Gui_Menu_Cliente();
 
 private slots:
 
-    void on_pushButton_2_clicked();
 
     void on_pushButtonB3_clicked();
 

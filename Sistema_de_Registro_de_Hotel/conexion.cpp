@@ -23,6 +23,8 @@ void Conexion::Conectar(){
 void  Conexion::Cerrar(){
     //db.close();
 }
+
+//Agrega nuevo registro de cliente
 void Conexion::addCliente(Cliente a){
     QSqlQuery query;
 
@@ -37,3 +39,4 @@ void Conexion::addCliente(Cliente a){
     query.isActive();
 
 }
+

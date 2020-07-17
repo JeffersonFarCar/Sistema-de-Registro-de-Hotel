@@ -260,40 +260,6 @@ Nuevo</string>
      <bool>false</bool>
     </attribute>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>180</y>
-      <width>121</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#pushButton_2{
-	border-color: rgb(85, 170, 127);
-alternate-background-color: rgb(85, 170, 127);
-	background-color: rgb(85, 170, 127);
-}</string>
-    </property>
-    <property name="text">
-     <string>Agregar Registro</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButtonB3">
     <property name="geometry">
      <rect>

@@ -29,7 +29,6 @@ public:
     QPushButton *Agregar_button;
     QPushButton *Buscar_button;
     QTableWidget *tablaMenuC;
-    QPushButton *pushButton_2;
     QPushButton *pushButtonB3;
     QLineEdit *lineEditNOMBRE;
     QLineEdit *lineEditAPELLIDO;
@@ -140,22 +139,6 @@ public:
         tablaMenuC->verticalHeader()->setDefaultSectionSize(29);
         tablaMenuC->verticalHeader()->setProperty("showSortIndicator", QVariant(false));
         tablaMenuC->verticalHeader()->setStretchLastSection(false);
-        pushButton_2 = new QPushButton(groupBox);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(440, 180, 121, 23));
-        QFont font3;
-        font3.setFamily(QString::fromUtf8("Times New Roman"));
-        font3.setPointSize(10);
-        font3.setBold(true);
-        font3.setWeight(75);
-        pushButton_2->setFont(font3);
-        pushButton_2->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_2->setAutoFillBackground(false);
-        pushButton_2->setStyleSheet(QString::fromUtf8("#pushButton_2{\n"
-"	border-color: rgb(85, 170, 127);\n"
-"alternate-background-color: rgb(85, 170, 127);\n"
-"	background-color: rgb(85, 170, 127);\n"
-"}"));
         pushButtonB3 = new QPushButton(groupBox);
         pushButtonB3->setObjectName(QString::fromUtf8("pushButtonB3"));
         pushButtonB3->setGeometry(QRect(470, 230, 51, 41));
@@ -187,38 +170,38 @@ public:
         label = new QLabel(groupBox);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(20, 380, 61, 16));
-        QFont font4;
-        font4.setFamily(QString::fromUtf8("Times New Roman"));
-        font4.setBold(false);
-        font4.setWeight(50);
-        label->setFont(font4);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Times New Roman"));
+        font3.setBold(false);
+        font3.setWeight(50);
+        label->setFont(font3);
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(180, 380, 61, 16));
-        QFont font5;
-        font5.setFamily(QString::fromUtf8("Times New Roman"));
-        label_2->setFont(font5);
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("Times New Roman"));
+        label_2->setFont(font4);
         label_3 = new QLabel(groupBox);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(360, 380, 71, 16));
-        label_3->setFont(font5);
+        label_3->setFont(font4);
         label_4 = new QLabel(groupBox);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(20, 420, 71, 16));
-        label_4->setFont(font5);
+        label_4->setFont(font4);
         label_5 = new QLabel(groupBox);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(220, 420, 71, 16));
-        label_5->setFont(font5);
+        label_5->setFont(font4);
         pushButtoMODIFICAR = new QPushButton(groupBox);
         pushButtoMODIFICAR->setObjectName(QString::fromUtf8("pushButtoMODIFICAR"));
         pushButtoMODIFICAR->setGeometry(QRect(470, 300, 51, 31));
-        QFont font6;
-        font6.setFamily(QString::fromUtf8("Times New Roman"));
-        font6.setPointSize(10);
-        font6.setBold(false);
-        font6.setWeight(50);
-        pushButtoMODIFICAR->setFont(font6);
+        QFont font5;
+        font5.setFamily(QString::fromUtf8("Times New Roman"));
+        font5.setPointSize(10);
+        font5.setBold(false);
+        font5.setWeight(50);
+        pushButtoMODIFICAR->setFont(font5);
         pushButtoMODIFICAR->setCursor(QCursor(Qt::PointingHandCursor));
         pushButtoMODIFICAR->setStyleSheet(QString::fromUtf8("#pushButtoMODIFICAR{\n"
 "	background-color: transparent;\n"
@@ -253,7 +236,6 @@ public:
         Agregar_button->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Registrar \n"
 "Nuevo", nullptr));
         Buscar_button->setText(QString());
-        pushButton_2->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Agregar Registro", nullptr));
         pushButtonB3->setText(QString());
         label->setText(QCoreApplication::translate("Gui_Menu_Cliente", "NOMBRE", nullptr));
         label_2->setText(QCoreApplication::translate("Gui_Menu_Cliente", "APELLIDO", nullptr));
