@@ -19,8 +19,6 @@ public:
 private slots:
     void on_New_Registro_Button_clicked();
 
-    void on_view_registros_button_clicked();
-
     void on_edit_registros_button_clicked();
 
     void on_delete_registros_button_clicked();
