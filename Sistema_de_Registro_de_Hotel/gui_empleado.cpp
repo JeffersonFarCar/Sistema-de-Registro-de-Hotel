@@ -1,6 +1,7 @@
 #include "gui_empleado.h"
 #include "ui_gui_empleado.h"
-
+#include "conexion.h"
+#include "empleado.h"
 #include <QMessageBox>
 #include <iostream>
 #include <string>
@@ -11,6 +12,7 @@ Gui_Empleado::Gui_Empleado(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gui_Empleado)
 {
+    this->setFixedSize(QSize(397, 432));
     ui->setupUi(this);
 }
 
@@ -20,6 +22,10 @@ Gui_Empleado::~Gui_Empleado()
 }
 
 void Gui_Empleado::on_Aceptar_button_clicked(){
+
+        Conexion conect;
+        conect.Conectar();
+
         QString idE_str         = ui->lineEdit_idEmpleado->text();
         QString nombreE_str     = ui->lineEdit_nombreE->text();
         QString apellidoE_str   = ui->lineEdit_apellidoE->text();
@@ -36,6 +42,17 @@ void Gui_Empleado::on_Aceptar_button_clicked(){
             string emailE       = emailE_str.toStdString();
             string ocupacionE   = ocupacionE_str.toStdString();
             double sueldoE      = stoi(sueldo_str.toLocal8Bit().data());
+
+            Empleado empleado;
+
+            empleado.setNombre(nombreE);
+            empleado.setApellido(apellidoE);
+            empleado.setDireccion(direccionE);
+            empleado.setEmail(emailE);
+            empleado.setOcupacion(ocupacionE);
+            empleado.setSueldo(sueldoE);
+            conect.addEmpleado(empleado);
+
 
             if(idE!=NULL && nombreE!="" && apellidoE!="" && direccionE!="" && emailE!="" && ocupacionE!="" && sueldoE!=NULL){
                 QMessageBox::information(this, "Mensaje", "Se registró un nuevo Empleado.");

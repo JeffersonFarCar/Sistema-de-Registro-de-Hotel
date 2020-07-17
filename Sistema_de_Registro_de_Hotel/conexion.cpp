@@ -1,5 +1,6 @@
 #include "conexion.h"
 #include "cliente.h"
+#include "empleado.h"
 #include <iostream>
 #include <QtSql>
 #include <QtSql/QSqlQuery>
@@ -13,7 +14,7 @@ Conexion::Conexion()
 }
 void Conexion::Conectar(){
     db=QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/ARACELI/Documents/GitHub/Sistema-de-Registro-de-Hotel/build-Sistema_de_Registro_de_Hotel-nuevo-Debug/databasesol.db");
+    db.setDatabaseName("D:/ProyectoPS/BD/Sistema-de-Registro-de-Hotel/build-Sistema_de_Registro_de_Hotel-nuevo-Debug/databasesol.db");
     if(db.open())
         qDebug()<<"se conecto";
     else
@@ -40,3 +41,18 @@ void Conexion::addCliente(Cliente a){
 
 }
 
+
+void Conexion::addEmpleado(Empleado e){
+    QSqlQuery query;
+    QString nombre=QString::fromLocal8Bit(e.getNombre().c_str());
+    QString apellido=QString::fromLocal8Bit(e.getApellido().c_str());
+    QString direccion=QString::fromLocal8Bit(e.getDireccion().c_str());
+    QString email=QString::fromLocal8Bit(e.getEmail().c_str());
+    QString ocupacion=QString::fromLocal8Bit(e.getOcupacion().c_str());
+    QString fechaContratacion=QString::fromLocal8Bit(e.getFechaContratacion().c_str());
+    QString consulta="insert into empleados (id, nombre, apellido, direccion, email, ocupacion, sueldo, fechaContratacion) values ("+QString::number(e.getId())+",'"+nombre+"','"+apellido+"','"+direccion+"','"+email+"','"+ocupacion+"',"+QString::number(e.getSueldo())+",'"+fechaContratacion+"');";
+    cout<<consulta.toUtf8().constData();
+    query.exec(consulta);
+    query.isActive();
+
+}

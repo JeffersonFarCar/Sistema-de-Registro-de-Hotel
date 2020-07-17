@@ -1,6 +1,7 @@
 #ifndef CONEXION_H
 #define CONEXION_H
 #include "cliente.h"
+#include "empleado.h"
 #include <QtSql/QSqlQuery>
 #include <QString>
 #include <QtSql/QSqlDatabase>
@@ -12,6 +13,7 @@ public:
     void Conectar();
     void Cerrar();
     void addCliente(Cliente a);
+    void addEmpleado(Empleado e);
 };
 
 #endif // CONEXION_H
