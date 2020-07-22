@@ -15,18 +15,15 @@ class Gui_Index_Empleado : public QDialog
 
 public:
     explicit Gui_Index_Empleado(QWidget *parent = nullptr);
+    void mostrarDatos();
     ~Gui_Index_Empleado();
 
 private slots:
-    void on_CargarDatos_button_clicked();
-
     void on_Cancelar_button_clicked();
-
-    void on_PrepararTabla_button_clicked();
 
     void on_Nuevo_Button_clicked();
 
-  void on_delete_empleado_button_clicked();
+    void on_delete_empleado_button_clicked();
 
     void on_tableWidget_itemClicked(QTableWidgetItem *item);
 
