@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/imagenes">
         <file>imagenes/habitacion_pressed.png</file>
-        <file>imagenes/habitacion_unpressed.png</file>
         <file>imagenes/cliente_pressed.png</file>
         <file>imagenes/cliente_unpressed.png</file>
         <file>imagenes/empleado_pressed.png</file>
@@ -16,5 +15,6 @@
         <file>imagenes/view_unpressed.png</file>
         <file>imagenes/buscar_pressed.png</file>
         <file>imagenes/background_hotel.png</file>
+        <file>imagenes/habitacion.png</file>
     </qresource>
 </RCC>

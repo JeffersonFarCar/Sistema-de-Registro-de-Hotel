@@ -3,8 +3,9 @@
 using namespace std;
 Persona::Persona() {
 }
-Persona::Persona(int _id_persona,string _name, string _ap, string _dir, string _email) {
+Persona::Persona(int _id_persona, int _dni, string _name, string _ap, string _dir, string _email) {
  id_persona=_id_persona;
+ dni = _dni;
  nombre = _name;
  apellido = _ap;
  direccion = _dir;
@@ -13,6 +14,9 @@ Persona::Persona(int _id_persona,string _name, string _ap, string _dir, string _
 Persona::~Persona(){}
 int Persona::getId(){
     return id_persona;
+}
+int Persona::getDni(){
+    return dni;
 }
 string Persona::getNombre(){
     return nombre;
@@ -28,6 +32,9 @@ string Persona::getEmail(){
 }
 void Persona::setId(int _id){
     id_persona=_id;
+}
+void Persona::setDNI(int _dni){
+    dni = _dni;
 }
 void Persona::setNombre(string _nombre){
     nombre=_nombre;

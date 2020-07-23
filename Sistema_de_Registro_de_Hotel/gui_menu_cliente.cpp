@@ -44,7 +44,7 @@ void Gui_Menu_Cliente::mostrarDatos()
     conect.Conectar();
     QSqlQuery query_consulta;
 
-    QString consulta="select * from clientes";
+    QString consulta="select * from personas";
 
     query_consulta.exec(consulta);
 

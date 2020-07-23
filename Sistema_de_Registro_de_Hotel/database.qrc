@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/base_de_datos">
+        <file>base_de_datos/databasesol.db</file>
+    </qresource>
+    <qresource prefix="/new/prefix1"/>
+</RCC>

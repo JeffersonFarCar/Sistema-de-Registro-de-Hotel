@@ -65,7 +65,7 @@ QLabel{
     <property name="styleSheet">
      <string notr="true">#Habitacions_button{
 	background-color: transparent;
-	border-image: url(:/imagenes/imagenes/habitacion_unpressed.png);
+	border-image: url(:/imagenes/imagenes/habitacion.png);
 }
 
 #Habitacions_button:pressed{

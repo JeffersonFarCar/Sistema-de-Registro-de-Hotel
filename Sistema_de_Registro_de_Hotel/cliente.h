@@ -11,7 +11,7 @@ private:
 
 public:
     Cliente();
-    Cliente(int id_persona,string nombre,string apellido,string direccion,string email,string _ciudadania);
+    Cliente(int id_persona, int dni, string nombre,string apellido,string direccion,string email,string _ciudadania);
    //Getters and setters
 
    void setCiudadania(string _ciud);

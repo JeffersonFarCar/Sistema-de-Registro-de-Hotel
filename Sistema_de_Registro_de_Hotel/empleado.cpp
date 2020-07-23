@@ -6,7 +6,7 @@ Empleado::Empleado(){
 
 }
 
-Empleado::Empleado(int id_persona,string nombre,string apellido,string direccion,string email,double _sueldo, string _ocupacion,string _fechaContratacion) : Persona(id_persona,nombre,apellido,direccion,email){
+Empleado::Empleado(int id_persona, int dni, string nombre,string apellido,string direccion,string email,double _sueldo, string _ocupacion,string _fechaContratacion) : Persona(id_persona, dni, nombre,apellido,direccion,email){
         sueldo=_sueldo;
         ocupacion=_ocupacion;
         fechaContratacion=_fechaContratacion;

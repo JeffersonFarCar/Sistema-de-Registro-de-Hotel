@@ -6,7 +6,7 @@ Cliente::Cliente(){
 
 }
 
-Cliente::Cliente(int id_persona,string nombre,string apellido,string direccion,string email,string _ciudadania) : Persona(id_persona,nombre,apellido,direccion,email){
+Cliente::Cliente(int id_persona, int dni, string nombre,string apellido,string direccion,string email,string _ciudadania) : Persona(id_persona, dni,nombre,apellido,direccion,email){
   ciudadania = _ciudadania;
 }
 

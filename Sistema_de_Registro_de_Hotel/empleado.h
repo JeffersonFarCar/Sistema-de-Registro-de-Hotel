@@ -13,7 +13,7 @@ private:
 
 public:
     Empleado();
-    Empleado(int id_persona,string nombre,string apellido,string direccion,string email,double sueldo, string ocupacion, string fechaContratacion);
+    Empleado(int id_persona, int dni, string nombre,string apellido,string direccion,string email,double sueldo, string ocupacion, string fechaContratacion);
 
    void setSueldo(double _sueldo);
    void setOcupacion(string _ocupacion);
