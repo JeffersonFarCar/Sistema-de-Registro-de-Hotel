@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     cliente.cpp \
+    cliente_crud.cpp \
     conexion.cpp \
     empleado.cpp \
     estadohab.cpp \
@@ -35,11 +36,14 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     persona.cpp \
+    persona_crud.cpp \
     registro.cpp \
-    tipohabitacion.cpp
+    tipohabitacion.cpp \
+    utils.cpp
 
 HEADERS += \
     cliente.h \
+    cliente_crud.h \
     conexion.h \
     empleado.h \
     estadohab.h \
@@ -57,8 +61,10 @@ HEADERS += \
     habitacion.h \
     mainwindow.h \
     persona.h \
+    persona_crud.h \
     registro.h \
-    tipohabitacion.h
+    tipohabitacion.h \
+    utils.h
 
 FORMS += \
     gui_cliente.ui \

@@ -1,10 +1,13 @@
 #include "gui_cliente.h"
 #include "ui_gui_cliente.h"
-#include "conexion.h"
-#include "cliente.h"
 #include <QMessageBox>
 #include <iostream>
 #include <string>
+
+#include "cliente_crud.h"
+#include "utils.h"
+#include "cliente.h"
+
 using namespace std;
 
 Gui_Cliente::Gui_Cliente(QWidget *parent) :
@@ -12,6 +15,12 @@ Gui_Cliente::Gui_Cliente(QWidget *parent) :
     ui(new Ui::Gui_Cliente)
 {
     ui->setupUi(this);
+
+    Utils utils;
+
+    int id = utils.getLastId("personas", "idpersona") +1;
+
+    ui->lineEdit->setText(QString::number(id));
 }
 
 Gui_Cliente::~Gui_Cliente()
@@ -26,8 +35,8 @@ void Gui_Cliente::on_groupBox_clicked()
 
 void Gui_Cliente::on_Aceptar_button_clicked()
 {
-    Conexion conect;
-    conect.Conectar();
+    Cliente_CRUD ccrud;
+
     QString id_str = ui->lineEdit->text();
     QString nombre_str = ui->lineEdit_2->text();
     QString apellido_str = ui->lineEdit_3->text();
@@ -47,7 +56,9 @@ void Gui_Cliente::on_Aceptar_button_clicked()
             cliente.setId(id_C);
             cliente.setNombre(nombre); cliente.setApellido(apellido); cliente.setDireccion(direccion);
             cliente.setEmail(email); cliente.setCiudadania(ciudadania);
-            conect.addCliente(cliente);
+
+            ccrud.createCliente(cliente);
+
             QMessageBox::information(this, "Mensaje", "Se registró un nuevo cliente.");
             close();
         }

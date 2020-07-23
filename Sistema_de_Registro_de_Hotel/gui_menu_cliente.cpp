@@ -60,6 +60,7 @@ void Gui_Menu_Cliente::mostrarDatos()
         ui->tablaMenuC->setItem(fila, 5, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
         fila++;
     }
+    conect.Cerrar();
 }
 
 Gui_Menu_Cliente::~Gui_Menu_Cliente()
