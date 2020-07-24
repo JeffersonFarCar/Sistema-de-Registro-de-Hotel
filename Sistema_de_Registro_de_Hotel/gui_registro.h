@@ -24,6 +24,8 @@ private slots:
 
     void on_LineEdite_NomCliente_textChanged(const QString &arg1);
 
+    void on_Registrar_button_2_clicked();
+
 private:
     Ui::Gui_Registro *ui;
 };

@@ -7,6 +7,16 @@
 #include <QTableWidget>
 #include <QTableWidgetItem>
 
+#include "conexion.h"
+
+
+#include <QtSql>
+#include <QtSql/QSqlQuery>
+#include <QString>
+#include <QtSql/QSqlDatabase>
+#include <QStandardItemModel>
+#include <QMessageBox>
+
 
 gui_indexHabitacion::gui_indexHabitacion(QWidget *parent) :
     QDialog(parent),
@@ -15,7 +25,46 @@ gui_indexHabitacion::gui_indexHabitacion(QWidget *parent) :
     ui->setupUi(this);
     u = 0;
    fila =-1;
+   //mostrarDatos();
 }
+/*
+void gui_indexHabitacion::mostrarDatos(){
+    prepararTabla();
+
+        Conexion conect;
+        conect.Conectar();
+
+        QSqlQuery query_consulta;
+        QString consulta="SELECT idpersona, dni, nombre, apellido, direccion, email, sueldo, ocupacion, fecha "
+                         "FROM personas INNER JOIN empleados WHERE idpersona = id_persona";
+        query_consulta.exec(consulta);
+
+        int fila=0;
+        ui->tableWidget->setRowCount(0);
+
+        while(query_consulta.next()){
+            ui->tableWidget->insertRow(fila);
+            ui->tableWidget->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
+            ui->tableWidget->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
+            ui->tableWidget->setItem(fila, 2, new QTableWidgetItem(query_consulta.value(2).toByteArray().constData()));
+            ui->tableWidget->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
+            ui->tableWidget->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(4).toByteArray().constData()));
+            ui->tableWidget->setItem(fila, 5, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
+            ui->tableWidget->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(6).toByteArray().constData()));
+            ui->tableWidget->setItem(fila, 7, new QTableWidgetItem(query_consulta.value(7).toByteArray().constData()));
+            ui->tableWidget->setItem(fila, 8, new QTableWidgetItem(query_consulta.value(8).toByteArray().constData()));
+            fila++;
+        }
+        conect.Cerrar();
+
+
+
+
+}
+
+*/
+
+
 
 gui_indexHabitacion::~gui_indexHabitacion()
 {

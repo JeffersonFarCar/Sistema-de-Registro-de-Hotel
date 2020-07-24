@@ -4,7 +4,7 @@
 #include "registro_habitacion.h"
 #include "conexion.h"
 #include "utils.h"
-
+#include "gui_factura.h"
 #include <QMessageBox>
 #include <QComboBox>
 #include <QStringList>
@@ -91,4 +91,11 @@ void Gui_Registro::on_LineEdite_NomCliente_textChanged(const QString &arg1)
     }
     conn.Cerrar();
     ui->Cliente_cmbox->addItems(fonts);
+}
+
+void Gui_Registro::on_Registrar_button_2_clicked()
+{
+    gui_factura guiR;
+        guiR.setModal(true);
+        guiR.exec();
 }
