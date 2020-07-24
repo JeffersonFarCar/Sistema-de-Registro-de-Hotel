@@ -36,6 +36,7 @@ private:
     Ui::gui_indexHabitacion *ui;
     int u;
     int fila;
+
 };
 
 #endif // GUI_INDEXHABITACION_H

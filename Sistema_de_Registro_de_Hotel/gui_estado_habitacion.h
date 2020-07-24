@@ -1,5 +1,4 @@
-#ifndef GUI_ESTADO_HABITACION_H
-#define GUI_ESTADO_HABITACION_H
+
 
 #include <QDialog>
 #include <QTableWidget>
@@ -23,4 +22,4 @@ private:
     Ui::gui_estado_habitacion *ui;
 };
 
-#endif // GUI_ESTADO_HABITACION_H
+
