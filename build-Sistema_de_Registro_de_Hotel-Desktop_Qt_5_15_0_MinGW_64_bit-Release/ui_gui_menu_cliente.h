@@ -31,7 +31,6 @@ public:
     QPushButton *Buscar_button;
     QLineEdit *lineEditNOMBRE;
     QLabel *label_4;
-    QTableWidget *tablaMenuC;
     QLabel *label_5;
     QLineEdit *lineEditDIRECCION;
     QPushButton *Agregar_button;
@@ -41,6 +40,9 @@ public:
     QLabel *label_3;
     QLabel *label_7;
     QLineEdit *lineEditAPELLIDO;
+    QLabel *label_8;
+    QLineEdit *lineEditDNI;
+    QTableWidget *newTableC;
 
     void setupUi(QDialog *Gui_Menu_Cliente)
     {
@@ -133,39 +135,6 @@ public:
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(420, 280, 71, 16));
         label_4->setFont(font2);
-        tablaMenuC = new QTableWidget(Gui_Menu_Cliente);
-        tablaMenuC->setObjectName(QString::fromUtf8("tablaMenuC"));
-        tablaMenuC->setEnabled(true);
-        tablaMenuC->setGeometry(QRect(10, 100, 391, 201));
-        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(tablaMenuC->sizePolicy().hasHeightForWidth());
-        tablaMenuC->setSizePolicy(sizePolicy1);
-        tablaMenuC->setMaximumSize(QSize(16777215, 16777215));
-        tablaMenuC->setBaseSize(QSize(0, 0));
-        tablaMenuC->setFrameShape(QFrame::StyledPanel);
-        tablaMenuC->setFrameShadow(QFrame::Sunken);
-        tablaMenuC->setDragEnabled(false);
-        tablaMenuC->setShowGrid(true);
-        tablaMenuC->setSortingEnabled(false);
-        tablaMenuC->setWordWrap(true);
-        tablaMenuC->setCornerButtonEnabled(true);
-        tablaMenuC->setRowCount(0);
-        tablaMenuC->setColumnCount(0);
-        tablaMenuC->horizontalHeader()->setVisible(true);
-        tablaMenuC->horizontalHeader()->setCascadingSectionResizes(false);
-        tablaMenuC->horizontalHeader()->setMinimumSectionSize(43);
-        tablaMenuC->horizontalHeader()->setDefaultSectionSize(115);
-        tablaMenuC->horizontalHeader()->setHighlightSections(false);
-        tablaMenuC->horizontalHeader()->setProperty("showSortIndicator", QVariant(true));
-        tablaMenuC->horizontalHeader()->setStretchLastSection(false);
-        tablaMenuC->verticalHeader()->setVisible(true);
-        tablaMenuC->verticalHeader()->setCascadingSectionResizes(false);
-        tablaMenuC->verticalHeader()->setMinimumSectionSize(23);
-        tablaMenuC->verticalHeader()->setDefaultSectionSize(29);
-        tablaMenuC->verticalHeader()->setProperty("showSortIndicator", QVariant(false));
-        tablaMenuC->verticalHeader()->setStretchLastSection(false);
         label_5 = new QLabel(Gui_Menu_Cliente);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(420, 250, 71, 16));
@@ -215,6 +184,16 @@ public:
         lineEditAPELLIDO = new QLineEdit(Gui_Menu_Cliente);
         lineEditAPELLIDO->setObjectName(QString::fromUtf8("lineEditAPELLIDO"));
         lineEditAPELLIDO->setGeometry(QRect(500, 190, 171, 20));
+        label_8 = new QLabel(Gui_Menu_Cliente);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setGeometry(QRect(420, 130, 61, 16));
+        label_8->setFont(font5);
+        lineEditDNI = new QLineEdit(Gui_Menu_Cliente);
+        lineEditDNI->setObjectName(QString::fromUtf8("lineEditDNI"));
+        lineEditDNI->setGeometry(QRect(500, 130, 171, 20));
+        newTableC = new QTableWidget(Gui_Menu_Cliente);
+        newTableC->setObjectName(QString::fromUtf8("newTableC"));
+        newTableC->setGeometry(QRect(10, 90, 391, 211));
 
         retranslateUi(Gui_Menu_Cliente);
 
@@ -238,6 +217,7 @@ public:
         label->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Nombre:", nullptr));
         label_3->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Direcci\303\263n:", nullptr));
         label_7->setText(QCoreApplication::translate("Gui_Menu_Cliente", "Accciones", nullptr));
+        label_8->setText(QCoreApplication::translate("Gui_Menu_Cliente", "DNI:", nullptr));
     } // retranslateUi
 
 };

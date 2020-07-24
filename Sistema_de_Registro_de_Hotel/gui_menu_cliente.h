@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include <QTableWidget>
-//#include "cliente.h"
 
 namespace Ui {
 class Gui_Menu_Cliente;
@@ -24,13 +23,15 @@ private slots:
 
     void on_pushButtonELIMINAR_clicked();
 
-    void on_tablaMenuC_itemClicked(QTableWidgetItem *item);
-
     void on_pushButtoMODIFICAR_clicked();
 
     void on_Agregar_button_clicked();
 
     void on_lineEdit_buscar_textChanged(const QString &arg1);
+
+    void on_Buscar_button_clicked();
+
+    void on_newTableC_itemClicked(QTableWidgetItem *item);
 
 private:
     Ui::Gui_Menu_Cliente *ui;

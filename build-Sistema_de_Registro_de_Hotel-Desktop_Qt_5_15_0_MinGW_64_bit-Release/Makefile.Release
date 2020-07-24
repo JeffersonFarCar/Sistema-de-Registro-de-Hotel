@@ -2403,29 +2403,6 @@ release/gui_cliente.o: ../Sistema_de_Registro_de_Hotel/gui_cliente.cpp ../Sistem
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtouchdevice.h \
 		ui_gui_cliente.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qicon.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qmessagebox.h \
 		../Sistema_de_Registro_de_Hotel/cliente_crud.h \
@@ -2540,36 +2517,6 @@ release/gui_empleado.o: ../Sistema_de_Registro_de_Hotel/gui_empleado.cpp ../Sist
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtouchdevice.h \
 		ui_gui_empleado.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QDateEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdatetimeedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qdatetime.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcalendar.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qvalidator.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qregularexpression.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qicon.h \
 		../Sistema_de_Registro_de_Hotel/conexion.h \
 		../Sistema_de_Registro_de_Hotel/empleado.h \
 		../Sistema_de_Registro_de_Hotel/persona.h \
@@ -2713,27 +2660,6 @@ release/gui_estado_habitacion.o: ../Sistema_de_Registro_de_Hotel/gui_estado_habi
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qrubberband.h \
 		ui_gui_estado_habitacion.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
 		../Sistema_de_Registro_de_Hotel/gui_habitacion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\gui_estado_habitacion.o ..\Sistema_de_Registro_de_Hotel\gui_estado_habitacion.cpp
 
@@ -2843,23 +2769,6 @@ release/gui_factura.o: ../Sistema_de_Registro_de_Hotel/gui_factura.cpp ../Sistem
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtouchdevice.h \
 		ui_gui_factura.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qicon.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\gui_factura.o ..\Sistema_de_Registro_de_Hotel\gui_factura.cpp
@@ -2970,40 +2879,19 @@ release/gui_habitacion.o: ../Sistema_de_Registro_de_Hotel/gui_habitacion.cpp ../
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtouchdevice.h \
 		ui_gui_habitacion.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qicon.h \
 		../Sistema_de_Registro_de_Hotel/gui_tipo_habitacion.h \
 		../Sistema_de_Registro_de_Hotel/mainwindow.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QMainWindow \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qicon.h \
 		../Sistema_de_Registro_de_Hotel/gui_estado_habitacion.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTableWidget \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtablewidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtableview.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractitemview.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractitemmodel.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qitemselectionmodel.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -3157,36 +3045,8 @@ release/gui_index_empleado.o: ../Sistema_de_Registro_de_Hotel/gui_index_empleado
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qrubberband.h \
 		ui_gui_index_empleado.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QHeaderView \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTableWidget \
 		../Sistema_de_Registro_de_Hotel/gui_empleado.h \
 		ui_gui_empleado.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QDateEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdatetimeedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qdatetime.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcalendar.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgroupbox.h \
 		../Sistema_de_Registro_de_Hotel/conexion.h \
 		../Sistema_de_Registro_de_Hotel/empleado.h \
 		../Sistema_de_Registro_de_Hotel/persona.h \
@@ -3204,6 +3064,7 @@ release/gui_index_empleado.o: ../Sistema_de_Registro_de_Hotel/gui_index_empleado
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QtCoreDepends \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractanimation.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstracteventdispatcher.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractnativeeventfilter.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractproxymodel.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractstate.h \
@@ -3216,8 +3077,10 @@ release/gui_index_empleado.o: ../Sistema_de_Registro_de_Hotel/gui_index_empleado
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qbuffer.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qbytearraymatcher.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcache.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcalendar.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcborarray.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcborvalue.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qdatetime.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcborcommon.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/quuid.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcbormap.h \
@@ -3228,6 +3091,7 @@ release/gui_index_empleado.o: ../Sistema_de_Registro_de_Hotel/gui_index_empleado
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcollator.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcommandlineoption.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcommandlineparser.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qconcatenatetablesproxymodel.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcryptographichash.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qdeadlinetimer.h \
@@ -3337,6 +3201,7 @@ release/gui_index_empleado.o: ../Sistema_de_Registro_de_Hotel/gui_index_empleado
 		C:/Qt/5.15.0/mingw81_64/include/QtSql/qtsqlversion.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/QStandardItemModel \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTableWidget \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\gui_index_empleado.o ..\Sistema_de_Registro_de_Hotel\gui_index_empleado.cpp
@@ -3467,23 +3332,6 @@ release/gui_index_registro.o: ../Sistema_de_Registro_de_Hotel/gui_index_registro
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qrubberband.h \
 		ui_gui_index_registro.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QHeaderView \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QComboBox \
@@ -3621,37 +3469,15 @@ release/gui_indexhabitacion.o: ../Sistema_de_Registro_de_Hotel/gui_indexhabitaci
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qrubberband.h \
 		ui_gui_indexhabitacion.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QHeaderView \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTableWidget \
 		../Sistema_de_Registro_de_Hotel/gui_habitacion.h \
 		ui_gui_habitacion.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/QStandardItemModel \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qstandarditemmodel.h
+		C:/Qt/5.15.0/mingw81_64/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTableWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\gui_indexhabitacion.o ..\Sistema_de_Registro_de_Hotel\gui_indexhabitacion.cpp
 
-release/gui_menu_cliente.o: ../Sistema_de_Registro_de_Hotel/gui_menu_cliente.cpp ../Sistema_de_Registro_de_Hotel/gui_cliente.h \
+release/gui_menu_cliente.o: ../Sistema_de_Registro_de_Hotel/gui_menu_cliente.cpp ui_gui_menu_cliente.h \
+		../Sistema_de_Registro_de_Hotel/gui_menu_cliente.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QDialog \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdialog.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -3756,7 +3582,6 @@ release/gui_menu_cliente.o: ../Sistema_de_Registro_de_Hotel/gui_menu_cliente.cpp
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtouchdevice.h \
-		../Sistema_de_Registro_de_Hotel/gui_menu_cliente.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTableWidget \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtablewidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtableview.h \
@@ -3777,31 +3602,12 @@ release/gui_menu_cliente.o: ../Sistema_de_Registro_de_Hotel/gui_menu_cliente.cpp
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qrubberband.h \
-		ui_gui_menu_cliente.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QHeaderView \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		../Sistema_de_Registro_de_Hotel/gui_cliente.h \
+		../Sistema_de_Registro_de_Hotel/cliente_crud.h \
+		../Sistema_de_Registro_de_Hotel/cliente.h \
+		../Sistema_de_Registro_de_Hotel/persona.h \
 		../Sistema_de_Registro_de_Hotel/conexion.h \
 		../Sistema_de_Registro_de_Hotel/empleado.h \
-		../Sistema_de_Registro_de_Hotel/persona.h \
 		../Sistema_de_Registro_de_Hotel/habitacion.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtSql/QSqlQuery \
 		C:/Qt/5.15.0/mingw81_64/include/QtSql/qsqlquery.h \
@@ -3816,6 +3622,7 @@ release/gui_menu_cliente.o: ../Sistema_de_Registro_de_Hotel/gui_menu_cliente.cpp
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QtCoreDepends \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractanimation.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstracteventdispatcher.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractnativeeventfilter.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractproxymodel.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractstate.h \
@@ -3842,6 +3649,7 @@ release/gui_menu_cliente.o: ../Sistema_de_Registro_de_Hotel/gui_menu_cliente.cpp
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcollator.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcommandlineoption.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcommandlineparser.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qconcatenatetablesproxymodel.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcryptographichash.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qdeadlinetimer.h \
@@ -3951,7 +3759,8 @@ release/gui_menu_cliente.o: ../Sistema_de_Registro_de_Hotel/gui_menu_cliente.cpp
 		C:/Qt/5.15.0/mingw81_64/include/QtSql/qtsqlversion.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/QStandardItemModel \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qstandarditemmodel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTableWidgetItem
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\gui_menu_cliente.o ..\Sistema_de_Registro_de_Hotel\gui_menu_cliente.cpp
 
 release/gui_registro.o: ../Sistema_de_Registro_de_Hotel/gui_registro.cpp ../Sistema_de_Registro_de_Hotel/gui_registro.h \
@@ -4060,16 +3869,15 @@ release/gui_registro.o: ../Sistema_de_Registro_de_Hotel/gui_registro.cpp ../Sist
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtouchdevice.h \
 		ui_gui_registro.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QComboBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qcombobox.h \
+		../Sistema_de_Registro_de_Hotel/registro_habitacion.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTableWidget \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtablewidget.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtableview.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtCore/qitemselectionmodel.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qstyleoption.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractspinbox.h \
@@ -4082,32 +3890,6 @@ release/gui_registro.o: ../Sistema_de_Registro_de_Hotel/gui_registro.cpp ../Sist
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qrubberband.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QDateEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdatetimeedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qdatetime.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcalendar.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		../Sistema_de_Registro_de_Hotel/registro_habitacion.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTableWidget \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtablewidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtableview.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qitemselectionmodel.h \
 		../Sistema_de_Registro_de_Hotel/conexion.h \
 		../Sistema_de_Registro_de_Hotel/empleado.h \
 		../Sistema_de_Registro_de_Hotel/persona.h \
@@ -4122,6 +3904,8 @@ release/gui_registro.o: ../Sistema_de_Registro_de_Hotel/gui_registro.cpp ../Sist
 		../Sistema_de_Registro_de_Hotel/utils.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QComboBox \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qcombobox.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QStringList
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\gui_registro.o ..\Sistema_de_Registro_de_Hotel\gui_registro.cpp
 
@@ -4231,31 +4015,6 @@ release/gui_tipo_habitacion.o: ../Sistema_de_Registro_de_Hotel/gui_tipo_habitaci
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtouchdevice.h \
 		ui_gui_tipo_habitacion.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qpen.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qicon.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QTextEdit \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtextedit.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qtextdocument.h \
 		../Sistema_de_Registro_de_Hotel/gui_habitacion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\gui_tipo_habitacion.o ..\Sistema_de_Registro_de_Hotel\gui_tipo_habitacion.cpp
 
@@ -4496,21 +4255,6 @@ release/mainwindow.o: ../Sistema_de_Registro_de_Hotel/mainwindow.cpp ../Sistema_
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtGui/qicon.h \
 		ui_mainwindow.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QLabel \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QWidget \
 		../Sistema_de_Registro_de_Hotel/gui_registro.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QDialog \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdialog.h \
@@ -4521,6 +4265,7 @@ release/mainwindow.o: ../Sistema_de_Registro_de_Hotel/mainwindow.cpp ../Sistema_
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtableview.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractitemview.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qabstractitemmodel.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/qitemselectionmodel.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -4826,19 +4571,6 @@ release/registro_habitacion.o: ../Sistema_de_Registro_de_Hotel/registro_habitaci
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qrubberband.h \
 		ui_registro_habitacion.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/QVariant \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QApplication \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QHeaderView \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.15.0/mingw81_64/include/QtCore/QDebug \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/QSpinBox \
 		C:/Qt/5.15.0/mingw81_64/include/QtWidgets/qspinbox.h \

@@ -1,6 +1,9 @@
 #include "persona_crud.h"
 #include "conexion.h"
 
+#include <QSqlError>
+#include <QDebug>
+
 Persona_CRUD::Persona_CRUD()
 {
 }
@@ -36,5 +39,15 @@ void Persona_CRUD::updatePersona(Persona _persona){
 }
 
 void Persona_CRUD::deletePersona(int _id){
+    Conexion conn;
+    conn.Conectar();
 
+    QString consulta; consulta.append("DELETE FROM personas WHERE idpersona = "+QString::number(_id)+";");
+    QSqlQuery query;
+    query.prepare(consulta);
+    query.exec();
+    query.exec();
+    qDebug()<<query.lastError();
+
+    conn.Cerrar();
 }
