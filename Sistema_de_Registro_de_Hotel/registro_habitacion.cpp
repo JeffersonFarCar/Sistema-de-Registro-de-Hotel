@@ -20,7 +20,7 @@ void Registro_habitacion::mostrarDatos(){
     conn.Conectar();
 
     QString queryTH;
-    queryTH.append("SELECT * FROM tipohabitacion;");
+    queryTH.append("SELECT * FROM clientes;");
 
     ui->RHTableWidget->setColumnCount(2);
     QStringList l;
@@ -33,10 +33,11 @@ void Registro_habitacion::mostrarDatos(){
     sqlquery.prepare(queryTH);
     sqlquery.exec();
 
+    QSpinBox *boxes;
     cant = 0;
     ui->RHTableWidget->setRowCount(0);
     while(sqlquery.next()){
-        QSpinBox *boxes;
+        boxes = new QSpinBox;
         boxes->setMaximum(10);
         ui->RHTableWidget->insertRow(cant);
         ui->RHTableWidget->setItem(cant, 0, new QTableWidgetItem(sqlquery.value(0).toByteArray().constData()));
@@ -44,20 +45,30 @@ void Registro_habitacion::mostrarDatos(){
         cant++;
     }
 
-    /*
     Utils u;
-    QString n = QString::number(1);
-    int cantidad = u.contar("habitaciones", "idtipohab", n.toLocal8Bit().constData());
-    qDebug()<<cantidad;*/
+    QString n = QString::number(5);
+    int cantidad = u.contar("clientes", "id_persona", n.toLocal8Bit().constData());
+    qDebug()<<cantidad;
     conn.Cerrar();
 }
 
 void Registro_habitacion::on_AceptarRHButton_clicked()
 {
+    bool flag = false;
     for(int i=0; i<cant; i++){
         QSpinBox *cant;
         cant = (QSpinBox*)ui->RHTableWidget->cellWidget(i, 1);
         qDebug()<<QString::number(cant->value());
+        if(cant!=0)
+            flag = true;
+    }
+    try {
+        if(flag == false)
+            throw -1;
+        else
+            close();
+    } catch (exception) {
+        qDebug()<<"debe ser mayor a 0";
     }
 }
 

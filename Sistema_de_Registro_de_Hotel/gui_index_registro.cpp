@@ -2,10 +2,6 @@
 #include "ui_gui_index_registro.h"
 
 #include <QMessageBox>
-#include <QComboBox>
-#include <QStringList>
-#include <QSpinBox>
-#include <QDebug>
 
 #include "gui_registro.h"
 
@@ -15,8 +11,6 @@ Gui_Index_Registro::Gui_Index_Registro(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->tableListRegistros->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    //tableListRegistros
-
 }
 
 Gui_Index_Registro::~Gui_Index_Registro()
@@ -33,7 +27,6 @@ void Gui_Index_Registro::on_New_Registro_Button_clicked()
 
 void Gui_Index_Registro::on_edit_registros_button_clicked()
 {
-
 }
 
 void Gui_Index_Registro::on_delete_registros_button_clicked()
@@ -47,7 +40,7 @@ void Gui_Index_Registro::on_delete_registros_button_clicked()
 
 void Gui_Index_Registro::on_Regresar__clicked()
 {
-    close();//Permite cerra la ventana actual abierta
+    ui->tableListRegistros->clear();
 }
 
 void Gui_Index_Registro::on_cargarTablaRegistro_clicked()
@@ -67,15 +60,6 @@ void Gui_Index_Registro::on_cargarTablaRegistro_clicked()
 
 void Gui_Index_Registro::on_cargarDatoRegistro_clicked()
 {
-    QComboBox* combo;
-    QStringList fonts = {"elemento 1", "elemento 2", "elemento 3"};
-    combo = new QComboBox;
-    combo->addItems(fonts);
-    combo->setObjectName("combo"+QString::number(5));
-    QSpinBox* nani;
-    nani = new QSpinBox;
-    nani->setRange(0, 10);
-
     ui->tableListRegistros->insertRow(ui->tableListRegistros->rowCount());
 
     ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,0,new QTableWidgetItem("0003"));
@@ -83,15 +67,11 @@ void Gui_Index_Registro::on_cargarDatoRegistro_clicked()
     ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,2,new QTableWidgetItem("Pedro"));
     ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,3,new QTableWidgetItem("1"));
     ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,4,new QTableWidgetItem("22/02/20"));
-    ui->tableListRegistros->setCellWidget(ui->tableListRegistros->rowCount()-1,5, nani);
-    // ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,5,new QTableWidgetItem("13/03/20"));
+    ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,5,new QTableWidgetItem("13/03/20"));
 
 }
 
 void Gui_Index_Registro::on_tableListRegistros_itemClicked(QTableWidgetItem *item)
 {
     f = item->row();
-    QSpinBox *sera;
-    sera = (QSpinBox*)ui->tableListRegistros->cellWidget(f, 5);
-    qDebug()<<QString::number(sera->value());
 }

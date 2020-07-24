@@ -61,7 +61,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>ID-Cliente</string>
+     <string>Nombre</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -87,7 +87,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>N° Personas</string>
+     <string>Empleado</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -188,6 +188,9 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="LineEdit_idRegis">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -197,7 +200,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LineEdite_idCliente">
+   <widget class="QLineEdit" name="LineEdite_NomCliente">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -207,7 +210,10 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LineEdit_Nper">
+   <widget class="QLineEdit" name="LineEdit_NomEmpleado">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>160</x>

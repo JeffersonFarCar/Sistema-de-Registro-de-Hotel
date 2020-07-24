@@ -17,7 +17,6 @@ Gui_Cliente::Gui_Cliente(QWidget *parent) :
     ui->setupUi(this);
 
     Utils utils;
-
     int id = utils.getLastId("personas", "idpersona") +1;
 
     ui->lineEdit->setText(QString::number(id));
