@@ -41,6 +41,7 @@ public:
     QLineEdit *LineEdite_NomCliente;
     QLineEdit *LineEdit_NomEmpleado;
     QPushButton *pushButton;
+    QPushButton *Registrar_button_2;
 
     void setupUi(QDialog *Gui_Registro)
     {
@@ -79,7 +80,7 @@ public:
         dateEdit_2->setGeometry(QRect(160, 270, 161, 21));
         Registrar_button = new QPushButton(groupBox);
         Registrar_button->setObjectName(QString::fromUtf8("Registrar_button"));
-        Registrar_button->setGeometry(QRect(40, 320, 101, 41));
+        Registrar_button->setGeometry(QRect(10, 310, 101, 41));
         QFont font;
         font.setBold(true);
         font.setWeight(75);
@@ -87,7 +88,7 @@ public:
         Registrar_button->setAutoFillBackground(false);
         Cancelar_button = new QPushButton(groupBox);
         Cancelar_button->setObjectName(QString::fromUtf8("Cancelar_button"));
-        Cancelar_button->setGeometry(QRect(200, 320, 101, 41));
+        Cancelar_button->setGeometry(QRect(250, 310, 101, 41));
         Cancelar_button->setFont(font);
         Cliente_cmbox = new QComboBox(groupBox);
         Cliente_cmbox->setObjectName(QString::fromUtf8("Cliente_cmbox"));
@@ -106,6 +107,11 @@ public:
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(160, 100, 161, 23));
+        Registrar_button_2 = new QPushButton(groupBox);
+        Registrar_button_2->setObjectName(QString::fromUtf8("Registrar_button_2"));
+        Registrar_button_2->setGeometry(QRect(130, 310, 101, 41));
+        Registrar_button_2->setFont(font);
+        Registrar_button_2->setAutoFillBackground(false);
 
         retranslateUi(Gui_Registro);
 
@@ -126,6 +132,7 @@ public:
         Registrar_button->setText(QCoreApplication::translate("Gui_Registro", "Registrar", nullptr));
         Cancelar_button->setText(QCoreApplication::translate("Gui_Registro", "Cancelar", nullptr));
         pushButton->setText(QCoreApplication::translate("Gui_Registro", "Agregar Habitaciones", nullptr));
+        Registrar_button_2->setText(QCoreApplication::translate("Gui_Registro", "ver factura", nullptr));
     } // retranslateUi
 
 };
