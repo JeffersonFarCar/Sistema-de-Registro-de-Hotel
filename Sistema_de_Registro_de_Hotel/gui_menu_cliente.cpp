@@ -134,7 +134,10 @@ void Gui_Menu_Cliente::on_lineEdit_buscar_textChanged(const QString &arg1)
         query_consulta.exec(consulta);
 
         int fila=0;
+        ui->newTableC->setRowCount(0);
+
         while(query_consulta.next()){
+
             ui->newTableC->insertRow(fila);
             ui->newTableC->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
             ui->newTableC->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
@@ -142,6 +145,7 @@ void Gui_Menu_Cliente::on_lineEdit_buscar_textChanged(const QString &arg1)
             ui->newTableC->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
             ui->newTableC->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(4).toByteArray().constData()));
             ui->newTableC->setItem(fila, 5, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
+            ui->newTableC->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(6).toByteArray().constData()));
             fila++;
         }
         conect.Cerrar();
