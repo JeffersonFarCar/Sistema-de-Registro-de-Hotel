@@ -16,19 +16,10 @@ Conexion::Conexion()
 void Conexion::Conectar(){
     db=QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("./databasesol.db");
-    if(db.open())
-        qDebug()<<"se conecto";
-    else
-        qDebug()<<"no se conecto";
-
+    db.open();
 }
 void  Conexion::Cerrar(){
     db.close();
-    if(db.isOpen()){
-        qDebug()<<">>>>>>still here";
-    }else{
-        qDebug()<<">>>>>>se cerro";
-    }
 }
 
 void Conexion::addEmpleado(Empleado e){

@@ -40,7 +40,6 @@ void MainWindow::on_Registros_button_clicked()
 
 void MainWindow::on_Habitacions_button_clicked()
 {
-
      gui_indexHabitacion guiIH;
      guiIH.setModal(true);
      guiIH.exec();

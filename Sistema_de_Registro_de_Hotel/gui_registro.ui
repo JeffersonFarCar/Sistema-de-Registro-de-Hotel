@@ -187,16 +187,6 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="Habitacion_cmbox">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>100</y>
-      <width>161</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="LineEdit_idRegis">
     <property name="geometry">
      <rect>
@@ -225,6 +215,19 @@
       <width>161</width>
       <height>20</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>100</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Agregar Habitaciones</string>
     </property>
    </widget>
   </widget>

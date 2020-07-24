@@ -37,10 +37,10 @@ public:
     QPushButton *Registrar_button;
     QPushButton *Cancelar_button;
     QComboBox *Cliente_cmbox;
-    QComboBox *Habitacion_cmbox;
     QLineEdit *LineEdit_idRegis;
     QLineEdit *LineEdite_idCliente;
     QLineEdit *LineEdit_Nper;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *Gui_Registro)
     {
@@ -92,9 +92,6 @@ public:
         Cliente_cmbox = new QComboBox(groupBox);
         Cliente_cmbox->setObjectName(QString::fromUtf8("Cliente_cmbox"));
         Cliente_cmbox->setGeometry(QRect(160, 160, 161, 21));
-        Habitacion_cmbox = new QComboBox(groupBox);
-        Habitacion_cmbox->setObjectName(QString::fromUtf8("Habitacion_cmbox"));
-        Habitacion_cmbox->setGeometry(QRect(160, 100, 161, 21));
         LineEdit_idRegis = new QLineEdit(groupBox);
         LineEdit_idRegis->setObjectName(QString::fromUtf8("LineEdit_idRegis"));
         LineEdit_idRegis->setGeometry(QRect(160, 30, 161, 21));
@@ -104,6 +101,9 @@ public:
         LineEdit_Nper = new QLineEdit(groupBox);
         LineEdit_Nper->setObjectName(QString::fromUtf8("LineEdit_Nper"));
         LineEdit_Nper->setGeometry(QRect(160, 190, 161, 20));
+        pushButton = new QPushButton(groupBox);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(160, 100, 161, 23));
 
         retranslateUi(Gui_Registro);
 
@@ -123,6 +123,7 @@ public:
         label_7->setText(QCoreApplication::translate("Gui_Registro", "Fecha Salida", nullptr));
         Registrar_button->setText(QCoreApplication::translate("Gui_Registro", "Registrar", nullptr));
         Cancelar_button->setText(QCoreApplication::translate("Gui_Registro", "Cancelar", nullptr));
+        pushButton->setText(QCoreApplication::translate("Gui_Registro", "Agregar Habitaciones", nullptr));
     } // retranslateUi
 
 };

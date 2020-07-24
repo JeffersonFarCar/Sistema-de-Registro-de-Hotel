@@ -1,6 +1,8 @@
 #include "gui_registro.h"
 #include "ui_gui_registro.h"
 
+#include "registro_habitacion.h"
+
 #include <QMessageBox>
 #include <iostream>
 #include <string>
@@ -32,6 +34,13 @@ void Gui_Registro::on_Registrar_button_clicked()
     } catch (invalid_argument const &e) {
         QMessageBox::warning(this, "Advertencia", "Ingreso de datos erroneo.");
     }
+}
+
+void Gui_Registro::on_pushButton_clicked()
+{
+    Registro_habitacion rh;
+    rh.setModal(true);
+    rh.exec();
 }
 
 void Gui_Registro::on_Cancelar_button_clicked()

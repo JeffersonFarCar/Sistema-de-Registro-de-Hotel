@@ -20,6 +20,8 @@ release/mainwindow.o
 release/persona.o
 release/persona_crud.o
 release/registro.o
+release/registro_crud.o
+release/registro_habitacion.o
 release/tipohabitacion.o
 release/utils.o
 release/qrc_resources.o
@@ -34,3 +36,4 @@ release/moc_gui_menu_cliente.o
 release/moc_gui_registro.o
 release/moc_gui_tipo_habitacion.o
 release/moc_mainwindow.o
+release/moc_registro_habitacion.o
