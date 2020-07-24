@@ -42,6 +42,8 @@ public:
     QDateEdit *dateEdit;
     QPushButton *Aceptar_button;
     QPushButton *Cancel_button;
+    QLineEdit *lineEdit_DNI;
+    QLabel *label_9;
 
     void setupUi(QDialog *Gui_Empleado)
     {
@@ -59,57 +61,63 @@ public:
         lineEdit_idEmpleado->setGeometry(QRect(160, 30, 181, 21));
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(30, 70, 71, 21));
+        label_2->setGeometry(QRect(30, 100, 71, 21));
         label_3 = new QLabel(groupBox);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(30, 100, 71, 21));
+        label_3->setGeometry(QRect(30, 130, 71, 21));
         label_4 = new QLabel(groupBox);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(30, 130, 71, 21));
+        label_4->setGeometry(QRect(30, 160, 71, 21));
         label_5 = new QLabel(groupBox);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(30, 160, 71, 21));
+        label_5->setGeometry(QRect(30, 200, 71, 21));
         label_6 = new QLabel(groupBox);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(30, 190, 131, 21));
+        label_6->setGeometry(QRect(30, 230, 131, 21));
         label_7 = new QLabel(groupBox);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(30, 220, 71, 21));
+        label_7->setGeometry(QRect(30, 270, 71, 21));
         label_8 = new QLabel(groupBox);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(30, 260, 81, 21));
+        label_8->setGeometry(QRect(30, 300, 81, 21));
         lineEdit_nombreE = new QLineEdit(groupBox);
         lineEdit_nombreE->setObjectName(QString::fromUtf8("lineEdit_nombreE"));
-        lineEdit_nombreE->setGeometry(QRect(160, 70, 181, 21));
+        lineEdit_nombreE->setGeometry(QRect(160, 100, 181, 21));
         lineEdit_apellidoE = new QLineEdit(groupBox);
         lineEdit_apellidoE->setObjectName(QString::fromUtf8("lineEdit_apellidoE"));
-        lineEdit_apellidoE->setGeometry(QRect(160, 100, 181, 21));
+        lineEdit_apellidoE->setGeometry(QRect(160, 130, 181, 21));
         lineEdit_direccionE = new QLineEdit(groupBox);
         lineEdit_direccionE->setObjectName(QString::fromUtf8("lineEdit_direccionE"));
-        lineEdit_direccionE->setGeometry(QRect(160, 130, 181, 21));
+        lineEdit_direccionE->setGeometry(QRect(160, 160, 181, 21));
         lineEdit_emailE = new QLineEdit(groupBox);
         lineEdit_emailE->setObjectName(QString::fromUtf8("lineEdit_emailE"));
-        lineEdit_emailE->setGeometry(QRect(160, 160, 181, 21));
+        lineEdit_emailE->setGeometry(QRect(160, 200, 181, 21));
         lineEdit_sueldoE = new QLineEdit(groupBox);
         lineEdit_sueldoE->setObjectName(QString::fromUtf8("lineEdit_sueldoE"));
-        lineEdit_sueldoE->setGeometry(QRect(160, 190, 181, 21));
+        lineEdit_sueldoE->setGeometry(QRect(160, 230, 181, 21));
         lineEdit_ocupacionE = new QLineEdit(groupBox);
         lineEdit_ocupacionE->setObjectName(QString::fromUtf8("lineEdit_ocupacionE"));
-        lineEdit_ocupacionE->setGeometry(QRect(160, 220, 181, 21));
+        lineEdit_ocupacionE->setGeometry(QRect(160, 270, 181, 21));
         dateEdit = new QDateEdit(groupBox);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-        dateEdit->setGeometry(QRect(160, 260, 181, 21));
+        dateEdit->setGeometry(QRect(160, 310, 181, 21));
         Aceptar_button = new QPushButton(groupBox);
         Aceptar_button->setObjectName(QString::fromUtf8("Aceptar_button"));
-        Aceptar_button->setGeometry(QRect(40, 320, 91, 51));
+        Aceptar_button->setGeometry(QRect(40, 340, 91, 51));
         QFont font;
         font.setBold(true);
         font.setWeight(75);
         Aceptar_button->setFont(font);
         Cancel_button = new QPushButton(groupBox);
         Cancel_button->setObjectName(QString::fromUtf8("Cancel_button"));
-        Cancel_button->setGeometry(QRect(220, 320, 91, 51));
+        Cancel_button->setGeometry(QRect(220, 340, 91, 51));
         Cancel_button->setFont(font);
+        lineEdit_DNI = new QLineEdit(groupBox);
+        lineEdit_DNI->setObjectName(QString::fromUtf8("lineEdit_DNI"));
+        lineEdit_DNI->setGeometry(QRect(160, 60, 181, 21));
+        label_9 = new QLabel(groupBox);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setGeometry(QRect(30, 60, 71, 21));
 
         retranslateUi(Gui_Empleado);
 
@@ -131,6 +139,7 @@ public:
         lineEdit_sueldoE->setText(QString());
         Aceptar_button->setText(QCoreApplication::translate("Gui_Empleado", "Aceptar", nullptr));
         Cancel_button->setText(QCoreApplication::translate("Gui_Empleado", "Cancelar", nullptr));
+        label_9->setText(QCoreApplication::translate("Gui_Empleado", "DNI", nullptr));
     } // retranslateUi
 
 };

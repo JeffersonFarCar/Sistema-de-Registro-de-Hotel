@@ -20,6 +20,7 @@ SOURCES += \
     cliente_crud.cpp \
     conexion.cpp \
     empleado.cpp \
+    empleado_crud.cpp \
     estadohab.cpp \
     factura.cpp \
     gui_cliente.cpp \
@@ -48,6 +49,7 @@ HEADERS += \
     cliente_crud.h \
     conexion.h \
     empleado.h \
+    empleado_crud.h \
     estadohab.h \
     factura.h \
     gui_cliente.h \

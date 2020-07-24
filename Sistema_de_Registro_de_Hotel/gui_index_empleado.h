@@ -16,6 +16,7 @@ class Gui_Index_Empleado : public QDialog
 public:
     explicit Gui_Index_Empleado(QWidget *parent = nullptr);
     void mostrarDatos();
+    void prepararTabla();
     ~Gui_Index_Empleado();
 
 private slots:
@@ -28,6 +29,8 @@ private slots:
     void on_tableWidget_itemClicked(QTableWidgetItem *item);
 
     void on_edit_empleado_button_clicked();
+
+    void on_lineEdit_buscarEmpleado_textChanged(const QString &arg1);
 
 private:
     Ui::Gui_Index_Empleado *ui;

@@ -2,6 +2,7 @@ debug/cliente.o
 debug/cliente_crud.o
 debug/conexion.o
 debug/empleado.o
+debug/empleado_crud.o
 debug/estadohab.o
 debug/factura.o
 debug/gui_cliente.o

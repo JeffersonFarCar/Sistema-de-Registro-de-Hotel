@@ -2,6 +2,7 @@ release/cliente.o
 release/cliente_crud.o
 release/conexion.o
 release/empleado.o
+release/empleado_crud.o
 release/estadohab.o
 release/factura.o
 release/gui_cliente.o
