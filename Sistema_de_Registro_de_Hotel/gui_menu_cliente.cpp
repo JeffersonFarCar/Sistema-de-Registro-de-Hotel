@@ -24,22 +24,7 @@ Gui_Menu_Cliente::Gui_Menu_Cliente(QWidget *parent) :
 
 void Gui_Menu_Cliente::mostrarDatos()
 {
-    /*----Preparacion de la tabla----*/
-      ui->tablaMenuC->setColumnCount(7);
-      QStringList l;
-      l<<"ID"<<"DNI"<<"Nombre"<<"Apellido"<<"Direccion"<<"Email"<<"Ciudadania";
-
-      ui->tablaMenuC->setHorizontalHeaderLabels(l);
-      ui->tablaMenuC->setColumnWidth(0,80);
-      ui->tablaMenuC->setColumnWidth(1,100);
-      ui->tablaMenuC->setColumnWidth(2,120);
-      ui->tablaMenuC->setColumnWidth(3,150);
-      ui->tablaMenuC->setColumnWidth(4,120);
-      ui->tablaMenuC->setColumnWidth(5,120);
-      ui->tablaMenuC->setColumnWidth(6,120);
-
-      /*----Fin preparacion de la tabla----*/
-
+    prepararTabla();
     Conexion conect;
     conect.Conectar();
     QSqlQuery query_consulta;
@@ -110,4 +95,50 @@ void Gui_Menu_Cliente::on_Agregar_button_clicked()
     guiC.setModal(true);
     guiC.exec();
     mostrarDatos();
+}
+
+void Gui_Menu_Cliente::prepararTabla(){
+    /*----Preparacion de la tabla----*/
+      ui->tablaMenuC->setColumnCount(7);
+      QStringList l;
+      l<<"ID"<<"DNI"<<"Nombre"<<"Apellido"<<"Direccion"<<"Email"<<"Ciudadania";
+
+      ui->tablaMenuC->setHorizontalHeaderLabels(l);
+      ui->tablaMenuC->setColumnWidth(0,80);
+      ui->tablaMenuC->setColumnWidth(1,100);
+      ui->tablaMenuC->setColumnWidth(2,120);
+      ui->tablaMenuC->setColumnWidth(3,150);
+      ui->tablaMenuC->setColumnWidth(4,120);
+      ui->tablaMenuC->setColumnWidth(5,120);
+      ui->tablaMenuC->setColumnWidth(6,120);
+
+      /*----Fin preparacion de la tabla----*/
+}
+
+void Gui_Menu_Cliente::on_lineEdit_buscar_textChanged(const QString &arg1)
+{
+    ui->tablaMenuC->clear();
+    prepararTabla();
+    Conexion conect;
+        ui->tablaMenuC->setRowCount(0);
+        conect.Conectar();
+        QSqlQuery query_consulta;
+
+        QString consulta="SELECT idpersona, dni, nombre, apellido, direccion, email, "
+                         "ciudadania FROM personas INNER JOIN clientes WHERE idpersona = id_persona AND nombre LIKE '"+arg1+"%'";
+
+        query_consulta.exec(consulta);
+
+        int fila=0;
+        while(query_consulta.next()){
+            ui->tablaMenuC->insertRow(fila);
+            ui->tablaMenuC->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
+            ui->tablaMenuC->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
+            ui->tablaMenuC->setItem(fila, 2, new QTableWidgetItem(query_consulta.value(2).toByteArray().constData()));
+            ui->tablaMenuC->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
+            ui->tablaMenuC->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(4).toByteArray().constData()));
+            ui->tablaMenuC->setItem(fila, 5, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
+            fila++;
+        }
+        conect.Cerrar();
 }
