@@ -42,23 +42,27 @@ public:
     QLabel *label_6;
     QLabel *label_7;
     QLabel *label_8;
+    QLabel *label_9;
+    QLineEdit *lineEditDNIModi;
+    QPushButton *buscarEmpleadoButton;
+    QLineEdit *lineEdit_buscarEmpleado;
 
     void setupUi(QDialog *Gui_Index_Empleado)
     {
         if (Gui_Index_Empleado->objectName().isEmpty())
             Gui_Index_Empleado->setObjectName(QString::fromUtf8("Gui_Index_Empleado"));
-        Gui_Index_Empleado->resize(776, 350);
+        Gui_Index_Empleado->resize(776, 358);
         Nuevo_Button = new QPushButton(Gui_Index_Empleado);
         Nuevo_Button->setObjectName(QString::fromUtf8("Nuevo_Button"));
-        Nuevo_Button->setGeometry(QRect(80, 280, 101, 41));
+        Nuevo_Button->setGeometry(QRect(80, 300, 101, 41));
         Nuevo_Button->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
         label_2 = new QLabel(Gui_Index_Empleado);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(680, 50, 81, 21));
+        label_2->setGeometry(QRect(680, 70, 81, 21));
         label_2->setStyleSheet(QString::fromUtf8("font: 75 14pt \"Times New Roman\";"));
         edit_empleado_button = new QPushButton(Gui_Index_Empleado);
         edit_empleado_button->setObjectName(QString::fromUtf8("edit_empleado_button"));
-        edit_empleado_button->setGeometry(QRect(700, 110, 51, 51));
+        edit_empleado_button->setGeometry(QRect(700, 130, 51, 51));
         edit_empleado_button->setStyleSheet(QString::fromUtf8("#edit_empleado_button{\n"
 "	background-color: transparent;\n"
 "	border-image: url(:/imagenes/imagenes/edit_unpressed.png);\n"
@@ -74,14 +78,14 @@ public:
         label_3->setStyleSheet(QString::fromUtf8("font: 75 20pt \"Times New Roman\";"));
         Cancelar_button = new QPushButton(Gui_Index_Empleado);
         Cancelar_button->setObjectName(QString::fromUtf8("Cancelar_button"));
-        Cancelar_button->setGeometry(QRect(280, 280, 101, 41));
+        Cancelar_button->setGeometry(QRect(280, 300, 101, 41));
         Cancelar_button->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
         tableWidget = new QTableWidget(Gui_Index_Empleado);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(10, 70, 401, 192));
+        tableWidget->setGeometry(QRect(10, 90, 401, 192));
         delete_empleado_button = new QPushButton(Gui_Index_Empleado);
         delete_empleado_button->setObjectName(QString::fromUtf8("delete_empleado_button"));
-        delete_empleado_button->setGeometry(QRect(700, 200, 51, 51));
+        delete_empleado_button->setGeometry(QRect(700, 230, 51, 51));
         delete_empleado_button->setStyleSheet(QString::fromUtf8("#delete_empleado_button{\n"
 "	background-color: transparent;\n"
 "	border-image: url(:/imagenes/imagenes/delete_unpressed.png);\n"
@@ -93,25 +97,25 @@ public:
 "}"));
         lineEditNombreModi = new QLineEdit(Gui_Index_Empleado);
         lineEditNombreModi->setObjectName(QString::fromUtf8("lineEditNombreModi"));
-        lineEditNombreModi->setGeometry(QRect(530, 100, 151, 20));
+        lineEditNombreModi->setGeometry(QRect(530, 140, 151, 20));
         lineEditApellidoModi = new QLineEdit(Gui_Index_Empleado);
         lineEditApellidoModi->setObjectName(QString::fromUtf8("lineEditApellidoModi"));
-        lineEditApellidoModi->setGeometry(QRect(530, 130, 151, 20));
+        lineEditApellidoModi->setGeometry(QRect(530, 170, 151, 20));
         lineEditDireccionModi = new QLineEdit(Gui_Index_Empleado);
         lineEditDireccionModi->setObjectName(QString::fromUtf8("lineEditDireccionModi"));
-        lineEditDireccionModi->setGeometry(QRect(530, 160, 151, 20));
+        lineEditDireccionModi->setGeometry(QRect(530, 200, 151, 20));
         lineEditEmailModi = new QLineEdit(Gui_Index_Empleado);
         lineEditEmailModi->setObjectName(QString::fromUtf8("lineEditEmailModi"));
-        lineEditEmailModi->setGeometry(QRect(530, 190, 151, 20));
+        lineEditEmailModi->setGeometry(QRect(530, 230, 151, 20));
         lineEditOcupacionModi = new QLineEdit(Gui_Index_Empleado);
         lineEditOcupacionModi->setObjectName(QString::fromUtf8("lineEditOcupacionModi"));
-        lineEditOcupacionModi->setGeometry(QRect(530, 220, 151, 20));
+        lineEditOcupacionModi->setGeometry(QRect(530, 260, 151, 20));
         lineEditSueldoModi = new QLineEdit(Gui_Index_Empleado);
         lineEditSueldoModi->setObjectName(QString::fromUtf8("lineEditSueldoModi"));
-        lineEditSueldoModi->setGeometry(QRect(530, 250, 151, 20));
+        lineEditSueldoModi->setGeometry(QRect(530, 290, 151, 20));
         label = new QLabel(Gui_Index_Empleado);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(430, 100, 81, 16));
+        label->setGeometry(QRect(430, 140, 81, 16));
         QFont font;
         font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(12);
@@ -122,29 +126,48 @@ public:
         label->setStyleSheet(QString::fromUtf8("font: 12pt \"Times New Roman\";"));
         label_4 = new QLabel(Gui_Index_Empleado);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(430, 130, 81, 16));
+        label_4->setGeometry(QRect(430, 170, 81, 16));
         label_4->setFont(font);
         label_4->setStyleSheet(QString::fromUtf8("font: 12pt \"Times New Roman\";"));
         label_5 = new QLabel(Gui_Index_Empleado);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(430, 186, 81, 20));
+        label_5->setGeometry(QRect(430, 230, 81, 20));
         label_5->setFont(font);
         label_5->setStyleSheet(QString::fromUtf8("font: 12pt \"Times New Roman\";"));
         label_6 = new QLabel(Gui_Index_Empleado);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(430, 220, 81, 16));
+        label_6->setGeometry(QRect(430, 290, 81, 16));
         label_6->setFont(font);
         label_6->setStyleSheet(QString::fromUtf8("font: 12pt \"Times New Roman\";"));
         label_7 = new QLabel(Gui_Index_Empleado);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(430, 250, 81, 16));
+        label_7->setGeometry(QRect(430, 260, 81, 16));
         label_7->setFont(font);
         label_7->setStyleSheet(QString::fromUtf8("font: 12pt \"Times New Roman\";"));
         label_8 = new QLabel(Gui_Index_Empleado);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(430, 160, 81, 16));
+        label_8->setGeometry(QRect(430, 200, 81, 16));
         label_8->setFont(font);
         label_8->setStyleSheet(QString::fromUtf8("font: 12pt \"Times New Roman\";"));
+        label_9 = new QLabel(Gui_Index_Empleado);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setGeometry(QRect(430, 110, 81, 16));
+        label_9->setFont(font);
+        label_9->setStyleSheet(QString::fromUtf8("font: 12pt \"Times New Roman\";"));
+        lineEditDNIModi = new QLineEdit(Gui_Index_Empleado);
+        lineEditDNIModi->setObjectName(QString::fromUtf8("lineEditDNIModi"));
+        lineEditDNIModi->setGeometry(QRect(530, 110, 151, 20));
+        buscarEmpleadoButton = new QPushButton(Gui_Index_Empleado);
+        buscarEmpleadoButton->setObjectName(QString::fromUtf8("buscarEmpleadoButton"));
+        buscarEmpleadoButton->setGeometry(QRect(20, 50, 41, 31));
+        buscarEmpleadoButton->setStyleSheet(QString::fromUtf8("#buscarEmpleadoButton{\n"
+"	background-color: transparent;\n"
+"	border-image: url(:/imagenes/imagenes/buscar_pressed.png);\n"
+"}\n"
+""));
+        lineEdit_buscarEmpleado = new QLineEdit(Gui_Index_Empleado);
+        lineEdit_buscarEmpleado->setObjectName(QString::fromUtf8("lineEdit_buscarEmpleado"));
+        lineEdit_buscarEmpleado->setGeometry(QRect(70, 60, 191, 21));
 
         retranslateUi(Gui_Index_Empleado);
 
@@ -166,6 +189,8 @@ public:
         label_6->setText(QCoreApplication::translate("Gui_Index_Empleado", "Ocupacion:", nullptr));
         label_7->setText(QCoreApplication::translate("Gui_Index_Empleado", "Sueldo:", nullptr));
         label_8->setText(QCoreApplication::translate("Gui_Index_Empleado", "Direccion:", nullptr));
+        label_9->setText(QCoreApplication::translate("Gui_Index_Empleado", "DNI:", nullptr));
+        buscarEmpleadoButton->setText(QString());
     } // retranslateUi
 
 };

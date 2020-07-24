@@ -16,12 +16,13 @@ class Gui_Menu_Cliente : public QDialog
 public:
     explicit Gui_Menu_Cliente(QWidget *parent = nullptr);
     void mostrarDatos();
+    void prepararTabla();
     ~Gui_Menu_Cliente();
 
 private slots:
 
 
-    void on_pushButtonB3_clicked();
+    void on_pushButtonELIMINAR_clicked();
 
     void on_tablaMenuC_itemClicked(QTableWidgetItem *item);
 
@@ -29,9 +30,10 @@ private slots:
 
     void on_Agregar_button_clicked();
 
+    void on_lineEdit_buscar_textChanged(const QString &arg1);
+
 private:
     Ui::Gui_Menu_Cliente *ui;
-    int u;
     int fila;
 };
 

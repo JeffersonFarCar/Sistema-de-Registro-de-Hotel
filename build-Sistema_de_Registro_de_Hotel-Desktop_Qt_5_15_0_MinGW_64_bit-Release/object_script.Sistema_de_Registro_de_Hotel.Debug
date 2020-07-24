@@ -2,6 +2,7 @@ debug/cliente.o
 debug/cliente_crud.o
 debug/conexion.o
 debug/empleado.o
+debug/empleado_crud.o
 debug/estadohab.o
 debug/factura.o
 debug/gui_cliente.o
@@ -21,6 +22,8 @@ debug/mainwindow.o
 debug/persona.o
 debug/persona_crud.o
 debug/registro.o
+debug/registro_crud.o
+debug/registro_habitacion.o
 debug/tipohabitacion.o
 debug/utils.o
 debug/qrc_resources.o
@@ -36,3 +39,4 @@ debug/moc_gui_menu_cliente.o
 debug/moc_gui_registro.o
 debug/moc_gui_tipo_habitacion.o
 debug/moc_mainwindow.o
+debug/moc_registro_habitacion.o

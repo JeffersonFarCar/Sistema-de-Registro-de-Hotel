@@ -20,6 +20,7 @@ SOURCES += \
     cliente_crud.cpp \
     conexion.cpp \
     empleado.cpp \
+    empleado_crud.cpp \
     estadohab.cpp \
     factura.cpp \
     gui_cliente.cpp \
@@ -39,6 +40,8 @@ SOURCES += \
     persona.cpp \
     persona_crud.cpp \
     registro.cpp \
+    registro_crud.cpp \
+    registro_habitacion.cpp \
     tipohabitacion.cpp \
     utils.cpp
 
@@ -47,6 +50,7 @@ HEADERS += \
     cliente_crud.h \
     conexion.h \
     empleado.h \
+    empleado_crud.h \
     estadohab.h \
     factura.h \
     gui_cliente.h \
@@ -65,6 +69,8 @@ HEADERS += \
     persona.h \
     persona_crud.h \
     registro.h \
+    registro_crud.h \
+    registro_habitacion.h \
     tipohabitacion.h \
     utils.h
 
@@ -80,7 +86,8 @@ FORMS += \
     gui_menu_cliente.ui \
     gui_registro.ui \
     gui_tipo_habitacion.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    registro_habitacion.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

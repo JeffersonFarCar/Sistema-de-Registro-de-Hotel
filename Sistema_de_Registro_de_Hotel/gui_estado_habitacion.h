@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QTableWidget>
+
 namespace Ui {
 class gui_estado_habitacion;
 }

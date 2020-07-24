@@ -6,7 +6,8 @@ class Registro{
 private:
     int idRegistro;
     int idCliente;
-    int idHabitacion;
+    int idEmpleado;
+    int idHabitacion; // borrar
     int cantPersonas;
     QDate fechaEntrada;
     QDate fechaSalida;
