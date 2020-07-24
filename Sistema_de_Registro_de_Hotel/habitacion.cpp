@@ -28,18 +28,18 @@ void Habitacion::setEstadoH(int _estadoH){
     estadoHabitacion = _estadoH;
 }
 
-int Habitacion::getIdHabitacion() const{
+int Habitacion::getIdHabitacion() {
     return idHabitacion;
 }
-int Habitacion::getTipoHabitacion() const{
+int Habitacion::getTipoHabitacion() {
     return tipoHabitacion;
 }
-int Habitacion::getNumHabitacion() const{
-    return getNumHabitacion();
+int Habitacion::getNumHabitacion() {
+    return numeroHabitacion;
 }
-int Habitacion::getNumPiso() const{
+int Habitacion::getNumPiso(){
     return numeroPiso;
 }
-int Habitacion::getEstadoH() const{
+int Habitacion::getEstadoH(){
     return estadoHabitacion;
 }

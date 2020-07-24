@@ -48,13 +48,23 @@ void Conexion::addEmpleado(Empleado e){
 
 void Conexion::addHabitacion(Habitacion a){
     QSqlQuery query;
-     // int id =a.getIdHabitacion();
-     // int nh =a.getNumHabitacion();
-      //int np =a.getNumPiso();
+     qDebug()<<"laasddvqwdvqwkbdqliwd879a1\n";
+            std::string x = std::to_string(a.getIdHabitacion());
+            std::string b = std::to_string(a.getNumPiso());
+            std::string c = std::to_string(a.getEstadoH());
+            std::string d = std::to_string(a.getNumHabitacion());
+            qDebug()<<"laasddvqwdvqwkbdqliwd879a2\n";
+
+            QString x1=QString::fromLocal8Bit(x.c_str());
+            QString b1=QString::fromLocal8Bit(b.c_str());
+            QString c1=QString::fromLocal8Bit(c.c_str());
+            QString c2=QString::fromLocal8Bit(d.c_str());
+             qDebug()<<"laasddvqwdvqwkbdqliwd879a3\n";
+            QString consulta="insert into habitaciones (idhabitacion,idtipohab,idestado,numerohab) values ("+x1+","+c1+","+c2+","+b1+");";
+           //QString consulta="insert into prueba (id) values (1);";
+            qDebug()<<consulta;
 
 
-    QString consulta="insert into habitacion (id, Numero_Habitacion, Numero_Piso) values ("+QString::number(3)+",'"+QString::number(2)+"','"+QString::number(2)+"');";
-    cout<<consulta.toUtf8().constData();
-    query.exec(consulta);
-    query.isActive();
+            query.exec(consulta);
+            query.isActive();
 }

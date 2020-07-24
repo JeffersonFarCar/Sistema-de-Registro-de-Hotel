@@ -20,6 +20,8 @@ private slots:
 
     void on_Cancelar_button_clicked();
 
+    void on_Registrar_button_2_clicked();
+
 private:
     Ui::Gui_Registro *ui;
 };

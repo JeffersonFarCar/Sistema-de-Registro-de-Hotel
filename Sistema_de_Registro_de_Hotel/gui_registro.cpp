@@ -1,6 +1,6 @@
 #include "gui_registro.h"
 #include "ui_gui_registro.h"
-
+#include "gui_factura.h"
 #include <QMessageBox>
 #include <iostream>
 #include <string>
@@ -37,4 +37,14 @@ void Gui_Registro::on_Registrar_button_clicked()
 void Gui_Registro::on_Cancelar_button_clicked()
 {
     close();//Permite cerra la ventana actual abierta
+}
+
+void Gui_Registro::on_Registrar_button_2_clicked()
+{
+    QString idR_str = ui->LineEdit_idRegis->text();
+        QString idC_str = ui->LineEdite_idCliente->text();
+        QString num_str = ui->LineEdit_Nper->text();
+        gui_factura guiR;
+        guiR.setModal(true);
+        guiR.exec();
 }
