@@ -15,7 +15,7 @@ Gui_Cliente::Gui_Cliente(QWidget *parent) :
     ui(new Ui::Gui_Cliente)
 {
     ui->setupUi(this);
-
+    //  Obtener último ID de la tabla personas
     Utils utils;
     int id = utils.getLastId("personas", "idpersona") +1;
 
@@ -37,6 +37,7 @@ void Gui_Cliente::on_Aceptar_button_clicked()
     Cliente_CRUD ccrud;
 
     QString id_str = ui->lineEdit->text();
+    QString dni_str = ui->lineEdit_7->text();
     QString nombre_str = ui->lineEdit_2->text();
     QString apellido_str = ui->lineEdit_3->text();
     QString direccion_str = ui->lineEdit_4->text();
@@ -44,15 +45,17 @@ void Gui_Cliente::on_Aceptar_button_clicked()
     QString email_str = ui->lineEdit_6->text();
     try {
         int id_C = stoi(id_str.toLocal8Bit().data());
+        int dni = stoi(dni_str.toLocal8Bit().data());
         string nombre = nombre_str.toStdString();
         string apellido = apellido_str.toStdString();
         string direccion = direccion_str.toStdString();
         string ciudadania = ciudadania_str.toStdString();
         string email = email_str.toStdString();
 
-        if(id_C>=0 && nombre!="" && apellido!="" && direccion!="" && ciudadania!="" && email!=""){
+        if(id_C>=0 && dni>=0 && nombre!="" && apellido!="" && direccion!=""){
             Cliente cliente;
             cliente.setId(id_C);
+            cliente.setDNI(dni);
             cliente.setNombre(nombre); cliente.setApellido(apellido); cliente.setDireccion(direccion);
             cliente.setEmail(email); cliente.setCiudadania(ciudadania);
 

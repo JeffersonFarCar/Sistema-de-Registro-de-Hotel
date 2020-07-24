@@ -22,7 +22,7 @@ public:
 private slots:
 
 
-    void on_pushButtonB3_clicked();
+    void on_pushButtonELIMINAR_clicked();
 
     void on_tablaMenuC_itemClicked(QTableWidgetItem *item);
 
@@ -34,7 +34,6 @@ private slots:
 
 private:
     Ui::Gui_Menu_Cliente *ui;
-    int u;
     int fila;
 };
 
