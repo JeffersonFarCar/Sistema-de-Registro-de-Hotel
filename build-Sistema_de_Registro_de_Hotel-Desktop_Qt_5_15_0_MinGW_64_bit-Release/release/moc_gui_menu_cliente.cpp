@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Gui_Menu_Cliente_t {
     QByteArrayData data[8];
-    char stringdata0[147];
+    char stringdata0[153];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,16 +33,16 @@ struct qt_meta_stringdata_Gui_Menu_Cliente_t {
 static const qt_meta_stringdata_Gui_Menu_Cliente_t qt_meta_stringdata_Gui_Menu_Cliente = {
     {
 QT_MOC_LITERAL(0, 0, 16), // "Gui_Menu_Cliente"
-QT_MOC_LITERAL(1, 17, 23), // "on_pushButtonB3_clicked"
-QT_MOC_LITERAL(2, 41, 0), // ""
-QT_MOC_LITERAL(3, 42, 25), // "on_tablaMenuC_itemClicked"
-QT_MOC_LITERAL(4, 68, 17), // "QTableWidgetItem*"
-QT_MOC_LITERAL(5, 86, 4), // "item"
-QT_MOC_LITERAL(6, 91, 29), // "on_pushButtoMODIFICAR_clicked"
-QT_MOC_LITERAL(7, 121, 25) // "on_Agregar_button_clicked"
+QT_MOC_LITERAL(1, 17, 29), // "on_pushButtonELIMINAR_clicked"
+QT_MOC_LITERAL(2, 47, 0), // ""
+QT_MOC_LITERAL(3, 48, 25), // "on_tablaMenuC_itemClicked"
+QT_MOC_LITERAL(4, 74, 17), // "QTableWidgetItem*"
+QT_MOC_LITERAL(5, 92, 4), // "item"
+QT_MOC_LITERAL(6, 97, 29), // "on_pushButtoMODIFICAR_clicked"
+QT_MOC_LITERAL(7, 127, 25) // "on_Agregar_button_clicked"
 
     },
-    "Gui_Menu_Cliente\0on_pushButtonB3_clicked\0"
+    "Gui_Menu_Cliente\0on_pushButtonELIMINAR_clicked\0"
     "\0on_tablaMenuC_itemClicked\0QTableWidgetItem*\0"
     "item\0on_pushButtoMODIFICAR_clicked\0"
     "on_Agregar_button_clicked"
@@ -83,7 +83,7 @@ void Gui_Menu_Cliente::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         auto *_t = static_cast<Gui_Menu_Cliente *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_pushButtonB3_clicked(); break;
+        case 0: _t->on_pushButtonELIMINAR_clicked(); break;
         case 1: _t->on_tablaMenuC_itemClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
         case 2: _t->on_pushButtoMODIFICAR_clicked(); break;
         case 3: _t->on_Agregar_button_clicked(); break;

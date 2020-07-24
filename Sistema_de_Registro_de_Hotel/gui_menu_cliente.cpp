@@ -17,7 +17,6 @@ Gui_Menu_Cliente::Gui_Menu_Cliente(QWidget *parent) :
 {
     //Definicion de variables
     ui->setupUi(this);
-    u = 0;
     fila = -1;
 
     mostrarDatos();
@@ -26,31 +25,31 @@ Gui_Menu_Cliente::Gui_Menu_Cliente(QWidget *parent) :
 void Gui_Menu_Cliente::mostrarDatos()
 {
     /*----Preparacion de la tabla----*/
-      ui->tablaMenuC->setColumnCount(6);
+      ui->tablaMenuC->setColumnCount(7);
       QStringList l;
-      l<<"ID"<<"Nombre"<<"Apellido"<<"Direccion"<<"Email"<<"Ciudadania";
+      l<<"ID"<<"DNI"<<"Nombre"<<"Apellido"<<"Direccion"<<"Email"<<"Ciudadania";
 
       ui->tablaMenuC->setHorizontalHeaderLabels(l);
       ui->tablaMenuC->setColumnWidth(0,80);
-      ui->tablaMenuC->setColumnWidth(1,120);
+      ui->tablaMenuC->setColumnWidth(1,100);
       ui->tablaMenuC->setColumnWidth(2,120);
       ui->tablaMenuC->setColumnWidth(3,150);
       ui->tablaMenuC->setColumnWidth(4,120);
       ui->tablaMenuC->setColumnWidth(5,120);
+      ui->tablaMenuC->setColumnWidth(6,120);
 
       /*----Fin preparacion de la tabla----*/
 
     Conexion conect;
     conect.Conectar();
     QSqlQuery query_consulta;
-
-    QString consulta="select * from personas";
-
+    QString consulta="SELECT idpersona, dni, nombre, apellido, direccion, email, ciudadania FROM personas INNER JOIN clientes WHERE personas.idpersona = clientes.id_persona";
     query_consulta.exec(consulta);
-
     int fila=0;
     ui->tablaMenuC->setRowCount(0);
+
     while(query_consulta.next()){
+
         ui->tablaMenuC->insertRow(fila);
         ui->tablaMenuC->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
         ui->tablaMenuC->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
@@ -58,6 +57,7 @@ void Gui_Menu_Cliente::mostrarDatos()
         ui->tablaMenuC->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
         ui->tablaMenuC->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(4).toByteArray().constData()));
         ui->tablaMenuC->setItem(fila, 5, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
+        ui->tablaMenuC->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(6).toByteArray().constData()));
         fila++;
     }
     conect.Cerrar();
@@ -69,7 +69,7 @@ Gui_Menu_Cliente::~Gui_Menu_Cliente()
 }
 
 
-void Gui_Menu_Cliente::on_pushButtonB3_clicked()
+void Gui_Menu_Cliente::on_pushButtonELIMINAR_clicked()
 {
      ui->tablaMenuC->removeRow(fila);
 }
