@@ -192,13 +192,13 @@
      <string>Habitación</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QLineEdit" name="HABITA">
     <property name="geometry">
      <rect>
       <x>120</x>
       <y>70</y>
-      <width>121</width>
-      <height>22</height>
+      <width>113</width>
+      <height>20</height>
      </rect>
     </property>
    </widget>

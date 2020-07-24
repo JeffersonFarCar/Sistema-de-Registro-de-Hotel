@@ -56,16 +56,18 @@ void gui_habitacion::on_pushButton_3_clicked()
     QString idH_str = ui->lineEdit_2->text();
     QString numH_str = ui->lineEdit_3->text();
     QString numP_str = ui->lineEdit_4->text();
-
+    QString Habic_str= ui->HABITA->text();
 
     try {
         int idH = stoi(idH_str.toLocal8Bit().data());
         int numH = stoi(numH_str.toLocal8Bit().data());
+        int Habic = stoi(Habic_str.toLocal8Bit().data());
         int numP = stoi(numP_str.toLocal8Bit().data());
 
 
         Habitacion habitacion;
         habitacion.setIdHabitacion(idH);
+        habitacion.setEstadoH(Habic);
         habitacion.setNumHabitacion(numH);
         habitacion.setNumPiso(numP);
 

@@ -8,6 +8,7 @@ debug/factura.o
 debug/gui_cliente.o
 debug/gui_empleado.o
 debug/gui_estado_habitacion.o
+debug/gui_factura.o
 debug/gui_habitacion.o
 debug/gui_index_empleado.o
 debug/gui_index_registro.o
@@ -29,6 +30,7 @@ debug/qrc_resources.o
 debug/moc_gui_cliente.o
 debug/moc_gui_empleado.o
 debug/moc_gui_estado_habitacion.o
+debug/moc_gui_factura.o
 debug/moc_gui_habitacion.o
 debug/moc_gui_index_empleado.o
 debug/moc_gui_index_registro.o

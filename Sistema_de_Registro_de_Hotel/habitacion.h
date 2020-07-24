@@ -19,11 +19,11 @@ public:
     void setNumPiso(int _numPiso);
     void setEstadoH(int _estadoH);
 
-    int getIdHabitacion() const;
-    int getTipoHabitacion() const;
-    int getNumHabitacion() const;
-    int getNumPiso() const;
-    int getEstadoH() const;
+    int getIdHabitacion() ;
+    int getTipoHabitacion() ;
+    int getNumHabitacion() ;
+    int getNumPiso() ;
+    int getEstadoH();
 };
 
 #endif // HABITACION_H

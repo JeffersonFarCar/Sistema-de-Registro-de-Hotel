@@ -16,7 +16,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpinBox>
 
 QT_BEGIN_NAMESPACE
 
@@ -37,7 +36,7 @@ public:
     QLabel *label_4;
     QPushButton *pushButton;
     QLabel *label_6;
-    QSpinBox *spinBox;
+    QLineEdit *HABITA;
 
     void setupUi(QDialog *gui_habitacion)
     {
@@ -91,9 +90,9 @@ public:
         label_6 = new QLabel(groupBox);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(40, 70, 61, 16));
-        spinBox = new QSpinBox(groupBox);
-        spinBox->setObjectName(QString::fromUtf8("spinBox"));
-        spinBox->setGeometry(QRect(120, 70, 121, 22));
+        HABITA = new QLineEdit(groupBox);
+        HABITA->setObjectName(QString::fromUtf8("HABITA"));
+        HABITA->setGeometry(QRect(120, 70, 113, 20));
 
         retranslateUi(gui_habitacion);
 

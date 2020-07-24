@@ -26,6 +26,7 @@ SOURCES += \
     gui_cliente.cpp \
     gui_empleado.cpp \
     gui_estado_habitacion.cpp \
+    gui_factura.cpp \
     gui_habitacion.cpp \
     gui_index_empleado.cpp \
     gui_index_registro.cpp \
@@ -55,6 +56,7 @@ HEADERS += \
     gui_cliente.h \
     gui_empleado.h \
     gui_estado_habitacion.h \
+    gui_factura.h \
     gui_habitacion.h \
     gui_index_empleado.h \
     gui_index_registro.h \
@@ -76,6 +78,7 @@ FORMS += \
     gui_cliente.ui \
     gui_empleado.ui \
     gui_estado_habitacion.ui \
+    gui_factura.ui \
     gui_habitacion.ui \
     gui_index_empleado.ui \
     gui_index_registro.ui \
