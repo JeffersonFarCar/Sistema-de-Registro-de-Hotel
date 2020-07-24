@@ -61,7 +61,7 @@ void gui_habitacion::on_pushButton_3_clicked()
     try {
         int idH = stoi(idH_str.toLocal8Bit().data());
         int numH = stoi(numH_str.toLocal8Bit().data());
-        int Habic = stoi(numP_str.toLocal8Bit().data());
+        int Habic = stoi(Habic_str.toLocal8Bit().data());
         int numP = stoi(numP_str.toLocal8Bit().data());
 
 
