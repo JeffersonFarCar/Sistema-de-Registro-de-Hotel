@@ -17,6 +17,7 @@ Gui_Cliente::Gui_Cliente(QWidget *parent) :
     ui->setupUi(this);
     //  Obtener último ID de la tabla personas
     Utils utils;
+
     int id = utils.getLastId("personas", "idpersona") +1;
 
     ui->lineEdit->setText(QString::number(id));
