@@ -24,6 +24,7 @@ release/persona_crud.o
 release/registro.o
 release/registro_crud.o
 release/registro_habitacion.o
+release/registro_habitacion_crud.o
 release/tipohabitacion.o
 release/utils.o
 release/qrc_resources.o

@@ -15,7 +15,7 @@ Conexion::Conexion()
 }
 void Conexion::Conectar(){
     db=QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("./databasesol.db");
+    db.setDatabaseName("./registro_hotel.db");
     db.open();
 }
 void  Conexion::Cerrar(){

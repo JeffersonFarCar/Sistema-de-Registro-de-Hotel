@@ -36,6 +36,7 @@ int Utils::getLastId(string tablename, string idcolumname){
     return lastId;
 }
 
+//este no funciona bien
 int Utils::contar(string tablename, string where, string value){
     int contar = 0;
     Conexion conn;
@@ -65,12 +66,12 @@ int Utils::contar(string tablename, string where, string value){
  * @param clause Condicion WHERE de la consulta
  * @return La respuesta de la consulta COUNT
  */
-int Utils::_contar(string tablename, string clause){
+int Utils::_contar(QString tablename, QString clause){
     int contar = 0;
     Conexion conn;
 
     QString queryCount;
-    queryCount.append("SELECT COUNT(*) FROM "+QString::fromStdString(tablename)+" "+QString::fromStdString(clause));
+    queryCount.append("SELECT COUNT(*) FROM "+tablename+" "+clause);
 
     conn.Conectar();
 
@@ -85,4 +86,40 @@ int Utils::_contar(string tablename, string clause){
     conn.Cerrar();
 
     return contar;
+}
+
+/**
+ * @brief Utils::updateEstado
+ * @param tablename Nombre de la tabla del elemento que queremos actualizar
+ * @param estado Nombre del campo estado de la tabla
+ * @param id Condicion id
+ * Actualiza el estado de un elemento
+ */
+void Utils::updateEstado(QString tablename, QString estado, QString id){
+    Conexion conn;
+
+    QString queryUS;
+    queryUS.append("UPDATE "+tablename+" SET "+estado+" WHERE "+id);
+
+    conn.Conectar();
+    QSqlQuery count;
+    count.prepare(queryUS);
+    count.exec();
+
+    conn.Cerrar();
+}
+
+QStringList Utils::getIds(QString tablename, QString clause){
+    QStringList ids;
+    Conexion conn;
+    QString queryIds;
+    queryIds.append("SELECT idhabitacion FROM "+tablename+" WHERE "+clause);
+    conn.Conectar();
+    QSqlQuery query;
+    query.prepare(queryIds);
+    query.exec();
+    while(query.next()){
+        ids.append(query.value(0).toByteArray().constData());
+    }
+    return ids;
 }

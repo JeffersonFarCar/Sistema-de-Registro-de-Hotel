@@ -2,12 +2,12 @@
 #include "ui_registro_habitacion.h"
 
 #include <QDebug>
-#include <QSpinBox>
 #include <QMessageBox>
 #include <QStringList>
 
 #include "conexion.h"
 #include "utils.h"
+#include "registro_habitacion_crud.h"
 
 /**
  * @brief Registro_habitacion::Registro_habitacion
@@ -47,15 +47,16 @@ void Registro_habitacion::mostrarDatos(){
  */
 void Registro_habitacion::prepararTabla(){
     /*----Preparacion de la tabla1----*/
-    ui->RHTableWidget->setColumnCount(4);
+    ui->RHTableWidget->setColumnCount(5);
     QStringList l;
-    l<<"ID"<<"Descripcion"<<"Precio"<<"Disponibles";
+    l<<"ID"<<"Tipo"<<"Descripcion"<<"Precio"<<"Disponibles";
 
     ui->RHTableWidget->setHorizontalHeaderLabels(l);
     ui->RHTableWidget->setColumnWidth(0,50);
-    ui->RHTableWidget->setColumnWidth(1,200);
-    ui->RHTableWidget->setColumnWidth(2,60);
+    ui->RHTableWidget->setColumnWidth(1,70);
+    ui->RHTableWidget->setColumnWidth(2,200);
     ui->RHTableWidget->setColumnWidth(3,70);
+    ui->RHTableWidget->setColumnWidth(4,70);
     /*----Fin preparacion de la tabla1----*/
 
 
@@ -93,8 +94,9 @@ void Registro_habitacion::llenarTabla(){
         ui->RHTableWidget->insertRow(cant);
         ui->RHTableWidget->setItem(cant, 0, new QTableWidgetItem(sqlquery.value(0).toByteArray().constData()));
         ui->RHTableWidget->setItem(cant, 1, new QTableWidgetItem(sqlquery.value(1).toByteArray().constData()));
-        ui->RHTableWidget->setItem(cant, 2, new QTableWidgetItem(sqlquery.value(3).toByteArray().constData()));
-        ui->RHTableWidget->setItem(cant, 3, new QTableWidgetItem(cantidades.at(cant)));
+        ui->RHTableWidget->setItem(cant, 2, new QTableWidgetItem(sqlquery.value(2).toByteArray().constData()));
+        ui->RHTableWidget->setItem(cant, 3, new QTableWidgetItem(sqlquery.value(4).toByteArray().constData()));
+        ui->RHTableWidget->setItem(cant, 4, new QTableWidgetItem(cantidades.at(cant)));
         cant++;
     }
     conn.Cerrar();
@@ -110,8 +112,7 @@ QStringList Registro_habitacion::habitacionesXtipo(){
     QStringList cantidades;
     int aux = 0;
     for (int i=1; i<=total; i++){
-        QString n = QString::number(i);
-        aux = u._contar("habitaciones", "WHERE idestado = 1 AND idtipohab = "+(string)n.toLocal8Bit().constData());
+        aux = u._contar("habitaciones", "WHERE idestado = 1 AND idtipohab = "+QString::number(i));
         cantidades.append(QString::number(aux));
     }
     return cantidades;
@@ -186,13 +187,43 @@ void Registro_habitacion::on_THtableWidget_itemClicked(QTableWidgetItem *item)
     }
 }
 
+
+QStringList Registro_habitacion::getHabitacionesSelected() const{
+    return habitacionesSelected;
+}
+/*
+void Registro_habitacion::setHabitacionesSelected(QStringList _habSelec){
+    habitacionesSelected = _habSelec;
+}
+*/
+void Registro_habitacion::setIdRegistro(int _idR){
+    idRegistro = _idR;
+}
+
 /**
  * @brief Registro_habitacion::on_AceptarRHButton_clicked
- * Guarda los datos en la BD
+ * Guarda los datos de habitaciones y registro en la BD
  */
 void Registro_habitacion::on_AceptarRHButton_clicked()
 {
+    Utils u;
+    QString id = QString::number(idRegistro);
+    QString str;
+    int i=0;
+    if(!habitacionesSelected.isEmpty()){
+        for(i=0; i<habitacionesSelected.size()-1; i++){
+            str += "("+id+", "+habitacionesSelected.at(i)+"), ";
+            u.updateEstado("habitaciones", "idestado = 2", "idhabitacion = "+habitacionesSelected.at(i));
+        }
+        str += "("+id+", "+habitacionesSelected.at(i)+")";
+        u.updateEstado("habitaciones", "idestado = 2", "idhabitacion = "+habitacionesSelected.at(i));
 
+        Registro_Habitacion_CRUD rhcrud;
+        rhcrud.CreateRegistro_Habitacion("registro_habitacion", str);
+        close();
+    }else{
+        QMessageBox::information(this, "Cuidado!", "No hay habitaciones seleccionadas.");
+    }
 }
 
 /**
@@ -205,7 +236,7 @@ void Registro_habitacion::on_CancelarRHButton_clicked()
     reply = QMessageBox::question(this, "Salir", "¿Esta seguro de salir?",
                                     QMessageBox::Yes|QMessageBox::No);
     if(reply == QMessageBox::Yes){
-        QMessageBox::warning(this, "Advertencia", "No se guardaron los datos.");
+        habitacionesSelected.clear();
         close();
     }
 }

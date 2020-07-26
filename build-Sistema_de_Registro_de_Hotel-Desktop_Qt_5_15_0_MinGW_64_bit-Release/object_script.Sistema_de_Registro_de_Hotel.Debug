@@ -24,6 +24,7 @@ debug/persona_crud.o
 debug/registro.o
 debug/registro_crud.o
 debug/registro_habitacion.o
+debug/registro_habitacion_crud.o
 debug/tipohabitacion.o
 debug/utils.o
 debug/qrc_resources.o
