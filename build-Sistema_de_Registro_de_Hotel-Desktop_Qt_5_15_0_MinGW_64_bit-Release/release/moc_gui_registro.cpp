@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Gui_Registro_t {
     QByteArrayData data[8];
-    char stringdata0[162];
+    char stringdata0[168];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,17 +36,18 @@ QT_MOC_LITERAL(0, 0, 12), // "Gui_Registro"
 QT_MOC_LITERAL(1, 13, 27), // "on_Registrar_button_clicked"
 QT_MOC_LITERAL(2, 41, 0), // ""
 QT_MOC_LITERAL(3, 42, 26), // "on_Cancelar_button_clicked"
-QT_MOC_LITERAL(4, 69, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(5, 91, 35), // "on_LineEdite_NomCliente_textC..."
-QT_MOC_LITERAL(6, 127, 4), // "arg1"
-QT_MOC_LITERAL(7, 132, 29) // "on_Registrar_button_2_clicked"
+QT_MOC_LITERAL(4, 69, 25), // "on_Hab_Reg_Button_clicked"
+QT_MOC_LITERAL(5, 95, 29), // "on_Registrar_button_2_clicked"
+QT_MOC_LITERAL(6, 125, 36), // "on_Cliente_cmbox_currentIndex..."
+QT_MOC_LITERAL(7, 162, 5) // "index"
 
     },
     "Gui_Registro\0on_Registrar_button_clicked\0"
     "\0on_Cancelar_button_clicked\0"
-    "on_pushButton_clicked\0"
-    "on_LineEdite_NomCliente_textChanged\0"
-    "arg1\0on_Registrar_button_2_clicked"
+    "on_Hab_Reg_Button_clicked\0"
+    "on_Registrar_button_2_clicked\0"
+    "on_Cliente_cmbox_currentIndexChanged\0"
+    "index"
 };
 #undef QT_MOC_LITERAL
 
@@ -67,15 +68,15 @@ static const uint qt_meta_data_Gui_Registro[] = {
        1,    0,   39,    2, 0x08 /* Private */,
        3,    0,   40,    2, 0x08 /* Private */,
        4,    0,   41,    2, 0x08 /* Private */,
-       5,    1,   42,    2, 0x08 /* Private */,
-       7,    0,   45,    2, 0x08 /* Private */,
+       5,    0,   42,    2, 0x08 /* Private */,
+       6,    1,   43,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    6,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    7,
 
        0        // eod
 };
@@ -88,9 +89,9 @@ void Gui_Registro::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         switch (_id) {
         case 0: _t->on_Registrar_button_clicked(); break;
         case 1: _t->on_Cancelar_button_clicked(); break;
-        case 2: _t->on_pushButton_clicked(); break;
-        case 3: _t->on_LineEdite_NomCliente_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 4: _t->on_Registrar_button_2_clicked(); break;
+        case 2: _t->on_Hab_Reg_Button_clicked(); break;
+        case 3: _t->on_Registrar_button_2_clicked(); break;
+        case 4: _t->on_Cliente_cmbox_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }

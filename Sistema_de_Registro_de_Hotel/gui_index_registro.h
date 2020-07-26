@@ -25,15 +25,14 @@ private slots:
 
     void on_Regresar__clicked();
 
-    void on_cargarTablaRegistro_clicked();
-
-    void on_cargarDatoRegistro_clicked();
-
     void on_tableListRegistros_itemClicked(QTableWidgetItem *item);
 
 private:
     Ui::Gui_Index_Registro *ui;
     int f;
+    void prepararTabla();
+    void cargarTabla();
+    void mostrarDatos();
 };
 
 #endif // GUI_INDEX_REGISTRO_H

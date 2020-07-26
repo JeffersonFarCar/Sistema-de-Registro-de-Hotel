@@ -98,3 +98,4 @@ RESOURCES += \
     resources.qrc
 
 DISTFILES +=
+

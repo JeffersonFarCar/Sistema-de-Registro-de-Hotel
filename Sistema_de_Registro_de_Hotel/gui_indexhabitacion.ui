@@ -40,7 +40,7 @@
     </font>
    </property>
    <property name="title">
-    <string>indexHabitacion</string>
+    <string/>
    </property>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
@@ -56,29 +56,6 @@
     </property>
     <property name="text">
      <string>Accciones</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>90</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#pushButton{
-	background-color: transparent;
-	border-image: url(:/imagenes/imagenes/view_unpressed.png);
-}
-
-#pushButton:pressed{
-	border-image: url(:/imagenes/imagenes/view_pressed.png);
-}</string>
-    </property>
-    <property name="text">
-     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
@@ -114,7 +91,7 @@
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>200</x>
       <y>240</y>
       <width>91</width>
       <height>31</height>
@@ -164,8 +141,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>20</y>
+      <x>200</x>
+      <y>10</y>
       <width>141</width>
       <height>21</height>
      </rect>
@@ -277,7 +254,7 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>580</x>
       <y>80</y>
       <width>51</width>
       <height>51</height>

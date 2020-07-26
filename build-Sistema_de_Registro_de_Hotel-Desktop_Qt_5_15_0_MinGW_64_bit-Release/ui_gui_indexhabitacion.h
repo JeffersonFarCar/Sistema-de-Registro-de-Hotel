@@ -26,7 +26,6 @@ class Ui_gui_indexHabitacion
 public:
     QGroupBox *groupBox;
     QLabel *label_2;
-    QPushButton *pushButton;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
     QPushButton *pushButton_5;
@@ -67,17 +66,6 @@ public:
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(430, 60, 81, 21));
         label_2->setStyleSheet(QString::fromUtf8("font: 75 14pt \"Times New Roman\";"));
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(410, 90, 51, 51));
-        pushButton->setStyleSheet(QString::fromUtf8("#pushButton{\n"
-"	background-color: transparent;\n"
-"	border-image: url(:/imagenes/imagenes/view_unpressed.png);\n"
-"}\n"
-"\n"
-"#pushButton:pressed{\n"
-"	border-image: url(:/imagenes/imagenes/view_pressed.png);\n"
-"}"));
         pushButton_3 = new QPushButton(groupBox);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(490, 90, 51, 51));
@@ -92,7 +80,7 @@ public:
 "}"));
         pushButton_4 = new QPushButton(groupBox);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(220, 240, 91, 31));
+        pushButton_4->setGeometry(QRect(200, 240, 91, 31));
         QFont font2;
         font2.setFamily(QString::fromUtf8("Times New Roman"));
         font2.setPointSize(16);
@@ -108,7 +96,7 @@ public:
         pushButton_5->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
         label = new QLabel(groupBox);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(150, 20, 141, 21));
+        label->setGeometry(QRect(200, 10, 141, 21));
         QFont font3;
         font3.setFamily(QString::fromUtf8("Times New Roman"));
         font3.setPointSize(20);
@@ -140,7 +128,7 @@ public:
         label_6->setGeometry(QRect(480, 260, 47, 13));
         pushButton_2 = new QPushButton(groupBox);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(560, 80, 51, 51));
+        pushButton_2->setGeometry(QRect(580, 80, 51, 51));
         pushButton_2->setFont(font1);
         pushButton_2->setStyleSheet(QString::fromUtf8("#pushButton_2{\n"
 "	background-color: transparent;\n"
@@ -173,9 +161,8 @@ public:
     void retranslateUi(QDialog *gui_indexHabitacion)
     {
         gui_indexHabitacion->setWindowTitle(QCoreApplication::translate("gui_indexHabitacion", "Dialog", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("gui_indexHabitacion", "indexHabitacion", nullptr));
+        groupBox->setTitle(QString());
         label_2->setText(QCoreApplication::translate("gui_indexHabitacion", "Accciones", nullptr));
-        pushButton->setText(QString());
         pushButton_3->setText(QString());
         pushButton_4->setText(QCoreApplication::translate("gui_indexHabitacion", "Registrar", nullptr));
         pushButton_5->setText(QCoreApplication::translate("gui_indexHabitacion", "Cancelar", nullptr));

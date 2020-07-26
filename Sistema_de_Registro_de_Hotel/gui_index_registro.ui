@@ -148,38 +148,6 @@
     <string>Registros</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="cargarTablaRegistro">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>80</y>
-     <width>131</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 75 16pt &quot;Times New Roman&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Preparar Tabla</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cargarDatoRegistro">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>80</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 75 16pt &quot;Times New Roman&quot;;</string>
-   </property>
-   <property name="text">
-    <string>Cargar Datos</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>

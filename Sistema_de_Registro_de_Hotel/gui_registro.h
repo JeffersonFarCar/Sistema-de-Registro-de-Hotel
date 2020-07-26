@@ -2,6 +2,7 @@
 #define GUI_REGISTRO_H
 
 #include <QDialog>
+#include <QStringList>
 
 namespace Ui {
 class Gui_Registro;
@@ -20,14 +21,17 @@ private slots:
 
     void on_Cancelar_button_clicked();
 
-    void on_pushButton_clicked();
-
-    void on_LineEdite_NomCliente_textChanged(const QString &arg1);
+    void on_Hab_Reg_Button_clicked();
 
     void on_Registrar_button_2_clicked();
 
+    void on_Cliente_cmbox_currentIndexChanged(int index);
+
 private:
     Ui::Gui_Registro *ui;
+    QStringList clientes_nomape;
+    QStringList clientes_id;
+    void fillComboBox();
 };
 
 #endif // GUI_REGISTRO_H

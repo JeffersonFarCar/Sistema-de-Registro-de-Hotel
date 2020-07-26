@@ -1,33 +1,33 @@
 #ifndef REGISTRO_H
 #define REGISTRO_H
-#include <QDate>
+#include "string"
+using namespace std;
 
 class Registro{
 private:
     int idRegistro;
     int idCliente;
     int idEmpleado;
-    int idHabitacion; // borrar
-    int cantPersonas;
-    QDate fechaEntrada;
-    QDate fechaSalida;
+    int cantHabitaciones;
+    string fechaEntrada;
+    string fechaSalida;
 
 public:
     Registro();
-    Registro(int _idR, int _idC, int _idH, int _cant, QDate _fechE, QDate _fechS);
+    Registro(int _idR, int _idC, int _idE, int _cantH, string _fechE, string _fechS);
     void setIdRegistro(int _idR);
     void setIdCliente(int _idC);
-    void setIdHabitacion(int _idH);
-    void setCantPersonas(int _cant);
-    void setFechaEntrada(QDate _fechE);
-    void setFechaSalida(QDate _fechS);
+    void setIdEmpleado(int _idE);
+    void setCantHab(int _cantH);
+    void setFechaEntrada(string _fechE);
+    void setFechaSalida(string _fechS);
 
     int getIdRegistro() const;
     int getIdCliente() const;
-    int getIdHabitacion() const;
-    int getCantPersonas() const;
-    QDate getFechaEntrada() const;
-    QDate getFechaSalida() const;
+    int getIdEmpleado() const;
+    int getCantHab() const;
+    string getFechaEntrada() const;
+    string getFechaSalida() const;
 };
 
 #endif // REGISTRO_H

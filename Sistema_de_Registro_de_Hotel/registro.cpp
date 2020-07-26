@@ -4,11 +4,11 @@ Registro::Registro(){
 
 }
 
-Registro::Registro(int _idR, int _idC, int _idH, int _cant, QDate _fechE, QDate _fechS){
+Registro::Registro(int _idR, int _idC, int _idE, int _cantH, string _fechE, string _fechS){
     idRegistro = _idR;
     idCliente = _idC;
-    idHabitacion = _idH;
-    cantPersonas = _cant;
+    idEmpleado = _idE;
+    cantHabitaciones = _cantH;
     fechaEntrada = _fechE;
     fechaSalida = _fechS;
 }
@@ -20,16 +20,16 @@ void Registro::setIdRegistro(int _idR){
 void Registro::setIdCliente(int _idC){
     idCliente = _idC;
 }
-void Registro::setIdHabitacion(int _idH){
-    idHabitacion = _idH;
+void Registro::setIdEmpleado(int _idE){
+    idEmpleado = _idE;
 }
-void Registro::setCantPersonas(int _cant){
-    cantPersonas = _cant;
+void Registro::setCantHab(int _cantH){
+    cantHabitaciones = _cantH;
 }
-void Registro::setFechaEntrada(QDate _fechE){
+void Registro::setFechaEntrada(string _fechE){
     fechaEntrada = _fechE;
 }
-void Registro::setFechaSalida(QDate _fechS){
+void Registro::setFechaSalida(string _fechS){
     fechaSalida = _fechS;
 }
 
@@ -40,15 +40,15 @@ int Registro::getIdRegistro() const{
 int Registro::getIdCliente() const{
     return idCliente;
 }
-int Registro::getIdHabitacion() const{
-    return idHabitacion;
+int Registro::getIdEmpleado() const{
+    return idEmpleado;
 }
-int Registro::getCantPersonas() const{
-    return cantPersonas;
+int Registro::getCantHab() const{
+    return cantHabitaciones;
 }
-QDate Registro::getFechaEntrada() const{
+string Registro::getFechaEntrada() const{
     return fechaEntrada;
 }
-QDate Registro::getFechaSalida() const{
+string Registro::getFechaSalida() const{
     return fechaSalida;
 }

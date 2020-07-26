@@ -6,8 +6,10 @@
 #include <QStringList>
 #include <QSpinBox>
 #include <QDebug>
+#include <QSqlError>
 
 #include "gui_registro.h"
+#include "conexion.h"
 
 Gui_Index_Registro::Gui_Index_Registro(QWidget *parent) :
     QDialog(parent),
@@ -15,8 +17,7 @@ Gui_Index_Registro::Gui_Index_Registro(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->tableListRegistros->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    //tableListRegistros
-
+    mostrarDatos();
 }
 
 Gui_Index_Registro::~Gui_Index_Registro()
@@ -24,11 +25,62 @@ Gui_Index_Registro::~Gui_Index_Registro()
     delete ui;
 }
 
+void Gui_Index_Registro::on_Regresar__clicked()
+{
+    close();//Permite cerra la ventana actual abierta
+}
+
+void Gui_Index_Registro::mostrarDatos(){
+    prepararTabla();
+    cargarTabla();
+}
+
+void Gui_Index_Registro::prepararTabla(){
+    /**----Preparar Tabla----**/
+    ui->tableListRegistros->setColumnCount(5);
+    QStringList l;
+    l<<"ID"<<"Cliente"<<"Cant. Hab."<<"F. Ingreso"<<"F. Salida";
+    ui->tableListRegistros->setHorizontalHeaderLabels(l);
+    ui->tableListRegistros->setColumnWidth(0,20);
+    ui->tableListRegistros->setColumnWidth(1,100);
+    ui->tableListRegistros->setColumnWidth(2,100);
+    ui->tableListRegistros->setColumnWidth(3,90);
+    ui->tableListRegistros->setColumnWidth(4,90);
+    /**---Fin Tabla---**/
+}
+
+void Gui_Index_Registro::cargarTabla(){
+    Conexion conn;
+    conn.Conectar();
+
+    QSqlQuery query_consulta;
+    QString query = "SELECT registros.idcliente, nombre, registros.fechae, registros.fechas FROM ((personas INNER JOIN clientes ON idpersona = id_persona) INNER JOIN registros ON clientes.idcliente = registros.idcliente);";
+    query_consulta.exec(query);
+    int fila = 0;
+    ui->tableListRegistros->setRowCount(0);
+    while(query_consulta.next()){
+        ui->tableListRegistros->insertRow(fila);
+        ui->tableListRegistros->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
+        ui->tableListRegistros->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
+        ui->tableListRegistros->setItem(fila, 2, new QTableWidgetItem("5"));
+        ui->tableListRegistros->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(2).toByteArray().constData()));
+        ui->tableListRegistros->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
+        fila++;
+    }
+    conn.Cerrar();
+}
+
+void Gui_Index_Registro::on_tableListRegistros_itemClicked(QTableWidgetItem *item)
+{
+
+}
+
 void Gui_Index_Registro::on_New_Registro_Button_clicked()
 {
     Gui_Registro guiR;
     guiR.setModal(true);
     guiR.exec();
+    mostrarDatos();
 }
 
 void Gui_Index_Registro::on_edit_registros_button_clicked()
@@ -43,55 +95,4 @@ void Gui_Index_Registro::on_delete_registros_button_clicked()
     if(action == QMessageBox::Yes){
         ui->tableListRegistros->removeRow(f);
     }
-}
-
-void Gui_Index_Registro::on_Regresar__clicked()
-{
-    close();//Permite cerra la ventana actual abierta
-}
-
-void Gui_Index_Registro::on_cargarTablaRegistro_clicked()
-{
-    ui->tableListRegistros->setColumnCount(6);
-    QStringList l;
-    l<<"ID"<<"Habitacion"<<"Cliente"<<"Cantidad"<<"Ingreso"<<"Salida";
-    ui->tableListRegistros->setHorizontalHeaderLabels(l);
-    ui->tableListRegistros->setColumnWidth(0,20);
-    ui->tableListRegistros->setColumnWidth(1,100);
-    ui->tableListRegistros->setColumnWidth(2,100);
-    ui->tableListRegistros->setColumnWidth(3,80);
-    ui->tableListRegistros->setColumnWidth(4,80);
-    ui->tableListRegistros->setColumnWidth(5,80);
-    ui->tableListRegistros->setColumnWidth(6,100);
-}
-
-void Gui_Index_Registro::on_cargarDatoRegistro_clicked()
-{
-    QComboBox* combo;
-    QStringList fonts = {"elemento 1", "elemento 2", "elemento 3"};
-    combo = new QComboBox;
-    combo->addItems(fonts);
-    combo->setObjectName("combo"+QString::number(5));
-    QSpinBox* nani;
-    nani = new QSpinBox;
-    nani->setRange(0, 10);
-
-    ui->tableListRegistros->insertRow(ui->tableListRegistros->rowCount());
-
-    ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,0,new QTableWidgetItem("0003"));
-    ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,1,new QTableWidgetItem("Simple"));
-    ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,2,new QTableWidgetItem("Pedro"));
-    ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,3,new QTableWidgetItem("1"));
-    ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,4,new QTableWidgetItem("22/02/20"));
-    ui->tableListRegistros->setCellWidget(ui->tableListRegistros->rowCount()-1,5, nani);
-    // ui->tableListRegistros->setItem(ui->tableListRegistros->rowCount()-1,5,new QTableWidgetItem("13/03/20"));
-
-}
-
-void Gui_Index_Registro::on_tableListRegistros_itemClicked(QTableWidgetItem *item)
-{
-    f = item->row();
-    QSpinBox *sera;
-    sera = (QSpinBox*)ui->tableListRegistros->cellWidget(f, 5);
-    qDebug()<<QString::number(sera->value());
 }

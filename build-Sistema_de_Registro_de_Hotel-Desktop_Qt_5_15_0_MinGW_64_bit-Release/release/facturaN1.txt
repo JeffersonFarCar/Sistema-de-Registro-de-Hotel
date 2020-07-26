@@ -1,0 +1,12 @@
+Factura N1
+
+Nombre:		Luis
+Apellido:		Aliaga Mariaca
+Dirección:		Claveles - 114 / JLBR
+Ciudadania:		4569871
+Numero de personas:		cinco
+Fecha de Ingreso:		15-03-2020
+Fecha de Salida:		20-03-2020
+Cantidad de dias:		5
+Precio por día:		$/50.00
+Precio Total:		$/250.00

@@ -32,15 +32,15 @@ public:
     QLabel *label_5;
     QLabel *label_6;
     QLabel *label_7;
-    QDateEdit *dateEdit;
-    QDateEdit *dateEdit_2;
+    QDateEdit *fechaE;
+    QDateEdit *fechaS;
     QPushButton *Registrar_button;
     QPushButton *Cancelar_button;
     QComboBox *Cliente_cmbox;
     QLineEdit *LineEdit_idRegis;
-    QLineEdit *LineEdite_NomCliente;
+    QLineEdit *LineEdite_idCliente;
     QLineEdit *LineEdit_NomEmpleado;
-    QPushButton *pushButton;
+    QPushButton *Hab_Reg_Button;
     QPushButton *Registrar_button_2;
 
     void setupUi(QDialog *Gui_Registro)
@@ -72,12 +72,14 @@ public:
         label_7 = new QLabel(groupBox);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(30, 270, 71, 21));
-        dateEdit = new QDateEdit(groupBox);
-        dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-        dateEdit->setGeometry(QRect(160, 240, 161, 21));
-        dateEdit_2 = new QDateEdit(groupBox);
-        dateEdit_2->setObjectName(QString::fromUtf8("dateEdit_2"));
-        dateEdit_2->setGeometry(QRect(160, 270, 161, 21));
+        fechaE = new QDateEdit(groupBox);
+        fechaE->setObjectName(QString::fromUtf8("fechaE"));
+        fechaE->setGeometry(QRect(160, 240, 161, 21));
+        fechaE->setCalendarPopup(true);
+        fechaS = new QDateEdit(groupBox);
+        fechaS->setObjectName(QString::fromUtf8("fechaS"));
+        fechaS->setGeometry(QRect(160, 270, 161, 21));
+        fechaS->setCalendarPopup(true);
         Registrar_button = new QPushButton(groupBox);
         Registrar_button->setObjectName(QString::fromUtf8("Registrar_button"));
         Registrar_button->setGeometry(QRect(10, 310, 101, 41));
@@ -93,20 +95,23 @@ public:
         Cliente_cmbox = new QComboBox(groupBox);
         Cliente_cmbox->setObjectName(QString::fromUtf8("Cliente_cmbox"));
         Cliente_cmbox->setGeometry(QRect(160, 160, 161, 21));
+        Cliente_cmbox->setEditable(true);
         LineEdit_idRegis = new QLineEdit(groupBox);
         LineEdit_idRegis->setObjectName(QString::fromUtf8("LineEdit_idRegis"));
-        LineEdit_idRegis->setEnabled(false);
+        LineEdit_idRegis->setEnabled(true);
         LineEdit_idRegis->setGeometry(QRect(160, 30, 161, 21));
-        LineEdite_NomCliente = new QLineEdit(groupBox);
-        LineEdite_NomCliente->setObjectName(QString::fromUtf8("LineEdite_NomCliente"));
-        LineEdite_NomCliente->setGeometry(QRect(160, 130, 161, 20));
+        LineEdit_idRegis->setReadOnly(true);
+        LineEdite_idCliente = new QLineEdit(groupBox);
+        LineEdite_idCliente->setObjectName(QString::fromUtf8("LineEdite_idCliente"));
+        LineEdite_idCliente->setGeometry(QRect(160, 130, 161, 20));
+        LineEdite_idCliente->setReadOnly(true);
         LineEdit_NomEmpleado = new QLineEdit(groupBox);
         LineEdit_NomEmpleado->setObjectName(QString::fromUtf8("LineEdit_NomEmpleado"));
         LineEdit_NomEmpleado->setEnabled(false);
         LineEdit_NomEmpleado->setGeometry(QRect(160, 190, 161, 20));
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(160, 100, 161, 23));
+        Hab_Reg_Button = new QPushButton(groupBox);
+        Hab_Reg_Button->setObjectName(QString::fromUtf8("Hab_Reg_Button"));
+        Hab_Reg_Button->setGeometry(QRect(160, 100, 161, 23));
         Registrar_button_2 = new QPushButton(groupBox);
         Registrar_button_2->setObjectName(QString::fromUtf8("Registrar_button_2"));
         Registrar_button_2->setGeometry(QRect(130, 310, 101, 41));
@@ -124,14 +129,14 @@ public:
         groupBox->setTitle(QCoreApplication::translate("Gui_Registro", "Registro Hospedaje Formulario", nullptr));
         label->setText(QCoreApplication::translate("Gui_Registro", "ID-Registro", nullptr));
         label_2->setText(QCoreApplication::translate("Gui_Registro", "Habitaci\303\263n", nullptr));
-        label_3->setText(QCoreApplication::translate("Gui_Registro", "Nombre", nullptr));
+        label_3->setText(QCoreApplication::translate("Gui_Registro", "ID-Cliente", nullptr));
         label_4->setText(QCoreApplication::translate("Gui_Registro", "Cliente", nullptr));
         label_5->setText(QCoreApplication::translate("Gui_Registro", "Empleado", nullptr));
         label_6->setText(QCoreApplication::translate("Gui_Registro", "Fecha Ingreso", nullptr));
         label_7->setText(QCoreApplication::translate("Gui_Registro", "Fecha Salida", nullptr));
         Registrar_button->setText(QCoreApplication::translate("Gui_Registro", "Registrar", nullptr));
         Cancelar_button->setText(QCoreApplication::translate("Gui_Registro", "Cancelar", nullptr));
-        pushButton->setText(QCoreApplication::translate("Gui_Registro", "Agregar Habitaciones", nullptr));
+        Hab_Reg_Button->setText(QCoreApplication::translate("Gui_Registro", "Agregar Habitaciones", nullptr));
         Registrar_button_2->setText(QCoreApplication::translate("Gui_Registro", "ver factura", nullptr));
     } // retranslateUi
 

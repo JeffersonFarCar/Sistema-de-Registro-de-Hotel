@@ -31,8 +31,6 @@ public:
     QPushButton *delete_registros_button;
     QLabel *label_2;
     QLabel *label_3;
-    QPushButton *cargarTablaRegistro;
-    QPushButton *cargarDatoRegistro;
 
     void setupUi(QDialog *Gui_Index_Registro)
     {
@@ -85,14 +83,6 @@ public:
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(260, 10, 151, 41));
         label_3->setStyleSheet(QString::fromUtf8("font: 75 28pt \"Times New Roman\";"));
-        cargarTablaRegistro = new QPushButton(Gui_Index_Registro);
-        cargarTablaRegistro->setObjectName(QString::fromUtf8("cargarTablaRegistro"));
-        cargarTablaRegistro->setGeometry(QRect(30, 80, 131, 31));
-        cargarTablaRegistro->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
-        cargarDatoRegistro = new QPushButton(Gui_Index_Registro);
-        cargarDatoRegistro->setObjectName(QString::fromUtf8("cargarDatoRegistro"));
-        cargarDatoRegistro->setGeometry(QRect(180, 80, 121, 31));
-        cargarDatoRegistro->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
 
         retranslateUi(Gui_Index_Registro);
 
@@ -109,8 +99,6 @@ public:
         delete_registros_button->setText(QString());
         label_2->setText(QCoreApplication::translate("Gui_Index_Registro", "Accciones", nullptr));
         label_3->setText(QCoreApplication::translate("Gui_Index_Registro", "Registros", nullptr));
-        cargarTablaRegistro->setText(QCoreApplication::translate("Gui_Index_Registro", "Preparar Tabla", nullptr));
-        cargarDatoRegistro->setText(QCoreApplication::translate("Gui_Index_Registro", "Cargar Datos", nullptr));
     } // retranslateUi
 
 };

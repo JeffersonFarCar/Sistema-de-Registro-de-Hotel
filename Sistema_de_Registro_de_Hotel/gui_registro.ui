@@ -61,7 +61,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Nombre</string>
+     <string>ID-Cliente</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -116,7 +116,7 @@
      <string>Fecha Salida</string>
     </property>
    </widget>
-   <widget class="QDateEdit" name="dateEdit">
+   <widget class="QDateEdit" name="fechaE">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -125,8 +125,11 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QDateEdit" name="dateEdit_2">
+   <widget class="QDateEdit" name="fechaS">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -134,6 +137,9 @@
       <width>161</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="Registrar_button">
@@ -186,10 +192,13 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLineEdit" name="LineEdit_idRegis">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -199,8 +208,11 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="LineEdite_NomCliente">
+   <widget class="QLineEdit" name="LineEdite_idCliente">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -208,6 +220,9 @@
       <width>161</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLineEdit" name="LineEdit_NomEmpleado">
@@ -223,7 +238,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Hab_Reg_Button">
     <property name="geometry">
      <rect>
       <x>160</x>
