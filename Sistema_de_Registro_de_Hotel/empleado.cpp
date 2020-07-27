@@ -13,9 +13,8 @@ Empleado::Empleado(int id_persona, int dni, string nombre,string apellido,string
 
 }
 
-int Empleado::getIdEmpleado(){
-    return getId();
-}
+
+//Metodos Getters
 double Empleado::getSueldo(){
     return sueldo;
 }
@@ -27,7 +26,7 @@ string Empleado::getFechaContratacion(){
 }
 
 
-
+//Metodos Setters
 void Empleado::setSueldo(double _sueldo){
     sueldo=_sueldo;
 

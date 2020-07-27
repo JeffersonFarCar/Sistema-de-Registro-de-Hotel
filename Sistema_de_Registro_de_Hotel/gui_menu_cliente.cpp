@@ -84,11 +84,36 @@ void Gui_Menu_Cliente::on_newTableC_itemClicked(QTableWidgetItem *item)
 
 void Gui_Menu_Cliente::on_pushButtoMODIFICAR_clicked()
 {
-    ui->newTableC->setItem(fila,1,new QTableWidgetItem(ui->lineEditNOMBRE->text()));
-    ui->newTableC->setItem(fila,2,new QTableWidgetItem(ui->lineEditAPELLIDO->text()));
-    ui->newTableC->setItem(fila,3,new QTableWidgetItem(ui->lineEditDIRECCION->text()));
-    ui->newTableC->setItem(fila,4,new QTableWidgetItem(ui->lineEditCIUDADANIA->text()));
-    ui->newTableC->setItem(fila,5,new QTableWidgetItem(ui->lineEditEMAIL->text()));
+    QMessageBox::StandardButton action;
+
+    Cliente cliente;
+    try {
+        if(validarDatos()){
+            int dni_C = stoi(ui->lineEditDNI->text().toLocal8Bit().data());
+            string nombre = ui->lineEditNOMBRE->text().toStdString();
+            string apellido = ui->lineEditAPELLIDO->text().toStdString();
+            string direccion = ui->lineEditDIRECCION->text().toStdString();
+            string ciudadania = ui->lineEditCIUDADANIA->text().toStdString();
+            string email = ui->lineEditEMAIL->text().toStdString();
+
+            QString id = ui->newTableC->item(fila,0)->text();
+            cliente.setId(id.toInt());
+            cliente.setDNI(dni_C);
+            cliente.setNombre(nombre); cliente.setApellido(apellido); cliente.setDireccion(direccion);
+            cliente.setEmail(email); cliente.setCiudadania(ciudadania);
+
+            //Mensaje de Alerta
+            action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa editar el dato?");
+            if(action == QMessageBox::Yes){
+                crudC.updateCliente(cliente); //Realizar Cambios
+                mostrarDatos();
+                QMessageBox::information(this, "Mensaje", "Cambios realizados correctamente.");
+            } else{ QMessageBox::information(this,"Mensaje","No se realizó ningun cambio"); }
+        }
+    } catch (exception  &e) {
+        QMessageBox::warning(this, "Advertencia", "Problema al editar, revisa los datos.");
+    }
+
 }
 
 void Gui_Menu_Cliente::on_pushButtonELIMINAR_clicked()
@@ -98,7 +123,7 @@ void Gui_Menu_Cliente::on_pushButtonELIMINAR_clicked()
     action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa borrar el dato?");
     if(action == QMessageBox::Yes)
         crudC.deleteCliente(id.toInt());
-        mostrarDatos();
+     mostrarDatos();
 }
 
 void Gui_Menu_Cliente::prepararTabla(){
@@ -116,7 +141,73 @@ void Gui_Menu_Cliente::prepararTabla(){
     ui->newTableC->setColumnWidth(5,120);
     ui->newTableC->setColumnWidth(6,120);
 
-      /*----Fin preparacion de la tabla----*/
+    /*----Fin preparacion de la tabla----*/
+}
+
+bool Gui_Menu_Cliente::validarDatos()
+{
+
+    /*Inicio Ayuda para ingreso de datos*/
+        QRegExp exp_dni("[0-9]{8}");
+        QRegExp exp_N_A_C("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$");
+        QRegExp exp_email("[\\w]+@{1}[\\w]+\\.[a-z]{2,3}");
+
+        ui->lineEditDNI->setValidator(new QRegExpValidator(exp_dni, this));
+        ui->lineEditNOMBRE->setValidator(new QRegExpValidator(exp_N_A_C, this));
+        ui->lineEditAPELLIDO->setValidator(new QRegExpValidator(exp_N_A_C, this));
+        ui->lineEditCIUDADANIA->setValidator(new QRegExpValidator(exp_N_A_C, this));
+        ui->lineEditEMAIL->setValidator(new QRegExpValidator(exp_email, this));
+    /*Fin Ayuda*/
+
+        /*Comprobación de ingresos correctos*/
+          bool ifDni =  exp_dni.exactMatch(ui->lineEditDNI->text());
+          bool ifNombre = exp_N_A_C.exactMatch(ui->lineEditNOMBRE->text());
+          bool ifApellido = exp_N_A_C.exactMatch(ui->lineEditAPELLIDO->text());
+          bool ifCiudadania = exp_N_A_C.exactMatch(ui->lineEditCIUDADANIA->text());
+          bool ifEmail = exp_email.exactMatch(ui->lineEditEMAIL->text());
+
+        if(ifDni == false){
+            ui->lineEditDNI->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditDNI->setStyleSheet("border: 1px solid green;");
+            ifDni =true;
+        }
+
+        if(ifNombre == false){
+             ui->lineEditNOMBRE->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditNOMBRE->setStyleSheet("border: 1px solid green;");
+            ifNombre = true;
+        }
+
+        if(ifApellido == false){
+            ui->lineEditAPELLIDO->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditAPELLIDO->setStyleSheet("border: 1px solid green;");
+            ifApellido = true;
+        }
+
+        if (ui->lineEditDIRECCION->text() !=""){
+            ui->lineEditDIRECCION->setStyleSheet("border: 1px solid green;");
+        }
+
+        if(ifCiudadania == false){
+            ui->lineEditCIUDADANIA->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditCIUDADANIA->setStyleSheet("border: 1px solid green;");
+            ifCiudadania = true;
+        }
+
+        if(ifEmail == false){
+            ui->lineEditEMAIL->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditEMAIL->setStyleSheet("border: 1px solid green;");
+            ifEmail = true;
+        }
+
+        if(ifDni==true && ifNombre==true && ifApellido==true && ifCiudadania==true && ifEmail==true)
+        return true; //Si todos son correctos registra
+        else return false; //No registra por almenos un error
 }
 
 void Gui_Menu_Cliente::on_lineEdit_buscar_textChanged(const QString &arg1)
@@ -149,11 +240,6 @@ void Gui_Menu_Cliente::on_lineEdit_buscar_textChanged(const QString &arg1)
             fila++;
         }
         conect.Cerrar();
-}
-
-void Gui_Menu_Cliente::on_Buscar_button_clicked()
-{
-
 }
 
 Gui_Menu_Cliente::~Gui_Menu_Cliente()

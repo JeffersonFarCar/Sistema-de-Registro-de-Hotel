@@ -16,6 +16,7 @@ public:
     explicit Gui_Menu_Cliente(QWidget *parent = nullptr);
     void mostrarDatos();
     void prepararTabla();
+    bool validarDatos();
     ~Gui_Menu_Cliente();
 
 private slots:
@@ -28,8 +29,6 @@ private slots:
     void on_Agregar_button_clicked();
 
     void on_lineEdit_buscar_textChanged(const QString &arg1);
-
-    void on_Buscar_button_clicked();
 
     void on_newTableC_itemClicked(QTableWidgetItem *item);
 

@@ -87,7 +87,7 @@ public:
         lineEdit_buscar = new QLineEdit(Gui_Menu_Cliente);
         lineEdit_buscar->setObjectName(QString::fromUtf8("lineEdit_buscar"));
         lineEdit_buscar->setEnabled(true);
-        lineEdit_buscar->setGeometry(QRect(500, 60, 181, 21));
+        lineEdit_buscar->setGeometry(QRect(70, 60, 181, 21));
         QFont font1;
         font1.setFamily(QString::fromUtf8("MS Sans Serif"));
         lineEdit_buscar->setFont(font1);
@@ -105,7 +105,8 @@ public:
         label_2->setFont(font2);
         Buscar_button = new QPushButton(Gui_Menu_Cliente);
         Buscar_button->setObjectName(QString::fromUtf8("Buscar_button"));
-        Buscar_button->setGeometry(QRect(700, 50, 41, 41));
+        Buscar_button->setEnabled(true);
+        Buscar_button->setGeometry(QRect(20, 50, 31, 31));
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -113,12 +114,12 @@ public:
         Buscar_button->setSizePolicy(sizePolicy);
         Buscar_button->setMaximumSize(QSize(1677, 1677));
         QFont font3;
-        font3.setBold(true);
+        font3.setBold(false);
         font3.setUnderline(false);
-        font3.setWeight(75);
+        font3.setWeight(50);
         font3.setStrikeOut(false);
         Buscar_button->setFont(font3);
-        Buscar_button->setCursor(QCursor(Qt::PointingHandCursor));
+        Buscar_button->setCursor(QCursor(Qt::ArrowCursor));
         Buscar_button->setTabletTracking(false);
         Buscar_button->setAcceptDrops(false);
         Buscar_button->setAutoFillBackground(false);
@@ -147,6 +148,8 @@ public:
         Agregar_button->setEnabled(true);
         Agregar_button->setGeometry(QRect(700, 150, 71, 31));
         QFont font4;
+        font4.setFamily(QString::fromUtf8("Times New Roman"));
+        font4.setPointSize(12);
         font4.setBold(true);
         font4.setWeight(75);
         Agregar_button->setFont(font4);
@@ -159,7 +162,14 @@ public:
 "}"));
         label_6 = new QLabel(Gui_Menu_Cliente);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(350, 10, 101, 31));
+        label_6->setGeometry(QRect(360, 10, 111, 41));
+        QFont font5;
+        font5.setFamily(QString::fromUtf8("Times New Roman"));
+        font5.setPointSize(20);
+        font5.setBold(false);
+        font5.setItalic(false);
+        font5.setWeight(9);
+        label_6->setFont(font5);
         label_6->setStyleSheet(QString::fromUtf8("font: 75 20pt \"Times New Roman\";"));
         lineEditCIUDADANIA = new QLineEdit(Gui_Menu_Cliente);
         lineEditCIUDADANIA->setObjectName(QString::fromUtf8("lineEditCIUDADANIA"));
@@ -167,12 +177,12 @@ public:
         label = new QLabel(Gui_Menu_Cliente);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(420, 160, 61, 16));
-        QFont font5;
-        font5.setFamily(QString::fromUtf8("Times New Roman"));
-        font5.setPointSize(12);
-        font5.setBold(false);
-        font5.setWeight(50);
-        label->setFont(font5);
+        QFont font6;
+        font6.setFamily(QString::fromUtf8("Times New Roman"));
+        font6.setPointSize(12);
+        font6.setBold(false);
+        font6.setWeight(50);
+        label->setFont(font6);
         label_3 = new QLabel(Gui_Menu_Cliente);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(420, 220, 71, 16));
@@ -187,13 +197,13 @@ public:
         label_8 = new QLabel(Gui_Menu_Cliente);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setGeometry(QRect(420, 130, 61, 16));
-        label_8->setFont(font5);
+        label_8->setFont(font6);
         lineEditDNI = new QLineEdit(Gui_Menu_Cliente);
         lineEditDNI->setObjectName(QString::fromUtf8("lineEditDNI"));
         lineEditDNI->setGeometry(QRect(500, 130, 171, 20));
         newTableC = new QTableWidget(Gui_Menu_Cliente);
         newTableC->setObjectName(QString::fromUtf8("newTableC"));
-        newTableC->setGeometry(QRect(10, 90, 391, 211));
+        newTableC->setGeometry(QRect(10, 100, 391, 211));
 
         retranslateUi(Gui_Menu_Cliente);
 

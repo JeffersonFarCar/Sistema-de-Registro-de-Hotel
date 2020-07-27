@@ -22,8 +22,13 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Gui_Menu_Cliente_t {
+<<<<<<< HEAD
     QByteArrayData data[11];
     char stringdata0[213];
+=======
+    QByteArrayData data[10];
+    char stringdata0[188];
+>>>>>>> fd83720496141db40454b2bf42df42e19b1518dc
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,17 +44,26 @@ QT_MOC_LITERAL(3, 48, 29), // "on_pushButtoMODIFICAR_clicked"
 QT_MOC_LITERAL(4, 78, 25), // "on_Agregar_button_clicked"
 QT_MOC_LITERAL(5, 104, 30), // "on_lineEdit_buscar_textChanged"
 QT_MOC_LITERAL(6, 135, 4), // "arg1"
+<<<<<<< HEAD
 QT_MOC_LITERAL(7, 140, 24), // "on_Buscar_button_clicked"
 QT_MOC_LITERAL(8, 165, 24), // "on_newTableC_itemClicked"
 QT_MOC_LITERAL(9, 190, 17), // "QTableWidgetItem*"
 QT_MOC_LITERAL(10, 208, 4) // "item"
+=======
+QT_MOC_LITERAL(7, 140, 24), // "on_newTableC_itemClicked"
+QT_MOC_LITERAL(8, 165, 17), // "QTableWidgetItem*"
+QT_MOC_LITERAL(9, 183, 4) // "item"
+>>>>>>> fd83720496141db40454b2bf42df42e19b1518dc
 
     },
     "Gui_Menu_Cliente\0on_pushButtonELIMINAR_clicked\0"
     "\0on_pushButtoMODIFICAR_clicked\0"
     "on_Agregar_button_clicked\0"
     "on_lineEdit_buscar_textChanged\0arg1\0"
+<<<<<<< HEAD
     "on_Buscar_button_clicked\0"
+=======
+>>>>>>> fd83720496141db40454b2bf42df42e19b1518dc
     "on_newTableC_itemClicked\0QTableWidgetItem*\0"
     "item"
 };
@@ -61,7 +75,11 @@ static const uint qt_meta_data_Gui_Menu_Cliente[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
+<<<<<<< HEAD
        6,   14, // methods
+=======
+       5,   14, // methods
+>>>>>>> fd83720496141db40454b2bf42df42e19b1518dc
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -69,20 +87,32 @@ static const uint qt_meta_data_Gui_Menu_Cliente[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
+<<<<<<< HEAD
        1,    0,   44,    2, 0x08 /* Private */,
        3,    0,   45,    2, 0x08 /* Private */,
        4,    0,   46,    2, 0x08 /* Private */,
        5,    1,   47,    2, 0x08 /* Private */,
        7,    0,   50,    2, 0x08 /* Private */,
        8,    1,   51,    2, 0x08 /* Private */,
+=======
+       1,    0,   39,    2, 0x08 /* Private */,
+       3,    0,   40,    2, 0x08 /* Private */,
+       4,    0,   41,    2, 0x08 /* Private */,
+       5,    1,   42,    2, 0x08 /* Private */,
+       7,    1,   45,    2, 0x08 /* Private */,
+>>>>>>> fd83720496141db40454b2bf42df42e19b1518dc
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    6,
+<<<<<<< HEAD
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 9,   10,
+=======
+    QMetaType::Void, 0x80000000 | 8,    9,
+>>>>>>> fd83720496141db40454b2bf42df42e19b1518dc
 
        0        // eod
 };
@@ -97,8 +127,12 @@ void Gui_Menu_Cliente::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 1: _t->on_pushButtoMODIFICAR_clicked(); break;
         case 2: _t->on_Agregar_button_clicked(); break;
         case 3: _t->on_lineEdit_buscar_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+<<<<<<< HEAD
         case 4: _t->on_Buscar_button_clicked(); break;
         case 5: _t->on_newTableC_itemClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
+=======
+        case 4: _t->on_newTableC_itemClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
+>>>>>>> fd83720496141db40454b2bf42df42e19b1518dc
         default: ;
         }
     }
@@ -133,6 +167,7 @@ int Gui_Menu_Cliente::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
+<<<<<<< HEAD
         if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
         _id -= 6;
@@ -140,6 +175,15 @@ int Gui_Menu_Cliente::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 6;
+=======
+        if (_id < 5)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 5;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 5)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 5;
+>>>>>>> fd83720496141db40454b2bf42df42e19b1518dc
     }
     return _id;
 }
