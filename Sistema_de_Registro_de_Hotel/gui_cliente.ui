@@ -82,7 +82,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Nombre:</string>
+     <string>Nombres:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -101,7 +101,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Apellido:</string>
+     <string>Apellidos:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -177,6 +177,9 @@
       <kerning>true</kerning>
      </font>
     </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_3">
     <property name="geometry">
@@ -186,6 +189,9 @@
       <width>181</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Inicie con mayúsculas</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_4">
@@ -206,6 +212,9 @@
       <width>181</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Inicie con mayúsculas</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_6">
@@ -275,6 +284,9 @@
       <width>181</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Inicie con mayúsculas</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_1">

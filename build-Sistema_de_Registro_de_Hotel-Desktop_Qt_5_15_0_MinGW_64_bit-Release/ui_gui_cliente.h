@@ -147,14 +147,18 @@ public:
         Gui_Cliente->setWindowTitle(QCoreApplication::translate("Gui_Cliente", "Dialog", nullptr));
         groupBox->setTitle(QCoreApplication::translate("Gui_Cliente", "Registro Cliente", nullptr));
         label->setText(QCoreApplication::translate("Gui_Cliente", "ID Cliente:", nullptr));
-        label_2->setText(QCoreApplication::translate("Gui_Cliente", "Nombre:", nullptr));
-        label_3->setText(QCoreApplication::translate("Gui_Cliente", "Apellido:", nullptr));
+        label_2->setText(QCoreApplication::translate("Gui_Cliente", "Nombres:", nullptr));
+        label_3->setText(QCoreApplication::translate("Gui_Cliente", "Apellidos:", nullptr));
         label_4->setText(QCoreApplication::translate("Gui_Cliente", "Direcci\303\263n:", nullptr));
         label_5->setText(QCoreApplication::translate("Gui_Cliente", "Ciudadania:", nullptr));
         label_6->setText(QCoreApplication::translate("Gui_Cliente", "E-mail:", nullptr));
+        lineEdit_1->setPlaceholderText(QString());
+        lineEdit_3->setPlaceholderText(QCoreApplication::translate("Gui_Cliente", "Inicie con may\303\272sculas", nullptr));
+        lineEdit_5->setPlaceholderText(QCoreApplication::translate("Gui_Cliente", "Inicie con may\303\272sculas", nullptr));
         lineEdit_6->setText(QString());
         Aceptar_button->setText(QCoreApplication::translate("Gui_Cliente", "Registrar", nullptr));
         Cancel_button->setText(QCoreApplication::translate("Gui_Cliente", "Cancelar", nullptr));
+        lineEdit_2->setPlaceholderText(QCoreApplication::translate("Gui_Cliente", "Inicie con may\303\272sculas", nullptr));
         label_1->setText(QCoreApplication::translate("Gui_Cliente", "DNI", nullptr));
     } // retranslateUi
 
