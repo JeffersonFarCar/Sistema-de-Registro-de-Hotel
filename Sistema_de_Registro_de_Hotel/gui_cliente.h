@@ -13,6 +13,8 @@ class Gui_Cliente : public QDialog
 
 public:
     explicit Gui_Cliente(QWidget *parent = nullptr);
+
+    bool validarDatos();
     ~Gui_Cliente();
 private slots:
     void on_groupBox_clicked();

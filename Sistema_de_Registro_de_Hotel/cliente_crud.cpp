@@ -40,7 +40,20 @@ Cliente Cliente_CRUD::readCliente() const{
 }
 
 void Cliente_CRUD::updateCliente(Cliente _cliente){
+    Conexion conn;
+    Persona_CRUD pcrud;
+    pcrud.updatePersona(_cliente);
 
+    QString ciudadania=QString::fromLocal8Bit(_cliente.getCiudadania().c_str());
+    conn.Conectar();
+
+    QString consulta; consulta.append("UPDATE clientes SET ciudadania = '"+ ciudadania +"' WHERE id_persona = "+QString::number(_cliente.getId())+";");
+
+    QSqlQuery query;
+    query.prepare(consulta);
+    query.exec();
+
+    conn.Cerrar();
 }
 
 void Cliente_CRUD::deleteCliente(int _id){
