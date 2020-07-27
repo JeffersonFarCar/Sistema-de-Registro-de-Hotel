@@ -51,23 +51,37 @@ void Gui_Index_Registro::prepararTabla(){
 }
 
 void Gui_Index_Registro::cargarTabla(){
+    Conexion conn1;
+    conn1.Conectar();
+    QString query1 = "SELECT idregistro FROM registros";
+    QSqlQuery sql;
+    sql.exec(query1);
+    QStringList ids;
+    while(sql.next()){
+        ids.append(sql.value(0).toByteArray());
+    }
+    conn1.Cerrar();
+    Utils u;
+    QStringList cantH;
+    for(QString str:ids){
+        cantH.append(QString::number(u._contar("registro_habitacion", "WHERE idregistro = "+str)));
+    }
     Conexion conn;
     conn.Conectar();
 
     QSqlQuery query_consulta;
-    QString query = "SELECT registros.idpersona_c, nombre, registros.fechae, registros.fechas "
+    QString query = "SELECT idregistro, nombre, registros.fechae, registros.fechas "
                     "FROM ((personas INNER JOIN clientes ON idpersona = id_persona) "
-                    "INNER JOIN registros ON clientes.id_persona = registros.idpersona_c);";
+                    "INNER JOIN registros ON clientes.id_persona = registros.idpersona_c) ORDER BY idregistro ASC;";
     query_consulta.exec(query);
     int fila = 0;
     ui->tableListRegistros->setRowCount(0);
-    Utils u;
     while(query_consulta.next()){
-        QString cantH = QString::number(u._contar("registro_habitacion", "WHERE idregistro = "+query_consulta.value(0).toByteArray()));
+        //QString cantH = QString::number(u._contar("registro_habitacion", "WHERE idregistro = "+query_consulta.value(0).toByteArray()));
         ui->tableListRegistros->insertRow(fila);
         ui->tableListRegistros->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
         ui->tableListRegistros->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
-        ui->tableListRegistros->setItem(fila, 2, new QTableWidgetItem(cantH));
+        ui->tableListRegistros->setItem(fila, 2, new QTableWidgetItem(cantH.at(fila)));
         ui->tableListRegistros->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(2).toByteArray().constData()));
         ui->tableListRegistros->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
         fila++;

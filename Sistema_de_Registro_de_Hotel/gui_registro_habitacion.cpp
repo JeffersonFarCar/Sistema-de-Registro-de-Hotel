@@ -178,7 +178,7 @@ void Registro_habitacion::on_SeleaccionadaslistWidget_itemDoubleClicked(QListWid
 /**
  * @brief Registro_habitacion::on_HabitacionesTableWidget_itemClicked
  * @param item Es el item seleccionado de la tabla
- * Permite agregar las habitaciones que se seleccionen
+ * Se agregan las habitaciones seleccionadas al registro de habitaciones_registro
  */
 void Registro_habitacion::on_HabitacionesTableWidget_itemClicked(QTableWidgetItem *item)
 {

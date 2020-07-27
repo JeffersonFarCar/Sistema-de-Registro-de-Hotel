@@ -11,16 +11,16 @@
 using namespace std;
 Conexion::Conexion()
 {
-    db=QSqlDatabase::addDatabase("QSQLITE");
+
 }
 void Conexion::Conectar(){
+    db=QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("./registro_hotel.db");
     db.open();
 }
 void  Conexion::Cerrar(){
     db.close();
 }
-
 
 void Conexion::addHabitacion(Habitacion a){
     QSqlQuery query;
