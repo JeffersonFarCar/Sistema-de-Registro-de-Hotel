@@ -51,14 +51,14 @@ public:
     {
         if (Gui_Index_Empleado->objectName().isEmpty())
             Gui_Index_Empleado->setObjectName(QString::fromUtf8("Gui_Index_Empleado"));
-        Gui_Index_Empleado->resize(776, 358);
+        Gui_Index_Empleado->resize(776, 380);
         Nuevo_Button = new QPushButton(Gui_Index_Empleado);
         Nuevo_Button->setObjectName(QString::fromUtf8("Nuevo_Button"));
         Nuevo_Button->setGeometry(QRect(80, 300, 101, 41));
         Nuevo_Button->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
         label_2 = new QLabel(Gui_Index_Empleado);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(580, 50, 101, 31));
+        label_2->setGeometry(QRect(680, 70, 81, 21));
         label_2->setStyleSheet(QString::fromUtf8("font: 75 14pt \"Times New Roman\";"));
         edit_empleado_button = new QPushButton(Gui_Index_Empleado);
         edit_empleado_button->setObjectName(QString::fromUtf8("edit_empleado_button"));
@@ -109,10 +109,10 @@ public:
         lineEditEmailModi->setGeometry(QRect(530, 230, 151, 20));
         lineEditOcupacionModi = new QLineEdit(Gui_Index_Empleado);
         lineEditOcupacionModi->setObjectName(QString::fromUtf8("lineEditOcupacionModi"));
-        lineEditOcupacionModi->setGeometry(QRect(530, 260, 151, 20));
+        lineEditOcupacionModi->setGeometry(QRect(530, 290, 151, 20));
         lineEditSueldoModi = new QLineEdit(Gui_Index_Empleado);
         lineEditSueldoModi->setObjectName(QString::fromUtf8("lineEditSueldoModi"));
-        lineEditSueldoModi->setGeometry(QRect(530, 290, 151, 20));
+        lineEditSueldoModi->setGeometry(QRect(530, 260, 151, 20));
         label = new QLabel(Gui_Index_Empleado);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(430, 140, 81, 16));
@@ -159,7 +159,7 @@ public:
         lineEditDNIModi->setGeometry(QRect(530, 110, 151, 20));
         buscarEmpleadoButton = new QPushButton(Gui_Index_Empleado);
         buscarEmpleadoButton->setObjectName(QString::fromUtf8("buscarEmpleadoButton"));
-        buscarEmpleadoButton->setGeometry(QRect(20, 50, 31, 31));
+        buscarEmpleadoButton->setGeometry(QRect(20, 50, 41, 31));
         buscarEmpleadoButton->setStyleSheet(QString::fromUtf8("#buscarEmpleadoButton{\n"
 "	background-color: transparent;\n"
 "	border-image: url(:/imagenes/imagenes/buscar_pressed.png);\n"

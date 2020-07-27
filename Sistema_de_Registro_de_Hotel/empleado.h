@@ -19,7 +19,7 @@ public:
    void setOcupacion(string _ocupacion);
    void setFechaContratacion(string _fechaContratacion);
 
-   int  getIdEmpleado();
+
    double getSueldo();
    string getOcupacion();
    string getFechaContratacion();

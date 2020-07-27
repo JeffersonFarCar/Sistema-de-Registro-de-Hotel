@@ -3,7 +3,7 @@
 #include "gui_empleado.h"
 #include "ui_gui_empleado.h"
 #include "conexion.h"
-
+#include "empleado_crud.h"
 
 #include <QtSql>
 #include <QtSql/QSqlQuery>
@@ -13,14 +13,17 @@
 #include <QTableWidget>
 #include <QTableWidgetItem>
 #include <QMessageBox>
+#include <regex>
 
 using namespace std;
+
+Empleado_Crud crudE; //Para poder elminiar y modificar
 
 Gui_Index_Empleado::Gui_Index_Empleado(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gui_Index_Empleado)
 {
-    this->setFixedSize(QSize(776, 350));
+    this->setFixedSize(QSize(776, 380));
     ui->setupUi(this);
     u=0;
     f=-1;
@@ -81,11 +84,12 @@ void Gui_Index_Empleado::on_Nuevo_Button_clicked()
 
 void Gui_Index_Empleado::on_delete_empleado_button_clicked()
 {
-
+    QString id = ui->tableWidget->item(f,0)->text();
     QMessageBox::StandardButton action;
     action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa borrar el dato?");
     if(action == QMessageBox::Yes)
-        ui->tableWidget->removeRow(f);
+        crudE.deleteEmpleado(id.toInt());
+        mostrarDatos();
 }
 
 void Gui_Index_Empleado::on_tableWidget_itemClicked(QTableWidgetItem *item)
@@ -118,15 +122,71 @@ void Gui_Index_Empleado::on_edit_empleado_button_clicked()
     QMessageBox::StandardButton action;
     action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa editar el dato?");
     if(action == QMessageBox::Yes){
-        ui->tableWidget->setItem(f,1,new QTableWidgetItem(ui->lineEditNombreModi->text()));
-        ui->tableWidget->setItem(f,2,new QTableWidgetItem(ui->lineEditApellidoModi->text()));
-        ui->tableWidget->setItem(f,3,new QTableWidgetItem(ui->lineEditDireccionModi->text()));
-        ui->tableWidget->setItem(f,4,new QTableWidgetItem(ui->lineEditEmailModi->text()));
-        ui->tableWidget->setItem(f,5,new QTableWidgetItem(ui->lineEditSueldoModi->text()));
-        ui->tableWidget->setItem(f,6,new QTableWidgetItem(ui->lineEditOcupacionModi->text()));
+
+    QString dniE_str = ui->lineEditDNIModi->text();
+    QString nombreE_str = ui->lineEditNombreModi->text();
+    QString apellidoE_str = ui->lineEditApellidoModi->text();
+    QString direccionE_str = ui->lineEditDireccionModi->text();
+    QString emailE_str = ui->lineEditEmailModi->text();
+    QString sueldoE_str = ui->lineEditSueldoModi->text();
+    QString ocupacionE_str = ui->lineEditOcupacionModi->text();
+
+    try {
+        int dniE            = stoi(dniE_str.toLocal8Bit().data());
+        string nombreE      = nombreE_str.toStdString();
+        string apellidoE    = apellidoE_str.toStdString();
+        string direccionE   = direccionE_str.toStdString();
+        string emailE       = emailE_str.toStdString();
+        double sueldoE      = stoi(sueldoE_str.toLocal8Bit().data());
+        string ocupacionE   = ocupacionE_str.toStdString();
+
+        if(dniE>=0 && nombreE!="" && apellidoE!="" && direccionE!="" && direccionE!="" && emailE!="" && sueldoE!=NULL && ocupacionE!=""){
+           Empleado empleado;
+            try {
+                QString id = ui->tableWidget->item(f,0)->text();
+
+                empleado.setId(id.toInt());
+
+                empleado.setNombre(nombreE);
+                empleado.setApellido(apellidoE);
+                empleado.setDireccion(direccionE);
+                empleado.setOcupacion(ocupacionE);
+
+                if(!std::isdigit(dniE) && std::to_string(dniE).length()==8 && !std::isdigit(sueldoE)){
+                    empleado.setDNI(dniE);
+                    empleado.setSueldo(sueldoE);
+                    if (regex_match(emailE, regex("([a-z]+)([_.a-z0-9]*)([a-z0-9]+)(@)([a-z]+)([.a-z]+)([a-z]+)"))){
+                    empleado.setEmail(emailE);
+
+                    }
+                    else{
+                    QMessageBox::warning(this, "Advertencia", "Ingreso el EMAIL incorrecto.");
+                    }
+                }
+                else{
+                    QMessageBox::warning(this, "Advertencia", "Ingreso el SUELDO o DNI incorrecto.");
+                }
+            }
+
+            catch (exception const &e) {
+                QMessageBox::warning(this, "Advertencia", "Problema al editar.");
+           }
+
+           crudE.updateEmpleado(empleado);
+           mostrarDatos();
+
+            }
+        }
+        catch (exception const &e) {
+                    QMessageBox::warning(this, "Advertencia", "Problema al editar.");
+        }
+
+     }
+     else{
+        QMessageBox::information(this,"Mensaje","No se realizo ningun cambio");
+        }
+
     }
-    QMessageBox::information(this,"Mensaje","Se edito correctamente");
-}
 
 void Gui_Index_Empleado::prepararTabla(){
     /*----Preparacion de la tabla----*/

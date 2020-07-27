@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <iostream>
 #include <string>
+#include <regex>
 
 using namespace std;
 
@@ -55,23 +56,35 @@ void Gui_Empleado::on_Aceptar_button_clicked(){
             string fechaE       = fechaE_str.toStdString();
 
 
+            string sueldoEcon = to_string(sueldoE);
             if(idE>=0 && nombreE!="" && apellidoE!="" && direccionE!="" && emailE!="" && ocupacionE!="" && sueldoE!=NULL){
+
                 Empleado empleado;
                 empleado.setId(idE);
-                empleado.setDNI(DNIE);
-                empleado.setNombre(nombreE);
-                empleado.setApellido(apellidoE);
-                empleado.setDireccion(direccionE);
-                empleado.setEmail(emailE);
-                empleado.setOcupacion(ocupacionE);
-                empleado.setSueldo(sueldoE);
                 empleado.setFechaContratacion(fechaE);
+                    empleado.setNombre(nombreE);
+                    empleado.setApellido(apellidoE);
+                    empleado.setDireccion(direccionE);
+                    empleado.setOcupacion(ocupacionE);
+                if(!std::isdigit(DNIE) && std::to_string(DNIE).length()==8 && !std::isdigit(sueldoE)){
+                    empleado.setDNI(DNIE);
+                    empleado.setSueldo(sueldoE);
+                if (regex_match(emailE, regex("([a-z]+)([_.a-z0-9]*)([a-z0-9]+)(@)([a-z]+)([.a-z]+)([a-z]+)"))){
+                    empleado.setEmail(emailE);
 
-                ccrud.createEmpleado(empleado);
-                QMessageBox::information(this, "Mensaje", "Se registró un nuevo Empleado.");
-                close();
-            }
-        }
+                    ccrud.createEmpleado(empleado);
+                    QMessageBox::information(this, "Mensaje", "Se registró un nuevo Empleado.");
+                    close();
+                }
+                else{
+                    QMessageBox::warning(this, "Advertencia", "Ingreso el EMAIL incorrecto.");
+                }
+                }else{
+                    QMessageBox::warning(this, "Advertencia", "Ingreso el SUELDO o DNI incorrecto.");
+                }
+                }
+
+       }
         catch (invalid_argument const &e) {
             QMessageBox::warning(this, "Advertencia", "Ingreso de datos erroneo.");
         }
@@ -82,3 +95,8 @@ void Gui_Empleado::on_Cancel_button_clicked()
 {
     close();//Permite cerra la ventana actual abierta
 }
+
+
+
+
+

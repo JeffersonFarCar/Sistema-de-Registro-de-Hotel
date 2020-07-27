@@ -25,7 +25,6 @@ class Ui_Gui_Empleado
 public:
     QGroupBox *groupBox;
     QLabel *label;
-    QLineEdit *lineEdit_idEmpleado;
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
@@ -44,6 +43,7 @@ public:
     QPushButton *Cancel_button;
     QLineEdit *lineEdit_DNI;
     QLabel *label_9;
+    QLineEdit *lineEdit_idEmpleado;
 
     void setupUi(QDialog *Gui_Empleado)
     {
@@ -56,9 +56,6 @@ public:
         label = new QLabel(groupBox);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(30, 30, 71, 21));
-        lineEdit_idEmpleado = new QLineEdit(groupBox);
-        lineEdit_idEmpleado->setObjectName(QString::fromUtf8("lineEdit_idEmpleado"));
-        lineEdit_idEmpleado->setGeometry(QRect(160, 30, 181, 21));
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(30, 100, 71, 21));
@@ -118,6 +115,10 @@ public:
         label_9 = new QLabel(groupBox);
         label_9->setObjectName(QString::fromUtf8("label_9"));
         label_9->setGeometry(QRect(30, 60, 71, 21));
+        lineEdit_idEmpleado = new QLineEdit(groupBox);
+        lineEdit_idEmpleado->setObjectName(QString::fromUtf8("lineEdit_idEmpleado"));
+        lineEdit_idEmpleado->setEnabled(false);
+        lineEdit_idEmpleado->setGeometry(QRect(160, 30, 181, 21));
 
         retranslateUi(Gui_Empleado);
 
