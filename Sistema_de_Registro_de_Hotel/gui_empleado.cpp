@@ -62,19 +62,37 @@ void Gui_Empleado::on_Aceptar_button_clicked(){
                 Empleado empleado;
                 empleado.setId(idE);
                 empleado.setFechaContratacion(fechaE);
-                    empleado.setNombre(nombreE);
-                    empleado.setApellido(apellidoE);
-                    empleado.setDireccion(direccionE);
-                    empleado.setOcupacion(ocupacionE);
+                empleado.setDireccion(direccionE);
+
                 if(!std::isdigit(DNIE) && std::to_string(DNIE).length()==8 && !std::isdigit(sueldoE)){
                     empleado.setDNI(DNIE);
                     empleado.setSueldo(sueldoE);
                 if (regex_match(emailE, regex("([a-z]+)([_.a-z0-9]*)([a-z0-9]+)(@)([a-z]+)([.a-z]+)([a-z]+)"))){
                     empleado.setEmail(emailE);
+                if(regex_match(nombreE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))){
+                    empleado.setNombre(nombreE);
+                 if(regex_match(apellidoE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))) {
+                    empleado.setApellido(apellidoE);
+                 if(regex_match(ocupacionE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))){
+                    empleado.setOcupacion(ocupacionE);
+
 
                     ccrud.createEmpleado(empleado);
                     QMessageBox::information(this, "Mensaje", "Se registró un nuevo Empleado.");
                     close();
+                }
+                else{
+                    QMessageBox::warning(this, "Advertencia", "Ingreso OCUPACION incorrecta, comenzar con mayúscula.");
+                }
+
+                }
+                else{
+                    QMessageBox::warning(this, "Advertencia", "Ingreso APELLIDO incorrecto, comenzar con mayúscula.");
+                }
+                }
+                else{
+                    QMessageBox::warning(this, "Advertencia", "Ingreso NOMBRE incorrecto, comenzar con mayúscula.");
+                }
                 }
                 else{
                     QMessageBox::warning(this, "Advertencia", "Ingreso el EMAIL incorrecto.");

@@ -176,7 +176,7 @@ public:
 
     void retranslateUi(QDialog *Gui_Index_Empleado)
     {
-        Gui_Index_Empleado->setWindowTitle(QCoreApplication::translate("Gui_Index_Empleado", "Dialog", nullptr));
+        Gui_Index_Empleado->setWindowTitle(QCoreApplication::translate("Gui_Index_Empleado", "Lista Empleados", nullptr));
         Nuevo_Button->setText(QCoreApplication::translate("Gui_Index_Empleado", "Nuevo", nullptr));
         label_2->setText(QCoreApplication::translate("Gui_Index_Empleado", "Accciones", nullptr));
         edit_empleado_button->setText(QString());

@@ -158,24 +158,47 @@ void Gui_Index_Empleado::on_edit_empleado_button_clicked()
                     if (regex_match(emailE, regex("([a-z]+)([_.a-z0-9]*)([a-z0-9]+)(@)([a-z]+)([.a-z]+)([a-z]+)"))){
                     empleado.setEmail(emailE);
 
+                    if(regex_match(nombreE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))){
+                        empleado.setNombre(nombreE);
+                     if(regex_match(apellidoE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))) {
+                        empleado.setApellido(apellidoE);
+                     if(regex_match(ocupacionE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))){
+                        empleado.setOcupacion(ocupacionE);
+
+
+                        crudE.updateEmpleado(empleado);
+                        mostrarDatos();
+
+
                     }
                     else{
-                    QMessageBox::warning(this, "Advertencia", "Ingreso el EMAIL incorrecto.");
-                    }
-                }
-                else{
-                    QMessageBox::warning(this, "Advertencia", "Ingreso el SUELDO o DNI incorrecto.");
-                }
-            }
+                         QMessageBox::warning(this, "Advertencia", "Ingreso OCUPACION incorrecta, comenzar con mayúscula.");
+                     }
 
-            catch (exception const &e) {
+                     }
+                     else{
+                         QMessageBox::warning(this, "Advertencia", "Ingreso APELLIDO incorrecto, comenzar con mayúscula.");
+                     }
+                     }
+                     else{
+                         QMessageBox::warning(this, "Advertencia", "Ingreso NOMBRE incorrecto, comenzar con mayúscula.");
+                     }
+                     }
+                     else{
+                        QMessageBox::warning(this, "Advertencia", "Ingreso el EMAIL incorrecto.");
+                    }
+                    }
+                    else{
+                        QMessageBox::warning(this, "Advertencia", "Ingreso el SUELDO o DNI incorrecto.");
+                    }
+                    }
+
+           catch (exception const &e) {
                 QMessageBox::warning(this, "Advertencia", "Problema al editar.");
            }
 
-           crudE.updateEmpleado(empleado);
-           mostrarDatos();
 
-            }
+           }
         }
         catch (exception const &e) {
                     QMessageBox::warning(this, "Advertencia", "Problema al editar.");
