@@ -10,6 +10,7 @@
 
 #include "gui_registro.h"
 #include "conexion.h"
+#include "utils.h"
 
 Gui_Index_Registro::Gui_Index_Registro(QWidget *parent) :
     QDialog(parent),
@@ -54,15 +55,19 @@ void Gui_Index_Registro::cargarTabla(){
     conn.Conectar();
 
     QSqlQuery query_consulta;
-    QString query = "SELECT registros.idcliente, nombre, registros.fechae, registros.fechas FROM ((personas INNER JOIN clientes ON idpersona = id_persona) INNER JOIN registros ON clientes.idcliente = registros.idcliente);";
+    QString query = "SELECT registros.idpersona_c, nombre, registros.fechae, registros.fechas "
+                    "FROM ((personas INNER JOIN clientes ON idpersona = id_persona) "
+                    "INNER JOIN registros ON clientes.id_persona = registros.idpersona_c);";
     query_consulta.exec(query);
     int fila = 0;
     ui->tableListRegistros->setRowCount(0);
+    Utils u;
     while(query_consulta.next()){
+        QString cantH = QString::number(u._contar("registro_habitacion", "WHERE idregistro = "+query_consulta.value(0).toByteArray()));
         ui->tableListRegistros->insertRow(fila);
         ui->tableListRegistros->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
         ui->tableListRegistros->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
-        ui->tableListRegistros->setItem(fila, 2, new QTableWidgetItem("5"));
+        ui->tableListRegistros->setItem(fila, 2, new QTableWidgetItem(cantH));
         ui->tableListRegistros->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(2).toByteArray().constData()));
         ui->tableListRegistros->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
         fila++;

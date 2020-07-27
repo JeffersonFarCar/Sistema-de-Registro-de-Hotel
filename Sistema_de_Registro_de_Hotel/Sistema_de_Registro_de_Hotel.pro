@@ -33,6 +33,7 @@ SOURCES += \
     gui_indexhabitacion.cpp \
     gui_menu_cliente.cpp \
     gui_registro.cpp \
+    gui_registro_habitacion.cpp \
     gui_tipo_habitacion.cpp \
     habitacion.cpp \
     main.cpp \
@@ -41,7 +42,6 @@ SOURCES += \
     persona_crud.cpp \
     registro.cpp \
     registro_crud.cpp \
-    registro_habitacion.cpp \
     registro_habitacion_crud.cpp \
     tipohabitacion.cpp \
     utils.cpp
@@ -64,6 +64,7 @@ HEADERS += \
     gui_indexhabitacion.h \
     gui_menu_cliente.h \
     gui_registro.h \
+    gui_registro_habitacion.h \
     gui_tipo_habitacion.h \
     habitacion.h \
     mainwindow.h \
@@ -71,7 +72,6 @@ HEADERS += \
     persona_crud.h \
     registro.h \
     registro_crud.h \
-    registro_habitacion.h \
     registro_habitacion_crud.h \
     tipohabitacion.h \
     utils.h
@@ -87,9 +87,9 @@ FORMS += \
     gui_indexhabitacion.ui \
     gui_menu_cliente.ui \
     gui_registro.ui \
+    gui_registro_habitacion.ui \
     gui_tipo_habitacion.ui \
-    mainwindow.ui \
-    registro_habitacion.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

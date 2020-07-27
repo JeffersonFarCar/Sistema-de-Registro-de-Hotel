@@ -15,6 +15,7 @@ debug/gui_index_registro.o
 debug/gui_indexhabitacion.o
 debug/gui_menu_cliente.o
 debug/gui_registro.o
+debug/gui_registro_habitacion.o
 debug/gui_tipo_habitacion.o
 debug/habitacion.o
 debug/main.o
@@ -23,7 +24,6 @@ debug/persona.o
 debug/persona_crud.o
 debug/registro.o
 debug/registro_crud.o
-debug/registro_habitacion.o
 debug/registro_habitacion_crud.o
 debug/tipohabitacion.o
 debug/utils.o
@@ -38,6 +38,6 @@ debug/moc_gui_index_registro.o
 debug/moc_gui_indexhabitacion.o
 debug/moc_gui_menu_cliente.o
 debug/moc_gui_registro.o
+debug/moc_gui_registro_habitacion.o
 debug/moc_gui_tipo_habitacion.o
 debug/moc_mainwindow.o
-debug/moc_registro_habitacion.o

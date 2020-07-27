@@ -30,12 +30,12 @@
    <property name="title">
     <string>                                    Elija las habitaciones                           </string>
    </property>
-   <widget class="QTableWidget" name="THtableWidget">
+   <widget class="QTableWidget" name="HabitacionesTableWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>200</y>
-      <width>191</width>
+      <width>221</width>
       <height>151</height>
      </rect>
     </property>
@@ -43,7 +43,7 @@
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
    </widget>
-   <widget class="QTableWidget" name="RHTableWidget">
+   <widget class="QTableWidget" name="TiposHTableWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -75,7 +75,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>40</x>
       <y>170</y>
       <width>151</width>
       <height>21</height>
@@ -91,8 +91,8 @@
    <widget class="QPushButton" name="CancelarRHButton">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>310</y>
+      <x>240</x>
+      <y>300</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -107,7 +107,7 @@
    <widget class="QPushButton" name="AceptarRHButton">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>240</x>
       <y>220</y>
       <width>101</width>
       <height>31</height>
@@ -120,12 +120,12 @@
      <string>Aceptar</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="SHlistWidget">
+   <widget class="QListWidget" name="SeleaccionadaslistWidget">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>360</x>
       <y>200</y>
-      <width>171</width>
+      <width>151</width>
       <height>151</height>
      </rect>
     </property>
@@ -133,9 +133,9 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>370</x>
       <y>170</y>
-      <width>171</width>
+      <width>131</width>
       <height>21</height>
      </rect>
     </property>
@@ -143,7 +143,7 @@
      <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;</string>
     </property>
     <property name="text">
-     <string>Habitaciones Seleccionadas</string>
+     <string>Hab. Seleccionadas</string>
     </property>
    </widget>
   </widget>

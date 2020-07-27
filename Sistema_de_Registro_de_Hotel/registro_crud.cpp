@@ -22,7 +22,7 @@ void Registro_CRUD::createRegistro(Registro _registro){
     QString fE = QString::fromLocal8Bit(_registro.getFechaEntrada().c_str());
     QString fS = QString::fromLocal8Bit(_registro.getFechaSalida().c_str());
 
-    QString insert; insert.append("INSERT INTO registros (idcliente, idempleado, fechaE, fechaS) "
+    QString insert; insert.append("INSERT INTO registros (idpersona_c, idpersona_e, fechaE, fechaS) "
                      "VALUES ("+idC+", "+idE+", '"+fE+"', '"+fS+"');");
     QSqlQuery insertar;
     insertar.prepare(insert);

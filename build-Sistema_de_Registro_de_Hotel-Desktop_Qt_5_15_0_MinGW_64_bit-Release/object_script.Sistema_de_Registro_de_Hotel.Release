@@ -15,6 +15,7 @@ release/gui_index_registro.o
 release/gui_indexhabitacion.o
 release/gui_menu_cliente.o
 release/gui_registro.o
+release/gui_registro_habitacion.o
 release/gui_tipo_habitacion.o
 release/habitacion.o
 release/main.o
@@ -23,7 +24,6 @@ release/persona.o
 release/persona_crud.o
 release/registro.o
 release/registro_crud.o
-release/registro_habitacion.o
 release/registro_habitacion_crud.o
 release/tipohabitacion.o
 release/utils.o
@@ -38,6 +38,6 @@ release/moc_gui_index_registro.o
 release/moc_gui_indexhabitacion.o
 release/moc_gui_menu_cliente.o
 release/moc_gui_registro.o
+release/moc_gui_registro_habitacion.o
 release/moc_gui_tipo_habitacion.o
 release/moc_mainwindow.o
-release/moc_registro_habitacion.o

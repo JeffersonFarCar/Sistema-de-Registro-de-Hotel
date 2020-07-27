@@ -16,7 +16,7 @@ class Registro_habitacion : public QDialog
 public:
     explicit Registro_habitacion(QWidget *parent = nullptr);
     void mostrarDatos();
-    //void setHabitacionesSelected(QStringList _habSelec);
+    void setHabitacionesSelected(QStringList _habSelec);
     QStringList getHabitacionesSelected() const;
     void setIdRegistro(int _idR);
     ~Registro_habitacion();
@@ -26,11 +26,11 @@ private slots:
 
     void on_CancelarRHButton_clicked();
 
-    void on_RHTableWidget_itemClicked(QTableWidgetItem *item);
+    void on_TiposHTableWidget_itemClicked(QTableWidgetItem *item);
 
-    void on_SHlistWidget_itemDoubleClicked(QListWidgetItem *item);
+    void on_SeleaccionadaslistWidget_itemDoubleClicked(QListWidgetItem *item);
 
-    void on_THtableWidget_itemClicked(QTableWidgetItem *item);
+    void on_HabitacionesTableWidget_itemClicked(QTableWidgetItem *item);
 
 private:
     Ui::Registro_habitacion *ui;
@@ -39,6 +39,8 @@ private:
     QStringList habitacionesSelected;
     void prepararTabla();
     void llenarTabla();
+    void llenarTablaHabitaciones(QString id);
+    void habitacionesXRegistro();
     QStringList habitacionesXtipo();
 };
 

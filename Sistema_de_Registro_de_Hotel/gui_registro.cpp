@@ -1,7 +1,7 @@
 #include "gui_registro.h"
 #include "ui_gui_registro.h"
 
-#include "registro_habitacion.h"
+#include "gui_registro_habitacion.h"
 #include "registro_habitacion_crud.h"
 #include "registro.h"
 #include "registro_crud.h"
@@ -58,7 +58,7 @@ Gui_Registro::~Gui_Registro()
  */
 void Gui_Registro::fillComboBox(){
     QString sql;
-    sql.append("SELECT idcliente, nombre, apellido FROM personas INNER JOIN clientes WHERE idpersona = id_persona");
+    sql.append("SELECT id_persona, nombre, apellido FROM personas INNER JOIN clientes WHERE idpersona = id_persona");
     Conexion conn;
     conn.Conectar();
     QSqlQuery query;
@@ -97,14 +97,13 @@ void Gui_Registro::on_Registrar_button_2_clicked()
     guiR.exec();
 }
 
-/*
+//Aqui      <--------------
 void Gui_Registro::setHabitacionesSelected(QStringList _habSelec){
     habitacionesSelected = _habSelec;
 }
 QStringList Gui_Registro::getHabitacionesSelected() const{
     return habitacionesSelected;
 }
-*/
 
 /**
  * @brief Gui_Registro::on_Hab_Reg_Button_clicked
@@ -116,7 +115,9 @@ void Gui_Registro::on_Hab_Reg_Button_clicked()
     rh.setIdRegistro(ui->LineEdit_idRegis->text().toInt());
     rh.setModal(true);
     rh.exec();
-    canthabitaciones = rh.getHabitacionesSelected().size();
+    Utils u;
+    canthabitaciones = u._contar("registro_habitacion", "WHERE idregistro = "+ui->LineEdit_idRegis->text());
+    habitacionesSelected = rh.getHabitacionesSelected();
 }
 
 /**
@@ -142,7 +143,6 @@ void Gui_Registro::on_Registrar_button_clicked()
         if(ui->fechaE->date() > ui->fechaS->date()){
             throw invalid_argument("La fecha de Salida no es válida.");
         }
-        qDebug()<<canthabitaciones;
         if(canthabitaciones < 1)
             throw out_of_range("Debe seleccionar una habitación.");
 
@@ -171,6 +171,7 @@ void Gui_Registro::on_Cancelar_button_clicked()
         Utils u;
         QStringList ids = u.getIds("registro_habitacion", "idregistro = "+ui->LineEdit_idRegis->text());
         for(int i=0; i<ids.size(); i++){
+            QString str= "(";
             u.updateEstado("habitaciones", "idestado = 1", "idhabitacion = "+ids.at(i));
         }
         Registro_Habitacion_CRUD rhc;

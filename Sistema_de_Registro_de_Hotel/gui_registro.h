@@ -14,8 +14,8 @@ class Gui_Registro : public QDialog
 
 public:
     explicit Gui_Registro(QWidget *parent = nullptr);
-    //void setHabitacionesSelected(QStringList _habSelec);
-    //QStringList getHabitacionesSelected() const;
+    void setHabitacionesSelected(QStringList _habSelec);
+    QStringList getHabitacionesSelected() const;
     ~Gui_Registro();
 
 private slots:
@@ -33,6 +33,7 @@ private:
     Ui::Gui_Registro *ui;
     QStringList clientes_nomape;
     QStringList clientes_id;
+    QStringList habitacionesSelected;
     int canthabitaciones;
     void fillComboBox();
 };
