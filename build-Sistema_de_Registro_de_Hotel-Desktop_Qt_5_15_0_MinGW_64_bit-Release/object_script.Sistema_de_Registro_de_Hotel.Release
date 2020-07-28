@@ -6,6 +6,7 @@ release/empleado_crud.o
 release/estadohab.o
 release/factura.o
 release/gui_cliente.o
+release/gui_edit_registro.o
 release/gui_empleado.o
 release/gui_estado_habitacion.o
 release/gui_factura.o
@@ -29,6 +30,7 @@ release/tipohabitacion.o
 release/utils.o
 release/qrc_resources.o
 release/moc_gui_cliente.o
+release/moc_gui_edit_registro.o
 release/moc_gui_empleado.o
 release/moc_gui_estado_habitacion.o
 release/moc_gui_factura.o

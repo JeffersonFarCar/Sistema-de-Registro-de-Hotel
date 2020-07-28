@@ -13,7 +13,7 @@ public:
     int contar(string tablename, string where, string value); //Este no usen xD
     int _contar (QString tablename, QString clause);
     void updateEstado(QString tablename, QString estado, QString id);
-    QStringList getIds(QString tablename, QString clause);
+    QStringList getIds(QString idcolumname, QString tablename, QString clause);
 };
 
 #endif // UTILS_H

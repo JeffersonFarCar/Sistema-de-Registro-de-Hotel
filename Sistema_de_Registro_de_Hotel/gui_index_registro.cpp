@@ -9,14 +9,19 @@
 #include <QSqlError>
 
 #include "gui_registro.h"
+#include "registro_crud.h"
+#include "registro_habitacion_crud.h"
 #include "conexion.h"
 #include "utils.h"
+#include "gui_edit_registro.h"
 
 Gui_Index_Registro::Gui_Index_Registro(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gui_Index_Registro)
 {
     ui->setupUi(this);
+    this->setFixedSize(QSize(627, 408));
+    f = -1;
     ui->tableListRegistros->setEditTriggers(QAbstractItemView::NoEditTriggers);
     mostrarDatos();
 }
@@ -50,6 +55,10 @@ void Gui_Index_Registro::prepararTabla(){
     /**---Fin Tabla---**/
 }
 
+/**
+ * @brief Gui_Index_Registro::cargarTabla
+ * Carga los datos de las base de datos registro
+ */
 void Gui_Index_Registro::cargarTabla(){
     Conexion conn1;
     conn1.Conectar();
@@ -91,7 +100,7 @@ void Gui_Index_Registro::cargarTabla(){
 
 void Gui_Index_Registro::on_tableListRegistros_itemClicked(QTableWidgetItem *item)
 {
-
+    f=item->row();
 }
 
 void Gui_Index_Registro::on_New_Registro_Button_clicked()
@@ -104,7 +113,15 @@ void Gui_Index_Registro::on_New_Registro_Button_clicked()
 
 void Gui_Index_Registro::on_edit_registros_button_clicked()
 {
-
+    if(f != -1){
+        GUI_Edit_Registro geR;
+        geR.setEditRegistro(f);
+        geR.setModal(true);
+        geR.exec();
+        mostrarDatos();
+    }else{
+        QMessageBox::warning(this, "Advertencia", "Debe seleccionar un dato.");
+    }
 }
 
 void Gui_Index_Registro::on_delete_registros_button_clicked()
@@ -112,6 +129,16 @@ void Gui_Index_Registro::on_delete_registros_button_clicked()
     QMessageBox::StandardButton action;
     action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa borrar el dato?");
     if(action == QMessageBox::Yes){
-        ui->tableListRegistros->removeRow(f);
+        Utils u;
+        QStringList ids = u.getIds("idhabitacion", "registro_habitacion","idregistro = "+QString::number(f+1));
+        for(QString id:ids){
+            u.updateEstado("habitaciones", "idestado = 1", "idhabitacion = "+id);
+        }
+        Registro_CRUD rc;
+        rc.deleteRegistro(f+1);
+        Registro_Habitacion_CRUD rhc;
+        rhc.DeleteRegistro_Habitacion(QString::number(f+1));
+        f=-1;
+        mostrarDatos();
     }
 }

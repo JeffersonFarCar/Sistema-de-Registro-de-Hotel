@@ -109,11 +109,11 @@ void Utils::updateEstado(QString tablename, QString estado, QString id){
     conn.Cerrar();
 }
 
-QStringList Utils::getIds(QString tablename, QString clause){
+QStringList Utils::getIds(QString idcolumname, QString tablename, QString clause){
     QStringList ids;
     Conexion conn;
     QString queryIds;
-    queryIds.append("SELECT idhabitacion FROM "+tablename+" WHERE "+clause);
+    queryIds.append("SELECT "+idcolumname+" FROM "+tablename+" WHERE "+clause);
     conn.Conectar();
     QSqlQuery query;
     query.prepare(queryIds);

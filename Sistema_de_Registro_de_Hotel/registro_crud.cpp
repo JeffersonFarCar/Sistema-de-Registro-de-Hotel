@@ -36,10 +36,20 @@ Registro Registro_CRUD::readRegistro(){
     return r;
 }
 
-void Registro_CRUD::updateRegistro(Registro _registro){
-
+void Registro_CRUD::updateRegistro(QString _fechaS, QString _idR){
+    Conexion conn;
+    conn.Conectar();
+    QString query = "UPDATE registros SET fechaS = '"+_fechaS+"' WHERE idregistro = "+_idR;
+    QSqlQuery sql;
+    sql.exec(query);
+    conn.Cerrar();
 }
 
 void Registro_CRUD::deleteRegistro(int _id){
-
+    Conexion conn;
+    conn.Conectar();
+    QString query = "DELETE FROM registros WHERE idregistro = "+QString::number(_id);
+    QSqlQuery sql;
+    sql.exec(query);
+    conn.Cerrar();
 }

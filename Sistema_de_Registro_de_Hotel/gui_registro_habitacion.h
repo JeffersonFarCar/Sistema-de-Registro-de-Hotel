@@ -18,6 +18,8 @@ public:
     void mostrarDatos();
     void setHabitacionesSelected(QStringList _habSelec);
     QStringList getHabitacionesSelected() const;
+    QStringList gethabitacionAdd();
+    QStringList gethabitacionDel();
     void setIdRegistro(int _idR);
     ~Registro_habitacion();
 

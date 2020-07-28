@@ -169,9 +169,8 @@ void Gui_Registro::on_Cancelar_button_clicked()
                                     QMessageBox::Yes|QMessageBox::No);
     if(reply == QMessageBox::Yes){
         Utils u;
-        QStringList ids = u.getIds("registro_habitacion", "idregistro = "+ui->LineEdit_idRegis->text());
+        QStringList ids = u.getIds("idhabitacion", "registro_habitacion", "idregistro = "+ui->LineEdit_idRegis->text());
         for(int i=0; i<ids.size(); i++){
-            QString str= "(";
             u.updateEstado("habitaciones", "idestado = 1", "idhabitacion = "+ids.at(i));
         }
         Registro_Habitacion_CRUD rhc;

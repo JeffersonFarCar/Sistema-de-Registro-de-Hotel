@@ -20,6 +20,8 @@ Registro_habitacion::Registro_habitacion(QWidget *parent) :
 {
     this->setFixedSize(QSize(546, 385));
     ui->setupUi(this);
+    ui->TiposHTableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->HabitacionesTableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     mostrarDatos();
 }
 

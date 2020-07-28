@@ -24,6 +24,7 @@ SOURCES += \
     estadohab.cpp \
     factura.cpp \
     gui_cliente.cpp \
+    gui_edit_registro.cpp \
     gui_empleado.cpp \
     gui_estado_habitacion.cpp \
     gui_factura.cpp \
@@ -55,6 +56,7 @@ HEADERS += \
     estadohab.h \
     factura.h \
     gui_cliente.h \
+    gui_edit_registro.h \
     gui_empleado.h \
     gui_estado_habitacion.h \
     gui_factura.h \
@@ -78,6 +80,7 @@ HEADERS += \
 
 FORMS += \
     gui_cliente.ui \
+    gui_edit_registro.ui \
     gui_empleado.ui \
     gui_estado_habitacion.ui \
     gui_factura.ui \
