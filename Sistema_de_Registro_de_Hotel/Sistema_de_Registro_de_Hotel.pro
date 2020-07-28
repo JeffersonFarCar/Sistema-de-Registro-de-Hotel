@@ -90,9 +90,9 @@ FORMS += \
     gui_indexhabitacion.ui \
     gui_menu_cliente.ui \
     gui_registro.ui \
+    gui_registro_habitacion.ui \
     gui_tipo_habitacion.ui \
-    mainwindow.ui \
-    registro_habitacion.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

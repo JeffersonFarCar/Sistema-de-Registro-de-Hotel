@@ -1,5 +1,5 @@
 #include "gui_registro_habitacion.h"
-#include "ui_registro_habitacion.h"
+#include "ui_gui_registro_habitacion.h"
 
 #include <QDebug>
 #include <QMessageBox>
