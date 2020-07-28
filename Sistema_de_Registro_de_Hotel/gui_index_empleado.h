@@ -17,6 +17,7 @@ public:
     explicit Gui_Index_Empleado(QWidget *parent = nullptr);
     void mostrarDatos();
     void prepararTabla();
+    bool validarDatos();
     ~Gui_Index_Empleado();
 
 private slots:

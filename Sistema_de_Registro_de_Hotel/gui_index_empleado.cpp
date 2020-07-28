@@ -24,6 +24,7 @@ Gui_Index_Empleado::Gui_Index_Empleado(QWidget *parent) :
     ui(new Ui::Gui_Index_Empleado)
 {
     this->setFixedSize(QSize(776, 380));
+
     ui->setupUi(this);
     u=0;
     f=-1;
@@ -120,96 +121,126 @@ void Gui_Index_Empleado::on_tableWidget_itemClicked(QTableWidgetItem *item)
 void Gui_Index_Empleado::on_edit_empleado_button_clicked()
 {
     QMessageBox::StandardButton action;
-    action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa editar el dato?");
-    if(action == QMessageBox::Yes){
 
-    QString dniE_str = ui->lineEditDNIModi->text();
-    QString nombreE_str = ui->lineEditNombreModi->text();
-    QString apellidoE_str = ui->lineEditApellidoModi->text();
-    QString direccionE_str = ui->lineEditDireccionModi->text();
-    QString emailE_str = ui->lineEditEmailModi->text();
-    QString sueldoE_str = ui->lineEditSueldoModi->text();
-    QString ocupacionE_str = ui->lineEditOcupacionModi->text();
-
+    Empleado empleado;
     try {
-        int dniE            = stoi(dniE_str.toLocal8Bit().data());
-        string nombreE      = nombreE_str.toStdString();
-        string apellidoE    = apellidoE_str.toStdString();
-        string direccionE   = direccionE_str.toStdString();
-        string emailE       = emailE_str.toStdString();
-        double sueldoE      = stoi(sueldoE_str.toLocal8Bit().data());
-        string ocupacionE   = ocupacionE_str.toStdString();
+        if(validarDatos()){
+            int dni_E           = stoi(ui->lineEditDNIModi->text().toLocal8Bit().data());
+            string nombre       = ui->lineEditNombreModi->text().toStdString();
+            string apellido     = ui->lineEditApellidoModi->text().toStdString();
+            string direccion    = ui->lineEditDireccionModi->text().toStdString();
+            string email        = ui->lineEditEmailModi->text().toStdString();
+            double sueldo       = stod(ui->lineEditSueldoModi->text().toLocal8Bit().data());
+            string ocupacion = ui->lineEditOcupacionModi->text().toStdString();
 
-        if(dniE>=0 && nombreE!="" && apellidoE!="" && direccionE!="" && direccionE!="" && emailE!="" && sueldoE!=NULL && ocupacionE!=""){
-           Empleado empleado;
-            try {
-                QString id = ui->tableWidget->item(f,0)->text();
+            QString id = ui->tableWidget->item(f,0)->text();
+            empleado.setId(id.toInt());
+            empleado.setDNI(dni_E);
+            empleado.setNombre(nombre);
+            empleado.setApellido(apellido);
+            empleado.setDireccion(direccion);
+            empleado.setEmail(email);
+            empleado.setOcupacion(ocupacion);
+            empleado.setSueldo(sueldo);
 
-                empleado.setId(id.toInt());
-
-                empleado.setNombre(nombreE);
-                empleado.setApellido(apellidoE);
-                empleado.setDireccion(direccionE);
-                empleado.setOcupacion(ocupacionE);
-
-                if(!std::isdigit(dniE) && std::to_string(dniE).length()==8 && !std::isdigit(sueldoE)){
-                    empleado.setDNI(dniE);
-                    empleado.setSueldo(sueldoE);
-                    if (regex_match(emailE, regex("([a-z]+)([_.a-z0-9]*)([a-z0-9]+)(@)([a-z]+)([.a-z]+)([a-z]+)"))){
-                    empleado.setEmail(emailE);
-
-                    if(regex_match(nombreE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))){
-                        empleado.setNombre(nombreE);
-                     if(regex_match(apellidoE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))) {
-                        empleado.setApellido(apellidoE);
-                     if(regex_match(ocupacionE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))){
-                        empleado.setOcupacion(ocupacionE);
-
-
-                        crudE.updateEmpleado(empleado);
-                        mostrarDatos();
-
-
-                    }
-                    else{
-                         QMessageBox::warning(this, "Advertencia", "Ingreso OCUPACION incorrecta, comenzar con mayúscula.");
-                     }
-
-                     }
-                     else{
-                         QMessageBox::warning(this, "Advertencia", "Ingreso APELLIDO incorrecto, comenzar con mayúscula.");
-                     }
-                     }
-                     else{
-                         QMessageBox::warning(this, "Advertencia", "Ingreso NOMBRE incorrecto, comenzar con mayúscula.");
-                     }
-                     }
-                     else{
-                        QMessageBox::warning(this, "Advertencia", "Ingreso el EMAIL incorrecto.");
-                    }
-                    }
-                    else{
-                        QMessageBox::warning(this, "Advertencia", "Ingreso el SUELDO o DNI incorrecto.");
-                    }
-                    }
-
-           catch (exception const &e) {
-                QMessageBox::warning(this, "Advertencia", "Problema al editar.");
-           }
-
-
-           }
+            //Mensaje de Alerta
+            action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa editar el dato?");
+            if(action == QMessageBox::Yes){
+                crudE.updateEmpleado(empleado); //Realizar Cambios
+                mostrarDatos();
+                QMessageBox::information(this, "Mensaje", "Cambios realizados correctamente.");
+            } else{ QMessageBox::information(this,"Mensaje","No se realizó ningun cambio"); }
         }
-        catch (exception const &e) {
-                    QMessageBox::warning(this, "Advertencia", "Problema al editar.");
-        }
-
-     }
-     else{
-        QMessageBox::information(this,"Mensaje","No se realizo ningun cambio");
-        }
+    } catch (exception  &e) {
+        QMessageBox::warning(this, "Advertencia", "Problema al editar, revisa los datos.");
+    }
 
     }
+
+bool Gui_Index_Empleado::validarDatos()
+{
+
+    /*Inicio Ayuda para ingreso de datos*/
+        QRegExp exp_dni("[0-9]{8}");
+        QRegExp exp_N_A_O("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$");
+        QRegExp exp_email("[\\w]+@{1}[\\w]+\\.[a-z]{2,3}");
+        QRegExp exp_sueldo("[0-9]+(\.[0-9][0-9]?)?");
+
+        ui->lineEditDNIModi->setValidator(new QRegExpValidator(exp_dni, this));
+        ui->lineEditNombreModi->setValidator(new QRegExpValidator(exp_N_A_O, this));
+        ui->lineEditApellidoModi->setValidator(new QRegExpValidator(exp_N_A_O, this));
+        ui->lineEditEmailModi->setValidator(new QRegExpValidator(exp_email, this));
+        ui->lineEditSueldoModi->setValidator(new QRegExpValidator(exp_sueldo,this));
+        ui->lineEditOcupacionModi->setValidator(new QRegExpValidator(exp_N_A_O,this));
+
+        /*Fin Ayuda*/
+
+        /*Comprobación de ingresos correctos*/
+          bool ifDni        =  exp_dni.exactMatch(ui->lineEditDNIModi->text());
+          bool ifNombre     = exp_N_A_O.exactMatch(ui->lineEditNombreModi->text());
+          bool ifApellido   = exp_N_A_O.exactMatch(ui->lineEditApellidoModi->text());
+          bool ifEmail      = exp_email.exactMatch(ui->lineEditEmailModi->text());
+          bool ifSueldo     = exp_sueldo.exactMatch(ui->lineEditSueldoModi->text());
+          bool ifOcupacion  = exp_N_A_O.exactMatch(ui->lineEditOcupacionModi->text());
+
+
+        if(ifDni == false){
+            ui->lineEditDNIModi->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditDNIModi->setStyleSheet("border: 1px solid green;");
+            ifDni =true;
+        }
+
+        if(ifNombre == false){
+             ui->lineEditNombreModi->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditNombreModi->setStyleSheet("border: 1px solid green;");
+            ifNombre = true;
+        }
+
+        if(ifApellido == false){
+            ui->lineEditApellidoModi->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditApellidoModi->setStyleSheet("border: 1px solid green;");
+            ifApellido = true;
+        }
+
+        if (ui->lineEditDireccionModi->text() !=""){
+            ui->lineEditDireccionModi->setStyleSheet("border: 1px solid green;");
+        }
+
+        if(ifEmail == false){
+            ui->lineEditEmailModi->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditEmailModi->setStyleSheet("border: 1px solid green;");
+            ifEmail = true;
+        }
+
+        if(ifSueldo == false){
+            ui->lineEditSueldoModi->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEditSueldoModi->setStyleSheet("border: 1px solid green;");
+            ifSueldo = true;
+        }
+
+        if(ifOcupacion == false){
+            ui->lineEditOcupacionModi->setStyleSheet("border: 1px solid red;");
+        }
+        else{
+            ui->lineEditOcupacionModi->setStyleSheet("border: 1px solid green;");
+        }
+
+        if(ifDni==true && ifNombre==true && ifApellido==true && ifOcupacion==true && ifEmail==true && ifSueldo==true)
+        return true; //Si todos son correctos registra
+        else return false; //No registra por almenos un error
+}
+
+
+
+
+
+
+
 
 void Gui_Index_Empleado::prepararTabla(){
     /*----Preparacion de la tabla----*/

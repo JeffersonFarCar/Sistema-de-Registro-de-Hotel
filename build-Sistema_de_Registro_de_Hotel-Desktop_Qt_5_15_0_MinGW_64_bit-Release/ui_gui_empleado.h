@@ -140,10 +140,14 @@ public:
         label_3->setText(QCoreApplication::translate("Gui_Empleado", "Apellido", nullptr));
         label_4->setText(QCoreApplication::translate("Gui_Empleado", "Direccion", nullptr));
         label_5->setText(QCoreApplication::translate("Gui_Empleado", "Email", nullptr));
-        label_6->setText(QCoreApplication::translate("Gui_Empleado", "Sueldo                            S/.", nullptr));
+        label_6->setText(QCoreApplication::translate("Gui_Empleado", "Sueldo                   S/.", nullptr));
         label_7->setText(QCoreApplication::translate("Gui_Empleado", "Ocupacion", nullptr));
         label_8->setText(QCoreApplication::translate("Gui_Empleado", "Fecha Contrato", nullptr));
+        lineEdit_nombreE->setPlaceholderText(QCoreApplication::translate("Gui_Empleado", "Inicie con Mayuscula", nullptr));
+        lineEdit_apellidoE->setPlaceholderText(QCoreApplication::translate("Gui_Empleado", "Inicie con Mayuscula", nullptr));
         lineEdit_sueldoE->setText(QString());
+        lineEdit_sueldoE->setPlaceholderText(QCoreApplication::translate("Gui_Empleado", "##.##", nullptr));
+        lineEdit_ocupacionE->setPlaceholderText(QCoreApplication::translate("Gui_Empleado", "Inicie con Mayuscula", nullptr));
         Aceptar_button->setText(QCoreApplication::translate("Gui_Empleado", "Aceptar", nullptr));
         Cancel_button->setText(QCoreApplication::translate("Gui_Empleado", "Cancelar", nullptr));
         label_9->setText(QCoreApplication::translate("Gui_Empleado", "DNI", nullptr));

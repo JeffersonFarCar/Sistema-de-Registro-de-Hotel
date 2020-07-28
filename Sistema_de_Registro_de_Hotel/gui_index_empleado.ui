@@ -144,6 +144,15 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Inicie con Mayuscula</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEditApellidoModi">
    <property name="geometry">
@@ -153,6 +162,15 @@
      <width>151</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Inicie con Mayuscula</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEditDireccionModi">
@@ -164,6 +182,12 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEditEmailModi">
    <property name="geometry">
@@ -173,6 +197,12 @@
      <width>151</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEditOcupacionModi">
@@ -184,6 +214,15 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Inicie con Mayuscula</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEditSueldoModi">
    <property name="geometry">
@@ -193,6 +232,15 @@
      <width>151</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>##.##</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -378,6 +426,12 @@
      <width>151</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QPushButton" name="buscarEmpleadoButton">

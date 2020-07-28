@@ -16,6 +16,7 @@ Gui_Empleado::Gui_Empleado(QWidget *parent) :
     ui(new Ui::Gui_Empleado)
 {
     this->setFixedSize(QSize(397, 432));
+
     ui->setupUi(this);
     Utils utils;
 
@@ -31,88 +32,141 @@ Gui_Empleado::~Gui_Empleado()
 
 void Gui_Empleado::on_Aceptar_button_clicked(){
 
-        Empleado_Crud ccrud;
-
-        QString idE_str         = ui->lineEdit_idEmpleado->text();
-        QString DNIE_str        = ui->lineEdit_DNI->text();
-        QString nombreE_str     = ui->lineEdit_nombreE->text();
-        QString apellidoE_str   = ui->lineEdit_apellidoE->text();
-        QString direccionE_str  = ui->lineEdit_direccionE->text();
-        QString emailE_str      = ui->lineEdit_emailE->text();
-        QString ocupacionE_str  = ui->lineEdit_ocupacionE->text();
-        QString sueldo_str      = ui->lineEdit_sueldoE->text();
-        QString fechaE_str       = ui->dateEdit->text();
-
+        Empleado_Crud ecrud;
+        Empleado empleado;
 
         try {
-            int idE             = stoi(idE_str.toLocal8Bit().data());
-            int DNIE            = stoi(DNIE_str.toLocal8Bit().data());
-            string nombreE      = nombreE_str.toStdString();
-            string apellidoE    = apellidoE_str.toStdString();
-            string direccionE   = direccionE_str.toStdString();
-            string emailE       = emailE_str.toStdString();
-            string ocupacionE   = ocupacionE_str.toStdString();
-            double sueldoE      = stoi(sueldo_str.toLocal8Bit().data());
-            string fechaE       = fechaE_str.toStdString();
+            if(validarDatos()){
+                QString idE_str         = ui->lineEdit_idEmpleado->text();
+                QString DNIE_str        = ui->lineEdit_DNI->text();
+                QString nombreE_str     = ui->lineEdit_nombreE->text();
+                QString apellidoE_str   = ui->lineEdit_apellidoE->text();
+                QString direccionE_str  = ui->lineEdit_direccionE->text();
+                QString emailE_str      = ui->lineEdit_emailE->text();
+                QString ocupacionE_str  = ui->lineEdit_ocupacionE->text();
+                QString sueldo_str      = ui->lineEdit_sueldoE->text();
+                QString fechaE_str       = ui->dateEdit->text();
 
 
-            string sueldoEcon = to_string(sueldoE);
-            if(idE>=0 && nombreE!="" && apellidoE!="" && direccionE!="" && emailE!="" && ocupacionE!="" && sueldoE!=NULL){
-
-                Empleado empleado;
-                empleado.setId(idE);
-                empleado.setFechaContratacion(fechaE);
-                empleado.setDireccion(direccionE);
-
-                if(!std::isdigit(DNIE) && std::to_string(DNIE).length()==8 && !std::isdigit(sueldoE)){
-                    empleado.setDNI(DNIE);
-                    empleado.setSueldo(sueldoE);
-                if (regex_match(emailE, regex("([a-z]+)([_.a-z0-9]*)([a-z0-9]+)(@)([a-z]+)([.a-z]+)([a-z]+)"))){
-                    empleado.setEmail(emailE);
-                if(regex_match(nombreE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))){
-                    empleado.setNombre(nombreE);
-                 if(regex_match(apellidoE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))) {
-                    empleado.setApellido(apellidoE);
-                 if(regex_match(ocupacionE,regex("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$"))){
-                    empleado.setOcupacion(ocupacionE);
+               empleado.setId(stoi(idE_str.toLocal8Bit().data()));
+               empleado.setDNI(stoi(DNIE_str.toLocal8Bit().data()));
+               empleado.setNombre(nombreE_str.toStdString());
+               empleado.setApellido(apellidoE_str.toStdString());
+               empleado.setDireccion(direccionE_str.toStdString());
+               empleado.setEmail(emailE_str.toStdString());
+               empleado.setOcupacion(ocupacionE_str.toStdString());
+               empleado.setSueldo(stod(sueldo_str.toLocal8Bit().data()));
+               empleado.setFechaContratacion(fechaE_str.toStdString());
 
 
-                    ccrud.createEmpleado(empleado);
-                    QMessageBox::information(this, "Mensaje", "Se registró un nuevo Empleado.");
-                    close();
-                }
-                else{
-                    QMessageBox::warning(this, "Advertencia", "Ingreso OCUPACION incorrecta, comenzar con mayúscula.");
-                }
+               ecrud.createEmpleado(empleado);
 
-                }
-                else{
-                    QMessageBox::warning(this, "Advertencia", "Ingreso APELLIDO incorrecto, comenzar con mayúscula.");
-                }
-                }
-                else{
-                    QMessageBox::warning(this, "Advertencia", "Ingreso NOMBRE incorrecto, comenzar con mayúscula.");
-                }
-                }
-                else{
-                    QMessageBox::warning(this, "Advertencia", "Ingreso el EMAIL incorrecto.");
-                }
-                }else{
-                    QMessageBox::warning(this, "Advertencia", "Ingreso el SUELDO o DNI incorrecto.");
-                }
-                }
+               QMessageBox::information(this, "Mensaje", "Se registró un nuevo empleado.");
+               close();
+            }
 
-       }
-        catch (invalid_argument const &e) {
-            QMessageBox::warning(this, "Advertencia", "Ingreso de datos erroneo.");
+        } catch (exception &e) {
+            QMessageBox::warning(this, "Advertencia", "Revise los datos.");
         }
+
+
+
+
 }
 
+bool Gui_Empleado::validarDatos()
+{
+
+    /*Inicio Ayuda para ingreso de datos*/
+        QRegExp exp_dni("[0-9]{8}");
+        QRegExp exp_N_A_O("^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\\s]*)+$");
+        QRegExp exp_email("[\\w]+@{1}[\\w]+\\.[a-z]{2,3}");
+        QRegExp exp_sueldo("[0-9]+(\.[0-9][0-9]?)?");
+
+        ui->lineEdit_DNI->setValidator(new QRegExpValidator(exp_dni,this));
+        ui->lineEdit_nombreE->setValidator(new QRegExpValidator(exp_N_A_O, this));
+        ui->lineEdit_apellidoE->setValidator(new QRegExpValidator(exp_N_A_O, this));
+        ui->lineEdit_emailE->setValidator(new QRegExpValidator(exp_email, this));
+        ui->lineEdit_ocupacionE->setValidator(new QRegExpValidator(exp_N_A_O, this));
+        ui->lineEdit_sueldoE->setValidator(new QRegExpValidator(exp_sueldo,this));
+        /*Fin Ayuda*/
+
+      /*Comprobación de ingresos correctos*/
+        bool ifDni          = exp_dni.exactMatch(ui->lineEdit_DNI->text());
+        bool ifNombre       = exp_N_A_O.exactMatch(ui->lineEdit_nombreE->text());
+        bool ifApellido     = exp_N_A_O.exactMatch(ui->lineEdit_apellidoE->text());
+        bool ifEmail        = exp_email.exactMatch(ui->lineEdit_emailE->text());
+        bool ifOcupacion    = exp_N_A_O.exactMatch(ui->lineEdit_ocupacionE->text());
+        bool ifSueldo       = exp_sueldo.exactMatch(ui->lineEdit_sueldoE->text());
+
+
+        if (ui->lineEdit_DNI->text() == ""){
+        }else if(ifDni == false){
+            ui->lineEdit_DNI->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEdit_DNI->setStyleSheet("border: 1px solid green;");
+            ifDni = true;
+        }
+
+        if (ui->lineEdit_nombreE->text() == ""){
+        }else if(ifNombre == false){
+             ui->lineEdit_nombreE->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEdit_nombreE->setStyleSheet("border: 1px solid green;");
+            ifNombre = true;
+        }
+
+        if (ui->lineEdit_apellidoE->text() ==""){
+        }else if(ifApellido == false){
+            ui->lineEdit_apellidoE->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEdit_apellidoE->setStyleSheet("border: 1px solid green;");
+            ifApellido = true;
+        }
+
+        if (ui->lineEdit_direccionE->text() !=""){
+            ui->lineEdit_direccionE->setStyleSheet("border: 1px solid green;");
+        }
+
+        if (ui->lineEdit_emailE->text() == ""){
+        }else if(ifEmail == false){
+            ui->lineEdit_emailE->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEdit_emailE->setStyleSheet("border: 1px solid green;");
+            ifEmail = true;
+        }
+
+        if (ui->lineEdit_ocupacionE->text() == ""){
+        }else if(ifOcupacion == false){
+            ui->lineEdit_ocupacionE->setStyleSheet("border: 1px solid red;");
+        }else {
+            ui->lineEdit_ocupacionE->setStyleSheet("border: 1px solid green;");
+            ifOcupacion = true;
+        }
+
+        if(ui->lineEdit_sueldoE->text() == "" ){
+        }else if(ifSueldo == false){
+            ui->lineEdit_sueldoE->setStyleSheet("border: 1px solid red;");
+        }else{
+            ui->lineEdit_sueldoE->setStyleSheet("border: 1px solid green;");
+            ifSueldo = true;
+        }
+
+        if (ui->dateEdit->text() !=""){
+            ui->dateEdit->setStyleSheet("border: 1px solid green;");
+        }
+
+        if(ifDni==true && ifNombre==true && ifApellido==true && ifOcupacion==true && ifEmail==true && ifSueldo==true)
+        return true; //Si todos son correctos registra
+        else return false; //No registra por almenos un error
+}
 
 void Gui_Empleado::on_Cancel_button_clicked()
 {
     close();//Permite cerra la ventana actual abierta
 }
+
+
 
 
 

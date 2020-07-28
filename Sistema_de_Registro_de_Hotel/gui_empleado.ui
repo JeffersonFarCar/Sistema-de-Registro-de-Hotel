@@ -106,7 +106,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Sueldo                            S/.</string>
+     <string>Sueldo                   S/.</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
@@ -144,6 +144,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="placeholderText">
+     <string extracomment="Ingresar primer letra una mayuscula">Inicie con Mayuscula</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_apellidoE">
     <property name="geometry">
@@ -153,6 +156,9 @@
       <width>181</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Inicie con Mayuscula</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_direccionE">
@@ -187,6 +193,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="placeholderText">
+     <string>##.##</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_ocupacionE">
     <property name="geometry">
@@ -196,6 +205,9 @@
       <width>181</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Inicie con Mayuscula</string>
     </property>
    </widget>
    <widget class="QDateEdit" name="dateEdit">

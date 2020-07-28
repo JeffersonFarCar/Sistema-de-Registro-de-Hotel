@@ -14,7 +14,7 @@ class Gui_Empleado : public QDialog
 public:
     explicit Gui_Empleado(QWidget *parent = nullptr);
     ~Gui_Empleado();
-
+    bool validarDatos();
 
 private slots:
     void on_Aceptar_button_clicked();
