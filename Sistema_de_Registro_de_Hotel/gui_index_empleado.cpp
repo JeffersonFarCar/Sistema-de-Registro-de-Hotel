@@ -28,6 +28,7 @@ Gui_Index_Empleado::Gui_Index_Empleado(QWidget *parent) :
     ui->setupUi(this);
     u=0;
     f=-1;
+    ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     mostrarDatos();
 }
 

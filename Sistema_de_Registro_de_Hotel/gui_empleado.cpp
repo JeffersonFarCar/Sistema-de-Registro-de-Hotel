@@ -23,6 +23,8 @@ Gui_Empleado::Gui_Empleado(QWidget *parent) :
     int id = utils.getLastId("personas", "idpersona") +1;
 
     ui->lineEdit_idEmpleado->setText(QString::number(id));
+
+    validarDatos();
 }
 
 Gui_Empleado::~Gui_Empleado()
