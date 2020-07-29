@@ -13,6 +13,8 @@ class gui_indexHabitacion : public QDialog
 
 public:
     explicit gui_indexHabitacion(QWidget *parent = nullptr);
+    void mostrarDatos();
+    void prepararTabla();
     ~gui_indexHabitacion();
 
 private slots:
@@ -31,6 +33,8 @@ private slots:
     void on_tabb_itemClicked(QTableWidgetItem *item);
 
     void on_pushButton_2_clicked();
+
+    void on_lineEdit_5_textChanged(const QString &arg1);
 
 private:
     Ui::gui_indexHabitacion *ui;

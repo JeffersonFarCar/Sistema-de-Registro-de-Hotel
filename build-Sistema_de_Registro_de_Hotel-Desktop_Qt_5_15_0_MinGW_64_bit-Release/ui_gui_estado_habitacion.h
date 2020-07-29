@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
@@ -25,9 +26,10 @@ public:
     QGroupBox *groupBox;
     QLabel *label;
     QLabel *label_2;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QLineEdit *IDESTADOlineEdit;
     QPushButton *pushButton;
+    QComboBox *comboBox;
+    QPushButton *pushButton_2;
 
     void setupUi(QDialog *gui_estado_habitacion)
     {
@@ -39,19 +41,23 @@ public:
         groupBox->setGeometry(QRect(30, 20, 341, 221));
         label = new QLabel(groupBox);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(16, 60, 81, 20));
+        label->setGeometry(QRect(16, 60, 91, 20));
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(30, 100, 71, 20));
-        lineEdit = new QLineEdit(groupBox);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(120, 60, 113, 20));
-        lineEdit_2 = new QLineEdit(groupBox);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(120, 100, 113, 20));
+        label_2->setGeometry(QRect(20, 100, 101, 20));
+        IDESTADOlineEdit = new QLineEdit(groupBox);
+        IDESTADOlineEdit->setObjectName(QString::fromUtf8("IDESTADOlineEdit"));
+        IDESTADOlineEdit->setGeometry(QRect(120, 60, 113, 20));
+        IDESTADOlineEdit->setReadOnly(true);
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(230, 170, 75, 23));
+        comboBox = new QComboBox(groupBox);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(120, 100, 111, 22));
+        pushButton_2 = new QPushButton(groupBox);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(140, 170, 75, 23));
 
         retranslateUi(gui_estado_habitacion);
 
@@ -62,10 +68,10 @@ public:
     {
         gui_estado_habitacion->setWindowTitle(QCoreApplication::translate("gui_estado_habitacion", "Dialog", nullptr));
         groupBox->setTitle(QCoreApplication::translate("gui_estado_habitacion", "Estado-Habitacion", nullptr));
-        label->setText(QCoreApplication::translate("gui_estado_habitacion", "ID-Habitaci\303\263n", nullptr));
-        label_2->setText(QCoreApplication::translate("gui_estado_habitacion", "Descripci\303\263n", nullptr));
-        lineEdit_2->setText(QCoreApplication::translate("gui_estado_habitacion", "Reservado", nullptr));
-        pushButton->setText(QCoreApplication::translate("gui_estado_habitacion", "Regresar", nullptr));
+        label->setText(QCoreApplication::translate("gui_estado_habitacion", "ID-Estado             :", nullptr));
+        label_2->setText(QCoreApplication::translate("gui_estado_habitacion", "Descripci\303\263n         :", nullptr));
+        pushButton->setText(QCoreApplication::translate("gui_estado_habitacion", "Cancelar", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("gui_estado_habitacion", "Aceptar", nullptr));
     } // retranslateUi
 
 };

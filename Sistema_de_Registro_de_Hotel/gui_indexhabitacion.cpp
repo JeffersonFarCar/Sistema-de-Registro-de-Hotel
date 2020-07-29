@@ -25,44 +25,58 @@ gui_indexHabitacion::gui_indexHabitacion(QWidget *parent) :
     ui->setupUi(this);
     u = 0;
    fila =-1;
-   //mostrarDatos();
+   mostrarDatos();
 }
-/*
+
 void gui_indexHabitacion::mostrarDatos(){
-    prepararTabla();
+   prepararTabla();
 
-        Conexion conect;
-        conect.Conectar();
+    Conexion conect;
+    conect.Conectar();
 
-        QSqlQuery query_consulta;
-        QString consulta="SELECT idpersona, dni, nombre, apellido, direccion, email, sueldo, ocupacion, fecha "
-                         "FROM personas INNER JOIN empleados WHERE idpersona = id_persona";
-        query_consulta.exec(consulta);
+    QSqlQuery query_consulta;
 
-        int fila=0;
-        ui->tableWidget->setRowCount(0);
+ QString consulta= "SELECT idhabitacion, numerohab, descripcion, precio, estadoname FROM ((tipohabitacion INNER JOIN habitaciones ON habitaciones.idtipohab = tipohabitacion.idtipohab) INNER JOIN estadohabitacion ON idestadohab = idestado)";
+  //QString consulta;
+  //consulta.append("SELECT * FROM habitaciones");
 
-        while(query_consulta.next()){
-            ui->tableWidget->insertRow(fila);
-            ui->tableWidget->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
-            ui->tableWidget->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
-            ui->tableWidget->setItem(fila, 2, new QTableWidgetItem(query_consulta.value(2).toByteArray().constData()));
-            ui->tableWidget->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
-            ui->tableWidget->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(4).toByteArray().constData()));
-            ui->tableWidget->setItem(fila, 5, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
-            ui->tableWidget->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(6).toByteArray().constData()));
-            ui->tableWidget->setItem(fila, 7, new QTableWidgetItem(query_consulta.value(7).toByteArray().constData()));
-            ui->tableWidget->setItem(fila, 8, new QTableWidgetItem(query_consulta.value(8).toByteArray().constData()));
-            fila++;
-        }
-        conect.Cerrar();
+ query_consulta.exec(consulta);
+    int fila=0;
+    ui->tabb->setRowCount(0);
 
-
-
+    while(query_consulta.next()){
+        ui->tabb->insertRow(fila);
+        ui->tabb->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
+        ui->tabb->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
+        ui->tabb->setItem(fila, 2, new QTableWidgetItem(query_consulta.value(2).toByteArray().constData()));
+        ui->tabb->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
+        ui->tabb->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(4).toByteArray().constData()));
+        ui->tabb->setItem(fila, 5, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
+        ui->tabb->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(6).toByteArray().constData()));
+        ui->tabb->setItem(fila, 7, new QTableWidgetItem(query_consulta.value(7).toByteArray().constData()));
+        fila++;
+    }
+    conect.Cerrar();
 
 }
 
-*/
+void gui_indexHabitacion::prepararTabla(){
+    /*----Preparacion de la tabla----*/
+      ui->tabb->setColumnCount(5);
+      QStringList l;
+      l<<"ID Habitacion"<<"N° Habitacion"<<"Descripcion"<<"Precio"<<"Estado";
+
+      ui->tabb->setHorizontalHeaderLabels(l);
+      ui->tabb->setColumnWidth(0,120);
+      ui->tabb->setColumnWidth(1,120);
+      ui->tabb->setColumnWidth(2,120);
+      ui->tabb->setColumnWidth(3,150);
+      ui->tabb->setColumnWidth(4,150);
+      ui->tabb->setColumnWidth(5,150);
+
+
+      /*----Fin preparacion de la tabla----*/
+}
 
 
 
@@ -135,7 +149,25 @@ void gui_indexHabitacion::on_pushButton_7_clicked()
 
 void gui_indexHabitacion::on_pushButton_3_clicked()
 {
-  ui->tabb->removeRow(fila);
+    // ui->tabb->removeRow(fila);
+
+       Conexion conect;
+       conect.Conectar();
+       QSqlQuery query;
+
+
+         QString id = ui->tabb->item(fila,0)->text();
+         QString consulta;
+         QMessageBox::StandardButton action;
+         action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa borrar el dato?");
+         if(action == QMessageBox::Yes)
+             //ui->tabb->removeRow(fila);
+
+           QString consulta; consulta.append("DELETE FROM habitaciones WHERE  idhabitacion = "+id+";");
+
+           query.exec(consulta);
+
+
 }
 
 void gui_indexHabitacion::on_tabb_itemClicked(QTableWidgetItem *item)
@@ -155,8 +187,55 @@ void gui_indexHabitacion::on_tabb_itemClicked(QTableWidgetItem *item)
 
 void gui_indexHabitacion::on_pushButton_2_clicked()
 {
-     ui->tabb->setItem(fila,0,new QTableWidgetItem(ui->lineEdit->text()));
-     ui->tabb->setItem(fila,1,new QTableWidgetItem(ui->lineEdit_2->text()));
-     ui->tabb->setItem(fila,2,new QTableWidgetItem(ui->lineEdit_3->text()));
-     ui->tabb->setItem(fila,3,new QTableWidgetItem(ui->lineEdit_4->text()));
+    ui->tabb->setItem(fila,0,new QTableWidgetItem(ui->lineEdit->text()));
+    ui->tabb->setItem(fila,1,new QTableWidgetItem(ui->lineEdit_2->text()));
+    ui->tabb->setItem(fila,2,new QTableWidgetItem(ui->lineEdit_3->text()));
+    ui->tabb->setItem(fila,3,new QTableWidgetItem(ui->lineEdit_4->text()));
+    QString idh=ui->lineEdit->text();
+    QString idtipo=ui->lineEdit_2->text();
+    QString idestado=ui->lineEdit_3->text();
+    QString numeroh=ui->lineEdit_4->text();
+    QString consulta="update habitaciones SET idtipohab="+idtipo+",idestado="+idestado+",numerohab="+numeroh+" WHERE idhabitacion ="+idh+";";
+    /*
+    UPDATE agenda
+      SET telefono='662142223' , email='albesanch@mimail.com'
+      WHERE nombre='Alberto Sanchez'
+*/
+    prepararTabla();
+    Conexion conect;
+        conect.Conectar();
+        QSqlQuery query_consulta;
+        query_consulta.exec(consulta);
+}
+
+void gui_indexHabitacion::on_lineEdit_5_textChanged(const QString &arg1)
+{  //este metodo permitira hacer la consulta
+    ui->tabb->clear();
+    prepararTabla();
+    Conexion conect;
+        ui->tabb->setRowCount(0);
+        conect.Conectar();
+        QSqlQuery query_consulta;
+
+         QString consulta= "SELECT idhabitacion, numerohab, descripcion, precio, estadoname FROM ((tipohabitacion INNER JOIN habitaciones ON habitaciones.idtipohab = tipohabitacion.idtipohab) INNER JOIN estadohabitacion ON idestadohab = idestado AND estadoname LIKE '"+arg1+"%' )";
+        // QString consulta="SELECT idhabitacion, numerohab, descripcion, precio, estadoname  FROM habitaciones INNER JOIN tipohabitacion WHERE idhabitacion = idtipohab AND descripcion LIKE '"+arg1+"%'";
+
+        query_consulta.exec(consulta);
+
+        int fila=0;
+        ui->tabb->setRowCount(0);
+
+        while(query_consulta.next()){
+
+            ui->tabb->insertRow(fila);
+            ui->tabb->setItem(fila, 0, new QTableWidgetItem(query_consulta.value(0).toByteArray().constData()));
+            ui->tabb->setItem(fila, 1, new QTableWidgetItem(query_consulta.value(1).toByteArray().constData()));
+            ui->tabb->setItem(fila, 2, new QTableWidgetItem(query_consulta.value(2).toByteArray().constData()));
+            ui->tabb->setItem(fila, 3, new QTableWidgetItem(query_consulta.value(3).toByteArray().constData()));
+            ui->tabb->setItem(fila, 4, new QTableWidgetItem(query_consulta.value(4).toByteArray().constData()));
+            ui->tabb->setItem(fila, 5, new QTableWidgetItem(query_consulta.value(5).toByteArray().constData()));
+            ui->tabb->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(6).toByteArray().constData()));
+            fila++;
+        }
+        conect.Cerrar();
 }

@@ -15,7 +15,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QTextEdit>
 
 QT_BEGIN_NAMESPACE
 
@@ -26,10 +25,13 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
-    QTextEdit *textEdit;
+    QLineEdit *IDTIPOlineEdit;
+    QLineEdit *NOMBRETIPOlineEdit_4;
     QPushButton *pushButton;
+    QLineEdit *DESTIPOlineEdit_3;
+    QLineEdit *PRECIOTIPOlineEdit_2;
+    QLabel *label_5;
+    QPushButton *pushButton_2;
 
     void setupUi(QDialog *gui_tipo_habitacion)
     {
@@ -46,25 +48,35 @@ public:
         label->setFont(font);
         label_2 = new QLabel(gui_tipo_habitacion);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(26, 90, 91, 20));
+        label_2->setGeometry(QRect(26, 90, 121, 20));
         label_3 = new QLabel(gui_tipo_habitacion);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(60, 120, 51, 20));
+        label_3->setGeometry(QRect(30, 120, 111, 20));
         label_4 = new QLabel(gui_tipo_habitacion);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(16, 170, 111, 20));
-        lineEdit = new QLineEdit(gui_tipo_habitacion);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(140, 90, 113, 20));
-        lineEdit_2 = new QLineEdit(gui_tipo_habitacion);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(140, 120, 113, 20));
-        textEdit = new QTextEdit(gui_tipo_habitacion);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
-        textEdit->setGeometry(QRect(140, 160, 161, 81));
+        label_4->setGeometry(QRect(30, 200, 111, 20));
+        IDTIPOlineEdit = new QLineEdit(gui_tipo_habitacion);
+        IDTIPOlineEdit->setObjectName(QString::fromUtf8("IDTIPOlineEdit"));
+        IDTIPOlineEdit->setGeometry(QRect(140, 90, 113, 20));
+        IDTIPOlineEdit->setReadOnly(true);
+        NOMBRETIPOlineEdit_4 = new QLineEdit(gui_tipo_habitacion);
+        NOMBRETIPOlineEdit_4->setObjectName(QString::fromUtf8("NOMBRETIPOlineEdit_4"));
+        NOMBRETIPOlineEdit_4->setGeometry(QRect(140, 120, 113, 20));
         pushButton = new QPushButton(gui_tipo_habitacion);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(290, 250, 75, 23));
+        pushButton->setGeometry(QRect(200, 250, 75, 23));
+        DESTIPOlineEdit_3 = new QLineEdit(gui_tipo_habitacion);
+        DESTIPOlineEdit_3->setObjectName(QString::fromUtf8("DESTIPOlineEdit_3"));
+        DESTIPOlineEdit_3->setGeometry(QRect(140, 160, 113, 20));
+        PRECIOTIPOlineEdit_2 = new QLineEdit(gui_tipo_habitacion);
+        PRECIOTIPOlineEdit_2->setObjectName(QString::fromUtf8("PRECIOTIPOlineEdit_2"));
+        PRECIOTIPOlineEdit_2->setGeometry(QRect(140, 200, 113, 20));
+        label_5 = new QLabel(gui_tipo_habitacion);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(30, 160, 111, 21));
+        pushButton_2 = new QPushButton(gui_tipo_habitacion);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(90, 250, 75, 23));
 
         retranslateUi(gui_tipo_habitacion);
 
@@ -75,15 +87,12 @@ public:
     {
         gui_tipo_habitacion->setWindowTitle(QCoreApplication::translate("gui_tipo_habitacion", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("gui_tipo_habitacion", "Tipo-Habitaci\303\263n", nullptr));
-        label_2->setText(QCoreApplication::translate("gui_tipo_habitacion", "ID-TipoHabitacion:", nullptr));
-        label_3->setText(QCoreApplication::translate("gui_tipo_habitacion", "Precio:", nullptr));
-        label_4->setText(QCoreApplication::translate("gui_tipo_habitacion", "descripci\303\263n-Habitaci\303\263n:", nullptr));
-        textEdit->setHtml(QCoreApplication::translate("gui_tipo_habitacion", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Habitacion individual- una habitacion para un huesped con una cama individual, un televisor y ba\303\261o privado.</p></body></html>", nullptr));
-        pushButton->setText(QCoreApplication::translate("gui_tipo_habitacion", "Regresar", nullptr));
+        label_2->setText(QCoreApplication::translate("gui_tipo_habitacion", "ID-TipoHabitacion      :", nullptr));
+        label_3->setText(QCoreApplication::translate("gui_tipo_habitacion", "Nombre tipo             :", nullptr));
+        label_4->setText(QCoreApplication::translate("gui_tipo_habitacion", "Precio                      :", nullptr));
+        pushButton->setText(QCoreApplication::translate("gui_tipo_habitacion", "Cancelar", nullptr));
+        label_5->setText(QCoreApplication::translate("gui_tipo_habitacion", "Descripcion              :", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("gui_tipo_habitacion", "Aceptar", nullptr));
     } // retranslateUi
 
 };

@@ -28,8 +28,18 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_comboBox_currentIndexChanged(int index);
+
+    void on_comboBox_2_currentIndexChanged(int index);
+
 private:
     Ui::gui_habitacion *ui;
+    void fillComboBox();
+    void fillComboBox1();
+    QStringList tipohabitaciones;
+    QStringList estados;
+    QString idtipohabitacion;
+    QString idestado;
 };
 
 #endif // GUI_HABITACION_H

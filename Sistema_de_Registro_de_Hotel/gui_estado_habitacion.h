@@ -18,8 +18,15 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_comboBox_currentIndexChanged(int index);
+
 private:
     Ui::gui_estado_habitacion *ui;
+    void fillComboBox();
+    QStringList estados;
+    QString idestado;
 };
 
 
