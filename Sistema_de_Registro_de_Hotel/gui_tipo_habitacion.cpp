@@ -20,6 +20,7 @@ gui_tipo_habitacion::gui_tipo_habitacion(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::gui_tipo_habitacion)
 {
+    this->setFixedSize(QSize(400, 300));
     ui->setupUi(this);
     Utils utils;
 

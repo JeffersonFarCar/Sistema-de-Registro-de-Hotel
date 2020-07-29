@@ -49,6 +49,7 @@ public:
     {
         if (Gui_Empleado->objectName().isEmpty())
             Gui_Empleado->setObjectName(QString::fromUtf8("Gui_Empleado"));
+        Gui_Empleado->setEnabled(true);
         Gui_Empleado->resize(397, 432);
         groupBox = new QGroupBox(Gui_Empleado);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));

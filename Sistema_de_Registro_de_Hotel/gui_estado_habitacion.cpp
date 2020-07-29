@@ -19,6 +19,7 @@ gui_estado_habitacion::gui_estado_habitacion(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::gui_estado_habitacion)
 {
+    this->setFixedSize(QSize(400, 270));
     ui->setupUi(this);
     Utils utils;
 

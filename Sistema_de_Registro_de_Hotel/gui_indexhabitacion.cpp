@@ -22,6 +22,7 @@ gui_indexHabitacion::gui_indexHabitacion(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::gui_indexHabitacion)
 {
+     this->setFixedSize(QSize(740, 320));
     ui->setupUi(this);
     u = 0;
    fila =-1;

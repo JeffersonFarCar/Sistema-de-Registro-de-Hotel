@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>Estado-Habitacion</string>
+    <string/>
    </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -98,6 +98,24 @@
     </property>
     <property name="text">
      <string>Aceptar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Estado-Habitacion</string>
     </property>
    </widget>
   </widget>

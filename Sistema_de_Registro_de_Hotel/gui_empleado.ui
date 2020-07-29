@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Gui_Empleado</class>
  <widget class="QDialog" name="Gui_Empleado">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>

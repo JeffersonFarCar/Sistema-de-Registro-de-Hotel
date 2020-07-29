@@ -30,6 +30,7 @@ public:
     QPushButton *pushButton;
     QComboBox *comboBox;
     QPushButton *pushButton_2;
+    QLabel *label_3;
 
     void setupUi(QDialog *gui_estado_habitacion)
     {
@@ -58,6 +59,12 @@ public:
         pushButton_2 = new QPushButton(groupBox);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(140, 170, 75, 23));
+        label_3 = new QLabel(groupBox);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(90, 10, 191, 20));
+        QFont font;
+        font.setPointSize(16);
+        label_3->setFont(font);
 
         retranslateUi(gui_estado_habitacion);
 
@@ -67,11 +74,12 @@ public:
     void retranslateUi(QDialog *gui_estado_habitacion)
     {
         gui_estado_habitacion->setWindowTitle(QCoreApplication::translate("gui_estado_habitacion", "Dialog", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("gui_estado_habitacion", "Estado-Habitacion", nullptr));
+        groupBox->setTitle(QString());
         label->setText(QCoreApplication::translate("gui_estado_habitacion", "ID-Estado             :", nullptr));
         label_2->setText(QCoreApplication::translate("gui_estado_habitacion", "Descripci\303\263n         :", nullptr));
         pushButton->setText(QCoreApplication::translate("gui_estado_habitacion", "Cancelar", nullptr));
         pushButton_2->setText(QCoreApplication::translate("gui_estado_habitacion", "Aceptar", nullptr));
+        label_3->setText(QCoreApplication::translate("gui_estado_habitacion", "Estado-Habitacion", nullptr));
     } // retranslateUi
 
 };
