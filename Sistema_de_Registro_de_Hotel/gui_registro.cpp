@@ -17,6 +17,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 /**
@@ -92,9 +93,41 @@ void Gui_Registro::on_Cliente_cmbox_currentIndexChanged(int index)
  */
 void Gui_Registro::on_Registrar_button_2_clicked()
 {
-    gui_factura guiR;
-    guiR.setModal(true);
-    guiR.exec();
+    Conexion conect;
+          conect.Conectar();
+
+          //Consulta a la tabla personas, para obtener los datos a partir del id del cliente (clave foranea)
+          QString consulta;
+          consulta.append("SELECT*FROM personas inner join clientes on personas.idpersona=clientes.id_persona where id_persona ="+ui->LineEdite_idCliente->text()+";");
+          QSqlQuery query;
+          query.prepare(consulta);
+          query.exec();
+          query.next();
+          // LineEdite_idCliente
+          //insercion de los datos obtenidos a un objeto cliente
+          Cliente cliente;
+
+          cliente.setCiudadania(query.value(7).toByteArray().constData());//
+          cliente.setEmail(query.value(5).toByteArray().constData());
+          cliente.setNombre(query.value(2).toByteArray().constData());
+          cliente.setDireccion(query.value(4).toByteArray().constData());
+          cliente.setApellido(query.value(3).toByteArray().constData());
+
+          QDate entrada;
+          QDate salida(ui->fechaS->date().day(),ui->fechaS->date().month(),ui->fechaS->date().year());
+          entrada.setDate(ui->fechaE->date().day(),ui->fechaE->date().month(),ui->fechaE->date().year());
+        int a = ui->fechaE->date().day();
+        int b = ui->fechaE->date().month();
+        int c = ui->fechaE->date().year();
+        entrada.setDate(a,b,c);
+        int d1,m1,y1,d2,m2,y2;
+        d2=ui->fechaS->date().day();m2=ui->fechaS->date().month();y2=ui->fechaS->date().year();
+        d1=ui->fechaE->date().day();m1=ui->fechaE->date().month();y1=ui->fechaE->date().year();
+            gui_factura guiR;
+            guiR.setCliente(cliente);
+            guiR.setFechas(d1,m1,y1,d2,m2,y2);
+            guiR.setModal(true);
+            guiR.exec();
 }
 
 //Aqui      <--------------
@@ -111,6 +144,10 @@ QStringList Gui_Registro::getHabitacionesSelected() const{
  */
 void Gui_Registro::on_Hab_Reg_Button_clicked()
 {
+    std::ofstream ofs;
+        ofs.open("tmp.dat", std::ofstream::out | std::ofstream::trunc);
+        ofs.close();
+
     Registro_habitacion rh;
     rh.setIdRegistro(ui->LineEdit_idRegis->text().toInt());
     rh.setModal(true);

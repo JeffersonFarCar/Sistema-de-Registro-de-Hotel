@@ -36,26 +36,26 @@ public:
     QGroupBox *groupBox_2;
     QLabel *label_7;
     QLabel *label_8;
-    QLabel *label_9;
     QLabel *label_10;
     QLabel *factura_cliente_nro_registro;
     QLabel *factura_cliente_ingreso;
     QLabel *factura_cliente_salida;
-    QLabel *factura_cliente_personas;
     QGroupBox *groupBox_3;
     QLabel *label_11;
+    QLabel *factura_habitaciones;
     QLabel *label_12;
+    QLabel *factura_preciototal;
+    QLabel *factura_totalDias;
     QLabel *label_13;
-    QLabel *factura_cliente_dias;
-    QLabel *factura_cliente_precioDia;
-    QLabel *factura_cliente_precioTotal;
+    QLabel *factura_habitaciones_2;
+    QLabel *factura_habitaciones_3;
     QPushButton *pushButton;
 
     void setupUi(QDialog *gui_factura)
     {
         if (gui_factura->objectName().isEmpty())
             gui_factura->setObjectName(QString::fromUtf8("gui_factura"));
-        gui_factura->resize(526, 405);
+        gui_factura->resize(569, 521);
         label = new QLabel(gui_factura);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(70, 10, 301, 16));
@@ -103,9 +103,6 @@ public:
         label_8 = new QLabel(groupBox_2);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setGeometry(QRect(10, 90, 91, 16));
-        label_9 = new QLabel(groupBox_2);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(10, 120, 71, 16));
         label_10 = new QLabel(groupBox_2);
         label_10->setObjectName(QString::fromUtf8("label_10"));
         label_10->setGeometry(QRect(10, 30, 71, 16));
@@ -118,33 +115,36 @@ public:
         factura_cliente_salida = new QLabel(groupBox_2);
         factura_cliente_salida->setObjectName(QString::fromUtf8("factura_cliente_salida"));
         factura_cliente_salida->setGeometry(QRect(110, 90, 91, 16));
-        factura_cliente_personas = new QLabel(groupBox_2);
-        factura_cliente_personas->setObjectName(QString::fromUtf8("factura_cliente_personas"));
-        factura_cliente_personas->setGeometry(QRect(110, 120, 91, 16));
         groupBox_3 = new QGroupBox(gui_factura);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
-        groupBox_3->setGeometry(QRect(10, 240, 491, 91));
+        groupBox_3->setGeometry(QRect(10, 240, 491, 241));
         label_11 = new QLabel(groupBox_3);
         label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setGeometry(QRect(10, 40, 81, 16));
+        label_11->setGeometry(QRect(20, 20, 121, 16));
+        factura_habitaciones = new QLabel(groupBox_3);
+        factura_habitaciones->setObjectName(QString::fromUtf8("factura_habitaciones"));
+        factura_habitaciones->setGeometry(QRect(20, 60, 341, 101));
         label_12 = new QLabel(groupBox_3);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(10, 20, 81, 16));
+        label_12->setGeometry(QRect(20, 200, 71, 16));
+        factura_preciototal = new QLabel(groupBox_3);
+        factura_preciototal->setObjectName(QString::fromUtf8("factura_preciototal"));
+        factura_preciototal->setGeometry(QRect(140, 200, 81, 16));
+        factura_totalDias = new QLabel(groupBox_3);
+        factura_totalDias->setObjectName(QString::fromUtf8("factura_totalDias"));
+        factura_totalDias->setGeometry(QRect(140, 180, 91, 16));
         label_13 = new QLabel(groupBox_3);
         label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setGeometry(QRect(10, 60, 61, 16));
-        factura_cliente_dias = new QLabel(groupBox_3);
-        factura_cliente_dias->setObjectName(QString::fromUtf8("factura_cliente_dias"));
-        factura_cliente_dias->setGeometry(QRect(100, 20, 101, 16));
-        factura_cliente_precioDia = new QLabel(groupBox_3);
-        factura_cliente_precioDia->setObjectName(QString::fromUtf8("factura_cliente_precioDia"));
-        factura_cliente_precioDia->setGeometry(QRect(100, 40, 111, 16));
-        factura_cliente_precioTotal = new QLabel(groupBox_3);
-        factura_cliente_precioTotal->setObjectName(QString::fromUtf8("factura_cliente_precioTotal"));
-        factura_cliente_precioTotal->setGeometry(QRect(100, 60, 111, 16));
+        label_13->setGeometry(QRect(20, 180, 91, 16));
+        factura_habitaciones_2 = new QLabel(groupBox_3);
+        factura_habitaciones_2->setObjectName(QString::fromUtf8("factura_habitaciones_2"));
+        factura_habitaciones_2->setGeometry(QRect(20, 40, 91, 16));
+        factura_habitaciones_3 = new QLabel(groupBox_3);
+        factura_habitaciones_3->setObjectName(QString::fromUtf8("factura_habitaciones_3"));
+        factura_habitaciones_3->setGeometry(QRect(160, 40, 91, 16));
         pushButton = new QPushButton(gui_factura);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(400, 370, 75, 23));
+        pushButton->setGeometry(QRect(450, 490, 75, 23));
 
         retranslateUi(gui_factura);
 
@@ -169,19 +169,19 @@ public:
         groupBox_2->setTitle(QCoreApplication::translate("gui_factura", "Datos del registro", nullptr));
         label_7->setText(QCoreApplication::translate("gui_factura", "Fecha de Ingreso", nullptr));
         label_8->setText(QCoreApplication::translate("gui_factura", "Fecha de Salida", nullptr));
-        label_9->setText(QCoreApplication::translate("gui_factura", "N\302\260 de Personas", nullptr));
         label_10->setText(QCoreApplication::translate("gui_factura", "N\302\260 de Registro", nullptr));
         factura_cliente_nro_registro->setText(QString());
         factura_cliente_ingreso->setText(QString());
         factura_cliente_salida->setText(QString());
-        factura_cliente_personas->setText(QString());
         groupBox_3->setTitle(QCoreApplication::translate("gui_factura", "Datos de pago", nullptr));
-        label_11->setText(QCoreApplication::translate("gui_factura", "Precio por d\303\255a", nullptr));
-        label_12->setText(QCoreApplication::translate("gui_factura", "Total de d\303\255as", nullptr));
-        label_13->setText(QCoreApplication::translate("gui_factura", "Precio Total", nullptr));
-        factura_cliente_dias->setText(QString());
-        factura_cliente_precioDia->setText(QString());
-        factura_cliente_precioTotal->setText(QString());
+        label_11->setText(QCoreApplication::translate("gui_factura", "habitaciones ocupadas: ", nullptr));
+        factura_habitaciones->setText(QString());
+        label_12->setText(QCoreApplication::translate("gui_factura", "Precio total", nullptr));
+        factura_preciototal->setText(QString());
+        factura_totalDias->setText(QString());
+        label_13->setText(QCoreApplication::translate("gui_factura", "Cantidad de d\303\255as", nullptr));
+        factura_habitaciones_2->setText(QCoreApplication::translate("gui_factura", "Tipo de Hatitacion", nullptr));
+        factura_habitaciones_3->setText(QCoreApplication::translate("gui_factura", "Precio por dia", nullptr));
         pushButton->setText(QCoreApplication::translate("gui_factura", "Guardar", nullptr));
     } // retranslateUi
 

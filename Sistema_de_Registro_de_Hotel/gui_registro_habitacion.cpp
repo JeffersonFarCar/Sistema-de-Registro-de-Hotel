@@ -8,6 +8,7 @@
 #include "conexion.h"
 #include "utils.h"
 #include "registro_habitacion_crud.h"
+#include <fstream>
 
 /**
  * @brief Registro_habitacion::Registro_habitacion
@@ -263,6 +264,13 @@ void Registro_habitacion::setIdRegistro(int _idR){
  */
 void Registro_habitacion::on_AceptarRHButton_clicked()
 {
+    ofstream write;
+        write.open("tmp.dat", ios::out | ios::app);
+        for (int i = 0; i < habitacionesSelected.size();++i){
+                write<<habitacionesSelected.at(i).toLocal8Bit().constData() <<endl;
+            }
+
+
     if(!habitacionesSelected.isEmpty()){
         close();
     }else{
