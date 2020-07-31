@@ -40,7 +40,7 @@ void Gui_Index_Empleado::mostrarDatos()
     conect.Conectar();
 
     QSqlQuery query_consulta;
-    QString consulta="SELECT idpersona, dni, nombre, apellido, direccion, email, sueldo, ocupacion, fecha "
+    QString consulta="SELECT idpersona, dni, contra, nombre, apellido, direccion, email, sueldo, ocupacion, fecha "
                      "FROM personas INNER JOIN empleados WHERE idpersona = id_persona";
     query_consulta.exec(consulta);
 
@@ -58,6 +58,7 @@ void Gui_Index_Empleado::mostrarDatos()
         ui->tableWidget->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(6).toByteArray().constData()));
         ui->tableWidget->setItem(fila, 7, new QTableWidgetItem(query_consulta.value(7).toByteArray().constData()));
         ui->tableWidget->setItem(fila, 8, new QTableWidgetItem(query_consulta.value(8).toByteArray().constData()));
+        ui->tableWidget->setItem(fila, 9, new QTableWidgetItem(query_consulta.value(9).toByteArray().constData()));
         fila++;
     }
     conect.Cerrar();
@@ -100,16 +101,18 @@ void Gui_Index_Empleado::on_tableWidget_itemClicked(QTableWidgetItem *item)
     f = item->row();
 
     //Cpaturar datos para poder modificarlo
-    QTableWidgetItem *dni = ui->tableWidget->item(f,1);
-    QTableWidgetItem *nombre = ui->tableWidget->item(f,2);
-    QTableWidgetItem *apellido = ui->tableWidget->item(f,3);
-    QTableWidgetItem *direccion = ui->tableWidget->item(f,4);
-    QTableWidgetItem *email = ui->tableWidget->item(f,5);
-    QTableWidgetItem *sueldo = ui->tableWidget->item(f,6);
-    QTableWidgetItem *ocupacion = ui->tableWidget->item(f,7);
+    QTableWidgetItem *dni       = ui->tableWidget->item(f,1);
+    QTableWidgetItem *contra    = ui->tableWidget->item(f,2);
+    QTableWidgetItem *nombre    = ui->tableWidget->item(f,3);
+    QTableWidgetItem *apellido  = ui->tableWidget->item(f,4);
+    QTableWidgetItem *direccion = ui->tableWidget->item(f,5);
+    QTableWidgetItem *email     = ui->tableWidget->item(f,6);
+    QTableWidgetItem *sueldo    = ui->tableWidget->item(f,7);
+    QTableWidgetItem *ocupacion = ui->tableWidget->item(f,8);
 
     //Recuperar datos de la tabla a los texedit para modificar
     ui->lineEditDNIModi->setText(dni->text());
+    ui->lineEditContraModi->setText(contra->text());
     ui->lineEditNombreModi->setText(nombre->text());
     ui->lineEditApellidoModi->setText(apellido->text());
     ui->lineEditDireccionModi->setText(direccion->text());
@@ -127,6 +130,7 @@ void Gui_Index_Empleado::on_edit_empleado_button_clicked()
     try {
         if(validarDatos()){
             int dni_E           = stoi(ui->lineEditDNIModi->text().toLocal8Bit().data());
+            string contra       = ui->lineEditContraModi->text().toStdString();
             string nombre       = ui->lineEditNombreModi->text().toStdString();
             string apellido     = ui->lineEditApellidoModi->text().toStdString();
             string direccion    = ui->lineEditDireccionModi->text().toStdString();
@@ -137,6 +141,7 @@ void Gui_Index_Empleado::on_edit_empleado_button_clicked()
             QString id = ui->tableWidget->item(f,0)->text();
             empleado.setId(id.toInt());
             empleado.setDNI(dni_E);
+            empleado.setContrasena(contra);
             empleado.setNombre(nombre);
             empleado.setApellido(apellido);
             empleado.setDireccion(direccion);
@@ -231,34 +236,32 @@ bool Gui_Index_Empleado::validarDatos()
             ui->lineEditOcupacionModi->setStyleSheet("border: 1px solid green;");
         }
 
+        if (ui->lineEditContraModi->text() !=""){
+            ui->lineEditContraModi->setStyleSheet("border: 1px solid green;");
+        }
+
         if(ifDni==true && ifNombre==true && ifApellido==true && ifOcupacion==true && ifEmail==true && ifSueldo==true)
         return true; //Si todos son correctos registra
         else return false; //No registra por almenos un error
 }
 
-
-
-
-
-
-
-
 void Gui_Index_Empleado::prepararTabla(){
     /*----Preparacion de la tabla----*/
-      ui->tableWidget->setColumnCount(8);
+      ui->tableWidget->setColumnCount(10);
       QStringList l;
-      l<<"ID"<<"DNI"<<"Nombre"<<"Apellido"<<"Direccion"<<"Email"<<"Sueldo"<<"Ocupacion"<<"Fecha Contratacion";
+      l<<"ID"<<"DNI"<<"Contraseña"<<"Nombre"<<"Apellido"<<"Direccion"<<"Email"<<"Sueldo"<<"Ocupacion"<<"Fecha Contratacion";
 
       ui->tableWidget->setHorizontalHeaderLabels(l);
       ui->tableWidget->setColumnWidth(0,80);
       ui->tableWidget->setColumnWidth(1,120);
       ui->tableWidget->setColumnWidth(2,120);
-      ui->tableWidget->setColumnWidth(3,150);
-      ui->tableWidget->setColumnWidth(4,120);
+      ui->tableWidget->setColumnWidth(3,120);
+      ui->tableWidget->setColumnWidth(4,150);
       ui->tableWidget->setColumnWidth(5,120);
       ui->tableWidget->setColumnWidth(6,120);
       ui->tableWidget->setColumnWidth(7,120);
       ui->tableWidget->setColumnWidth(8,120);
+      ui->tableWidget->setColumnWidth(9,120);
 
       /*----Fin preparacion de la tabla----*/
 }
@@ -271,7 +274,7 @@ void Gui_Index_Empleado::on_lineEdit_buscarEmpleado_textChanged(const QString &a
     conect.Conectar();
 
     QSqlQuery query_consulta;
-    QString consulta="SELECT idpersona, dni, nombre, apellido, direccion, email, sueldo, ocupacion, fecha "
+    QString consulta="SELECT idpersona, dni,contra, nombre, apellido, direccion, email, sueldo, ocupacion, fecha "
                      "FROM personas INNER JOIN empleados WHERE idpersona = id_persona AND nombre LIKE '"+arg1+"%'";
     query_consulta.exec(consulta);
 
@@ -289,6 +292,7 @@ void Gui_Index_Empleado::on_lineEdit_buscarEmpleado_textChanged(const QString &a
         ui->tableWidget->setItem(fila, 6, new QTableWidgetItem(query_consulta.value(6).toByteArray().constData()));
         ui->tableWidget->setItem(fila, 7, new QTableWidgetItem(query_consulta.value(7).toByteArray().constData()));
         ui->tableWidget->setItem(fila, 8, new QTableWidgetItem(query_consulta.value(8).toByteArray().constData()));
+        ui->tableWidget->setItem(fila, 9, new QTableWidgetItem(query_consulta.value(9).toByteArray().constData()));
         fila++;
     }
     conect.Cerrar();

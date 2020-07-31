@@ -15,7 +15,7 @@ Gui_Empleado::Gui_Empleado(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gui_Empleado)
 {
-    this->setFixedSize(QSize(397, 432));
+    this->setFixedSize(QSize(397, 474));
 
     ui->setupUi(this);
     Utils utils;
@@ -41,6 +41,7 @@ void Gui_Empleado::on_Aceptar_button_clicked(){
             if(validarDatos()){
                 QString idE_str         = ui->lineEdit_idEmpleado->text();
                 QString DNIE_str        = ui->lineEdit_DNI->text();
+                QString contraE_str      = ui->lineEdit_contrasenaE->text();
                 QString nombreE_str     = ui->lineEdit_nombreE->text();
                 QString apellidoE_str   = ui->lineEdit_apellidoE->text();
                 QString direccionE_str  = ui->lineEdit_direccionE->text();
@@ -52,6 +53,7 @@ void Gui_Empleado::on_Aceptar_button_clicked(){
 
                empleado.setId(stoi(idE_str.toLocal8Bit().data()));
                empleado.setDNI(stoi(DNIE_str.toLocal8Bit().data()));
+               empleado.setContrasena(contraE_str.toStdString());
                empleado.setNombre(nombreE_str.toStdString());
                empleado.setApellido(apellidoE_str.toStdString());
                empleado.setDireccion(direccionE_str.toStdString());
@@ -156,6 +158,9 @@ bool Gui_Empleado::validarDatos()
 
         if (ui->dateEdit->text() !=""){
             ui->dateEdit->setStyleSheet("border: 1px solid green;");
+        }
+        if (ui->lineEdit_contrasenaE->text() !=""){
+            ui->lineEdit_contrasenaE->setStyleSheet("border: 1px solid green;");
         }
 
         if(ifDni==true && ifNombre==true && ifApellido==true && ifOcupacion==true && ifEmail==true && ifSueldo==true)

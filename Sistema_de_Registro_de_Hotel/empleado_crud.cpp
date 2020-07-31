@@ -23,13 +23,14 @@ void Empleado_Crud::createEmpleado(Empleado _empleado){
     QString ocupacion=QString::fromLocal8Bit(_empleado.getOcupacion().c_str());
     QString fecha=QString::fromLocal8Bit(_empleado.getFechaContratacion().c_str());
     int dni = _empleado.getDni();
+    QString contra=QString::fromLocal8Bit(_empleado.getContrasena().c_str());
 
     Persona persona (1,dni, nombre.toStdString(), apellido.toStdString(), direccion.toStdString(), email.toStdString());
     pcrud.createPersona(persona);
 
     conn.Conectar();
 
-    QString consulta; consulta.append("INSERT INTO empleados (id_persona, ocupacion, sueldo, fecha) VALUES ("+QString::number(_empleado.getId())+", '"+ocupacion+"',"+QString::number(_empleado.getSueldo())+",'"+fecha+"');");
+    QString consulta; consulta.append("INSERT INTO empleados (id_persona, contra, ocupacion, sueldo, fecha) VALUES ("+QString::number(_empleado.getId())+", '"+contra+"','"+ocupacion+"',"+QString::number(_empleado.getSueldo())+",'"+fecha+"');");
 
     QSqlQuery query;
     query.prepare(consulta);
@@ -52,11 +53,11 @@ void Empleado_Crud::updateEmpleado(Empleado _empleado){
     QString ocupacion=QString::fromLocal8Bit(_empleado.getOcupacion().c_str());
     QString fecha=QString::fromLocal8Bit(_empleado.getFechaContratacion().c_str());
     double sueldo = _empleado.getSueldo();
-
+    QString contra=QString::fromLocal8Bit(_empleado.getContrasena().c_str());
     conn.Conectar();
 
 
-    QString consulta; consulta.append("UPDATE empleados SET ocupacion = '"+ ocupacion +"', sueldo = "+QString::number(_empleado.getSueldo())+" WHERE id_persona = "+QString::number(_empleado.getId())+";");
+    QString consulta; consulta.append("UPDATE empleados SET contra = '"+ contra +"', ocupacion = '"+ ocupacion +"', sueldo = "+QString::number(_empleado.getSueldo())+" WHERE id_persona = "+QString::number(_empleado.getId())+";");
 
     QSqlQuery query;
     query.prepare(consulta);
