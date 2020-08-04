@@ -30,6 +30,7 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
+    QPushButton *LogOutPushButton;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -110,6 +111,18 @@ public:
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(70, 320, 191, 41));
         label_4->setStyleSheet(QString::fromUtf8(""));
+        LogOutPushButton = new QPushButton(centralwidget);
+        LogOutPushButton->setObjectName(QString::fromUtf8("LogOutPushButton"));
+        LogOutPushButton->setGeometry(QRect(560, 10, 75, 51));
+        LogOutPushButton->setCursor(QCursor(Qt::PointingHandCursor));
+        LogOutPushButton->setStyleSheet(QString::fromUtf8("#LogOutPushButton{\n"
+"	background-color: transparent;\n"
+"	border-image: url(:/imagenes/imagenes/logout1.png);\n"
+"}\n"
+"\n"
+"#LogOutPushButton:pressed{\n"
+"	border-image: url(:/imagenes/imagenes/logout2.png);\n"
+"}"));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -128,6 +141,7 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "Registros", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Clientes", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Habitaciones", nullptr));
+        LogOutPushButton->setText(QString());
     } // retranslateUi
 
 };

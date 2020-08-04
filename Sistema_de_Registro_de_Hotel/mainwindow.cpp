@@ -56,3 +56,12 @@ void MainWindow::on_Empleados_button_clicked()
     guiE.setModal(true);
     guiE.exec();
 }
+
+void MainWindow::on_LogOutPushButton_clicked()
+{
+    close();
+    Login log;
+    log.setModal(true);
+    log.exec();
+
+}

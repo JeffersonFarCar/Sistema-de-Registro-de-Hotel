@@ -20,6 +20,7 @@ private slots:
     void on_Registros_button_clicked();
     void on_Habitacions_button_clicked();
     void on_Empleados_button_clicked();
+    void on_LogOutPushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

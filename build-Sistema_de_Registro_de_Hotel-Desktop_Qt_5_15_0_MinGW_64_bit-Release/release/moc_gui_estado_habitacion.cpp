@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "C:/Users/Jefferson Farfan/Documents/Trabajos U/7 semestre/Programación de Sistemas/proyecto/Sistema-de-Registro-de-Hotel/Sistema_de_Registro_de_Hotel/gui_estado_habitacion.h"
+#include "../../Sistema_de_Registro_de_Hotel/gui_estado_habitacion.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

@@ -192,6 +192,32 @@ QLabel{
      <string>Habitaciones</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="LogOutPushButton">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>10</y>
+      <width>75</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#LogOutPushButton{
+	background-color: transparent;
+	border-image: url(:/imagenes/imagenes/logout1.png);
+}
+
+#LogOutPushButton:pressed{
+	border-image: url(:/imagenes/imagenes/logout2.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

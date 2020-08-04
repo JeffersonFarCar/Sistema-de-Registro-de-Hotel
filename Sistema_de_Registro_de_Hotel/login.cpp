@@ -6,7 +6,7 @@
 #include "conexion.h"
 #include <QSqlQuery>
 #include <QMessageBox>
-
+#include <QRegExpValidator>
 
 Login::Login(QWidget *parent) :
     QDialog(parent),
@@ -17,6 +17,10 @@ Login::Login(QWidget *parent) :
     ui->contraLineEdit->setEchoMode(QLineEdit::Password);
     compruebaAdmin();
     ui->usuarioNormalRadioButton->setChecked(true);
+    /*Inicio Ayuda para ingreso de datos*/
+            QRegExp exp_dni("[0-9]{8}");
+            ui->usuarioLineEdit->setValidator(new QRegExpValidator(exp_dni, this));
+        /*Fin Ayuda*/
 }
 
 Login::~Login()
@@ -98,9 +102,9 @@ void Login::compruebaAdmin()
     if(cantidadAdmins != 1){
         ui-> registrarAdminPushButton->setEnabled(true);
     }
-   // else{
-           // ui-> registrarAdminPushButton->setEnabled(false);
-     //   }
+    else{
+         ui-> registrarAdminPushButton->setEnabled(false);
+    }
     conn.Cerrar();
 }
 
