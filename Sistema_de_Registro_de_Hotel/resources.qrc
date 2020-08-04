@@ -16,5 +16,7 @@
         <file>imagenes/buscar_pressed.png</file>
         <file>imagenes/background_hotel.png</file>
         <file>imagenes/habitacion.png</file>
+        <file>imagenes/logout1.png</file>
+        <file>imagenes/logout2.png</file>
     </qresource>
 </RCC>
