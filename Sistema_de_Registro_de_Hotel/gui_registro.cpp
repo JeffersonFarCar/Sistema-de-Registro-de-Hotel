@@ -123,11 +123,42 @@ void Gui_Registro::on_Registrar_button_2_clicked()
         int d1,m1,y1,d2,m2,y2;
         d2=ui->fechaS->date().day();m2=ui->fechaS->date().month();y2=ui->fechaS->date().year();
         d1=ui->fechaE->date().day();m1=ui->fechaE->date().month();y1=ui->fechaE->date().year();
-            gui_factura guiR;
-            guiR.setCliente(cliente);
-            guiR.setFechas(d1,m1,y1,d2,m2,y2);
-            guiR.setModal(true);
-            guiR.exec();
+
+        //validacion
+
+            QString idR_str = ui->LineEdit_idRegis->text();
+            QString idC_str = ui->LineEdite_idCliente->text();
+            QString idE_str = QString::number(2);
+            QString fechaE = ui->fechaE->text();
+            QString fechaS = ui->fechaS->text();
+            int idR=0, idC=0, idE=0;
+            try {
+                idR = stoi(idR_str.toLocal8Bit().data());
+                idC = stoi(idC_str.toLocal8Bit().data());
+                idE = stoi(idE_str.toLocal8Bit().data());
+
+                if(clientes_nomape.indexOf(ui->Cliente_cmbox->currentText()) == -1){
+                    throw out_of_range("Seleccione un nombre de cliente.");
+                }
+                if(ui->fechaE->date() > ui->fechaS->date()){
+                    throw invalid_argument("La fecha de Salida no es válida.");
+                }
+                if(canthabitaciones < 1)
+                    throw out_of_range("Debe seleccionar una habitación.");
+                gui_factura guiR;
+                guiR.setCliente(cliente);
+                guiR.setFechas(d1,m1,y1,d2,m2,y2);
+                guiR.setModal(true);
+                guiR.exec();
+
+
+            } catch (invalid_argument const &e) {
+                QMessageBox::warning(this, "Cuidado!!", "Revise los campos de ID.");
+            } catch (out_of_range const &oor){
+                QMessageBox::warning(this, "Cuidado!!", oor.what());
+            }
+
+            //fin validacion
 }
 
 //Aqui      <--------------
