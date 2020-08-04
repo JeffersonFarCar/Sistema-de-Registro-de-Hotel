@@ -53,7 +53,7 @@ public:
     {
         if (Gui_Index_Empleado->objectName().isEmpty())
             Gui_Index_Empleado->setObjectName(QString::fromUtf8("Gui_Index_Empleado"));
-        Gui_Index_Empleado->resize(776, 380);
+        Gui_Index_Empleado->resize(776, 374);
         Nuevo_Button = new QPushButton(Gui_Index_Empleado);
         Nuevo_Button->setObjectName(QString::fromUtf8("Nuevo_Button"));
         Nuevo_Button->setGeometry(QRect(80, 300, 101, 41));

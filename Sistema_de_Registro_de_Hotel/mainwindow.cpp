@@ -59,9 +59,19 @@ void MainWindow::on_Empleados_button_clicked()
 
 void MainWindow::on_LogOutPushButton_clicked()
 {
-    close();
+    hide(); //Ocultar ventana
+    nuevoLogin();
+    show(); //Mostrar ventana
+}
+
+void MainWindow::nuevoLogin()
+{
     Login log;
     log.setModal(true);
     log.exec();
-
+    if(log.getTipo()== 1){
+        ui->Empleados_button->setEnabled(true);
+    }else{
+        ui->Empleados_button->setEnabled(false);
+    }
 }

@@ -24,5 +24,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    void nuevoLogin();
 };
 #endif // MAINWINDOW_H

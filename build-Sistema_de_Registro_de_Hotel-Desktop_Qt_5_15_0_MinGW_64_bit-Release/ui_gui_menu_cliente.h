@@ -48,7 +48,7 @@ public:
     {
         if (Gui_Menu_Cliente->objectName().isEmpty())
             Gui_Menu_Cliente->setObjectName(QString::fromUtf8("Gui_Menu_Cliente"));
-        Gui_Menu_Cliente->resize(788, 331);
+        Gui_Menu_Cliente->resize(788, 345);
         pushButtoMODIFICAR = new QPushButton(Gui_Menu_Cliente);
         pushButtoMODIFICAR->setObjectName(QString::fromUtf8("pushButtoMODIFICAR"));
         pushButtoMODIFICAR->setGeometry(QRect(710, 190, 51, 41));

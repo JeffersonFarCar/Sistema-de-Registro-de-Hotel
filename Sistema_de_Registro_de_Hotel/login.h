@@ -19,15 +19,16 @@ public:
     explicit Login(QWidget *parent = nullptr);
     ~Login();
     int getTipo() const{return mTipo; }
+    int getUsuarioLog();
 private slots:
     void on_buttonBox_accepted();
     void on_buttonBox_rejected();
     void on_registrarAdminPushButton_clicked();
-
 private:
     void compruebaAdmin();
     Ui::Login *ui;
     int mTipo;
+    int dniUserLog;
 };
 
 #endif // LOGIN_H

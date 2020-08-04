@@ -28,13 +28,17 @@ Login::~Login()
     delete ui;
 }
 
+int Login::getUsuarioLog()
+{
+    return dniUserLog;
+}
+
 void Login::on_buttonBox_accepted()
 {
     Conexion conn;
     QString DNI_str = ui->usuarioLineEdit->text();
     QString contra_str = ui->contraLineEdit->text();
     int cantidad;
-    bool esUsuario;
     conn.Conectar();
     if(ui->usuarioNormalRadioButton->isChecked()){
         QSqlQuery query_consulta;
@@ -46,7 +50,7 @@ void Login::on_buttonBox_accepted()
           QMessageBox::warning(this, "Aviso","Usuario y contraseña incorrectos");
            return;
         }
-        esUsuario = true;
+        mTipo = USUARIO;
     }else{
         QSqlQuery query_consulta;
         QString consulta="SELECT count(*) FROM personas INNER JOIN administrador WHERE dni = "+DNI_str+" AND contrasena = '"+ contra_str+"';";
@@ -57,13 +61,11 @@ void Login::on_buttonBox_accepted()
             QMessageBox::warning(this, "Aviso","Usuario y contraseña incorrectos");
             return;
         }
-        esUsuario = false;
+        mTipo = ADMINISTRADOR;;
     }
-    if(esUsuario){
-       mTipo = USUARIO;
-    }else{
-       mTipo = ADMINISTRADOR;
-    }
+    //Almacenar DNI de usuario logueado
+    dniUserLog = stoi(DNI_str.toLocal8Bit().data());
+    //Cierro BD
     conn.Cerrar();
     accept();
 }

@@ -43,17 +43,17 @@ public:
         New_Registro_Button->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
         groupBox = new QGroupBox(Gui_Index_Registro);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(10, 120, 491, 211));
+        groupBox->setGeometry(QRect(10, 70, 491, 261));
         tableListRegistros = new QTableWidget(groupBox);
         tableListRegistros->setObjectName(QString::fromUtf8("tableListRegistros"));
-        tableListRegistros->setGeometry(QRect(10, 10, 471, 192));
+        tableListRegistros->setGeometry(QRect(10, 10, 471, 231));
         Regresar_ = new QPushButton(Gui_Index_Registro);
         Regresar_->setObjectName(QString::fromUtf8("Regresar_"));
         Regresar_->setGeometry(QRect(310, 340, 101, 41));
         Regresar_->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Times New Roman\";"));
         edit_registros_button = new QPushButton(Gui_Index_Registro);
         edit_registros_button->setObjectName(QString::fromUtf8("edit_registros_button"));
-        edit_registros_button->setGeometry(QRect(530, 170, 51, 51));
+        edit_registros_button->setGeometry(QRect(540, 110, 51, 51));
         edit_registros_button->setStyleSheet(QString::fromUtf8("#edit_registros_button{\n"
 "	background-color: transparent;\n"
 "	border-image: url(:/imagenes/imagenes/edit_unpressed.png);\n"
@@ -65,7 +65,7 @@ public:
 "}"));
         delete_registros_button = new QPushButton(Gui_Index_Registro);
         delete_registros_button->setObjectName(QString::fromUtf8("delete_registros_button"));
-        delete_registros_button->setGeometry(QRect(530, 260, 51, 51));
+        delete_registros_button->setGeometry(QRect(540, 200, 51, 51));
         delete_registros_button->setStyleSheet(QString::fromUtf8("#delete_registros_button{\n"
 "	background-color: transparent;\n"
 "	border-image: url(:/imagenes/imagenes/delete_unpressed.png);\n"
@@ -77,7 +77,7 @@ public:
 "}"));
         label_2 = new QLabel(Gui_Index_Registro);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(520, 130, 81, 21));
+        label_2->setGeometry(QRect(530, 70, 81, 21));
         label_2->setStyleSheet(QString::fromUtf8("font: 75 14pt \"Times New Roman\";"));
         label_3 = new QLabel(Gui_Index_Registro);
         label_3->setObjectName(QString::fromUtf8("label_3"));
