@@ -1,3 +1,4 @@
+debug/administrador.o
 debug/cliente.o
 debug/cliente_crud.o
 debug/conexion.o
@@ -19,10 +20,12 @@ debug/gui_registro.o
 debug/gui_registro_habitacion.o
 debug/gui_tipo_habitacion.o
 debug/habitacion.o
+debug/login.o
 debug/main.o
 debug/mainwindow.o
 debug/persona.o
 debug/persona_crud.o
+debug/registraradmin.o
 debug/registro.o
 debug/registro_crud.o
 debug/registro_habitacion_crud.o
@@ -42,4 +45,6 @@ debug/moc_gui_menu_cliente.o
 debug/moc_gui_registro.o
 debug/moc_gui_registro_habitacion.o
 debug/moc_gui_tipo_habitacion.o
+debug/moc_login.o
 debug/moc_mainwindow.o
+debug/moc_registraradmin.o

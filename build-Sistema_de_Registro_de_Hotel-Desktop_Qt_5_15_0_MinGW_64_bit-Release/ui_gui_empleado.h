@@ -44,16 +44,18 @@ public:
     QLineEdit *lineEdit_DNI;
     QLabel *label_9;
     QLineEdit *lineEdit_idEmpleado;
+    QLineEdit *lineEdit_contrasenaE;
+    QLabel *label_10;
 
     void setupUi(QDialog *Gui_Empleado)
     {
         if (Gui_Empleado->objectName().isEmpty())
             Gui_Empleado->setObjectName(QString::fromUtf8("Gui_Empleado"));
         Gui_Empleado->setEnabled(true);
-        Gui_Empleado->resize(397, 432);
+        Gui_Empleado->resize(397, 474);
         groupBox = new QGroupBox(Gui_Empleado);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(20, 10, 361, 401));
+        groupBox->setGeometry(QRect(20, 10, 361, 451));
         QFont font;
         font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(11);
@@ -63,49 +65,49 @@ public:
         label->setGeometry(QRect(20, 30, 101, 21));
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(20, 100, 71, 21));
+        label_2->setGeometry(QRect(20, 130, 71, 21));
         label_3 = new QLabel(groupBox);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(20, 130, 71, 21));
+        label_3->setGeometry(QRect(20, 170, 71, 21));
         label_4 = new QLabel(groupBox);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(20, 160, 71, 21));
+        label_4->setGeometry(QRect(20, 210, 71, 21));
         label_5 = new QLabel(groupBox);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(20, 200, 71, 21));
+        label_5->setGeometry(QRect(20, 250, 71, 21));
         label_6 = new QLabel(groupBox);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(20, 230, 131, 21));
+        label_6->setGeometry(QRect(20, 280, 131, 21));
         label_7 = new QLabel(groupBox);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(20, 270, 71, 21));
+        label_7->setGeometry(QRect(20, 310, 71, 21));
         label_8 = new QLabel(groupBox);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(20, 300, 111, 21));
+        label_8->setGeometry(QRect(20, 350, 111, 21));
         lineEdit_nombreE = new QLineEdit(groupBox);
         lineEdit_nombreE->setObjectName(QString::fromUtf8("lineEdit_nombreE"));
-        lineEdit_nombreE->setGeometry(QRect(160, 100, 181, 21));
+        lineEdit_nombreE->setGeometry(QRect(160, 130, 181, 21));
         lineEdit_apellidoE = new QLineEdit(groupBox);
         lineEdit_apellidoE->setObjectName(QString::fromUtf8("lineEdit_apellidoE"));
-        lineEdit_apellidoE->setGeometry(QRect(160, 130, 181, 21));
+        lineEdit_apellidoE->setGeometry(QRect(160, 170, 181, 21));
         lineEdit_direccionE = new QLineEdit(groupBox);
         lineEdit_direccionE->setObjectName(QString::fromUtf8("lineEdit_direccionE"));
-        lineEdit_direccionE->setGeometry(QRect(160, 160, 181, 21));
+        lineEdit_direccionE->setGeometry(QRect(160, 210, 181, 21));
         lineEdit_emailE = new QLineEdit(groupBox);
         lineEdit_emailE->setObjectName(QString::fromUtf8("lineEdit_emailE"));
-        lineEdit_emailE->setGeometry(QRect(160, 200, 181, 21));
+        lineEdit_emailE->setGeometry(QRect(160, 250, 181, 21));
         lineEdit_sueldoE = new QLineEdit(groupBox);
         lineEdit_sueldoE->setObjectName(QString::fromUtf8("lineEdit_sueldoE"));
-        lineEdit_sueldoE->setGeometry(QRect(160, 230, 181, 21));
+        lineEdit_sueldoE->setGeometry(QRect(160, 280, 181, 21));
         lineEdit_ocupacionE = new QLineEdit(groupBox);
         lineEdit_ocupacionE->setObjectName(QString::fromUtf8("lineEdit_ocupacionE"));
-        lineEdit_ocupacionE->setGeometry(QRect(160, 270, 181, 21));
+        lineEdit_ocupacionE->setGeometry(QRect(160, 310, 181, 21));
         dateEdit = new QDateEdit(groupBox);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-        dateEdit->setGeometry(QRect(160, 310, 181, 21));
+        dateEdit->setGeometry(QRect(160, 350, 181, 21));
         Aceptar_button = new QPushButton(groupBox);
         Aceptar_button->setObjectName(QString::fromUtf8("Aceptar_button"));
-        Aceptar_button->setGeometry(QRect(40, 340, 91, 51));
+        Aceptar_button->setGeometry(QRect(40, 390, 91, 51));
         QFont font1;
         font1.setFamily(QString::fromUtf8("Times New Roman"));
         font1.setPointSize(11);
@@ -114,7 +116,7 @@ public:
         Aceptar_button->setFont(font1);
         Cancel_button = new QPushButton(groupBox);
         Cancel_button->setObjectName(QString::fromUtf8("Cancel_button"));
-        Cancel_button->setGeometry(QRect(220, 340, 91, 51));
+        Cancel_button->setGeometry(QRect(220, 390, 91, 51));
         Cancel_button->setFont(font1);
         lineEdit_DNI = new QLineEdit(groupBox);
         lineEdit_DNI->setObjectName(QString::fromUtf8("lineEdit_DNI"));
@@ -126,6 +128,13 @@ public:
         lineEdit_idEmpleado->setObjectName(QString::fromUtf8("lineEdit_idEmpleado"));
         lineEdit_idEmpleado->setEnabled(false);
         lineEdit_idEmpleado->setGeometry(QRect(160, 30, 181, 21));
+        lineEdit_contrasenaE = new QLineEdit(groupBox);
+        lineEdit_contrasenaE->setObjectName(QString::fromUtf8("lineEdit_contrasenaE"));
+        lineEdit_contrasenaE->setGeometry(QRect(160, 90, 181, 21));
+        lineEdit_contrasenaE->setEchoMode(QLineEdit::PasswordEchoOnEdit);
+        label_10 = new QLabel(groupBox);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setGeometry(QRect(20, 90, 91, 21));
 
         retranslateUi(Gui_Empleado);
 
@@ -152,6 +161,7 @@ public:
         Aceptar_button->setText(QCoreApplication::translate("Gui_Empleado", "Aceptar", nullptr));
         Cancel_button->setText(QCoreApplication::translate("Gui_Empleado", "Cancelar", nullptr));
         label_9->setText(QCoreApplication::translate("Gui_Empleado", "DNI", nullptr));
+        label_10->setText(QCoreApplication::translate("Gui_Empleado", "Contrase\303\261a:", nullptr));
     } // retranslateUi
 
 };

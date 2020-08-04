@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    administrador.cpp \
     cliente.cpp \
     cliente_crud.cpp \
     conexion.cpp \
@@ -37,10 +38,12 @@ SOURCES += \
     gui_registro_habitacion.cpp \
     gui_tipo_habitacion.cpp \
     habitacion.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp \
     persona.cpp \
     persona_crud.cpp \
+    registraradmin.cpp \
     registro.cpp \
     registro_crud.cpp \
     registro_habitacion_crud.cpp \
@@ -48,6 +51,7 @@ SOURCES += \
     utils.cpp
 
 HEADERS += \
+    administrador.h \
     cliente.h \
     cliente_crud.h \
     conexion.h \
@@ -69,9 +73,11 @@ HEADERS += \
     gui_registro_habitacion.h \
     gui_tipo_habitacion.h \
     habitacion.h \
+    login.h \
     mainwindow.h \
     persona.h \
     persona_crud.h \
+    registraradmin.h \
     registro.h \
     registro_crud.h \
     registro_habitacion_crud.h \
@@ -92,7 +98,9 @@ FORMS += \
     gui_registro.ui \
     gui_registro_habitacion.ui \
     gui_tipo_habitacion.ui \
-    mainwindow.ui
+    login.ui \
+    mainwindow.ui \
+    registraradmin.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "login.h"
 #include "gui_registro.h"
 #include "gui_empleado.h"
 #include "gui_menu_cliente.h"
@@ -9,13 +9,18 @@
 #include "gui_index_registro.h"
 #include "gui_index_empleado.h"
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(int tipo, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     // setWindowFlags(Qt::Window | Qt::MSWindowsFixedSizeDialogHint);
     this->setFixedSize(QSize(650, 400)); //646, 395
     ui->setupUi(this);
+    if (tipo == Login::ADMINISTRADOR){
+        ui->Empleados_button->setEnabled(true);
+    }else{
+        ui->Empleados_button->setEnabled(false);
+    }
 }
 
 MainWindow::~MainWindow()

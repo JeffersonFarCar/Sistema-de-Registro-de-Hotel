@@ -26,12 +26,6 @@ public:
    string getOcupacion();
    string getFechaContratacion();
 
-
-    bool registrarEmpleado();
-    bool modificarEmpleado();
-    bool borrarEmpleado();
-    bool buscarEmpleado();
-
    ~Empleado();
 };
 

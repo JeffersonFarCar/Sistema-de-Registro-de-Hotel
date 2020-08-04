@@ -44,10 +44,4 @@ void Empleado::setFechaContratacion(string _fechaContratacion){
     fechaContratacion=_fechaContratacion;
 }
 
-
-bool Empleado::registrarEmpleado(){return true;}
-bool Empleado::modificarEmpleado(){return true;}
-bool Empleado::borrarEmpleado(){return true;}
-bool Empleado::buscarEmpleado(){return true;}
-
 Empleado::~Empleado(){}

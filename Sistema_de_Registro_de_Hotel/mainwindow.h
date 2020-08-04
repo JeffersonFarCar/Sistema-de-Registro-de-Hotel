@@ -12,16 +12,13 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(int tipo, QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
     void on_Usuarios_button_clicked();
-
     void on_Registros_button_clicked();
-
     void on_Habitacions_button_clicked();
-
     void on_Empleados_button_clicked();
 
 private:
