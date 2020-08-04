@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
@@ -28,9 +27,9 @@ public:
     QLabel *label_2;
     QLineEdit *IDESTADOlineEdit;
     QPushButton *pushButton;
-    QComboBox *comboBox;
     QPushButton *pushButton_2;
     QLabel *label_3;
+    QLineEdit *desnuevolineEdit;
 
     void setupUi(QDialog *gui_estado_habitacion)
     {
@@ -53,9 +52,6 @@ public:
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(230, 170, 75, 23));
-        comboBox = new QComboBox(groupBox);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(120, 100, 111, 22));
         pushButton_2 = new QPushButton(groupBox);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(140, 170, 75, 23));
@@ -65,6 +61,9 @@ public:
         QFont font;
         font.setPointSize(16);
         label_3->setFont(font);
+        desnuevolineEdit = new QLineEdit(groupBox);
+        desnuevolineEdit->setObjectName(QString::fromUtf8("desnuevolineEdit"));
+        desnuevolineEdit->setGeometry(QRect(120, 100, 113, 20));
 
         retranslateUi(gui_estado_habitacion);
 

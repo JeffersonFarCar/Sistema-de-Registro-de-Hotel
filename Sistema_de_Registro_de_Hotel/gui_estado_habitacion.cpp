@@ -37,7 +37,7 @@ void gui_estado_habitacion::fillComboBox(){
 
     while(sql1.next()){
         estados.append(sql1.value(1).toByteArray().constData());//agrego lo id de todas los tipos habitaciones
-        ui->comboBox->addItem(sql1.value(1).toByteArray().constData());//llena los nombres en el combo box
+        //ui->comboBox->addItem(sql1.value(1).toByteArray().constData());//llena los nombres en el combo box
     }
     con.Cerrar();
 }
@@ -64,11 +64,11 @@ void gui_estado_habitacion::on_pushButton_2_clicked()
     QString idestado_estadohabitacion = ui->IDESTADOlineEdit->text();
     //QString descripcion = ui->lineEdit_2_estado->text();
     QString descripcion = idestado;
-
+    QString descripcion1 = ui->desnuevolineEdit->text();
 
     try {
         int id = stoi(idestado_estadohabitacion.toLocal8Bit().data());
-        string descri = descripcion .toStdString();
+        string descri = descripcion1 .toStdString();
 
         EstadoHab estadoHab;
         estadoHab.setDescripcion(descri);
