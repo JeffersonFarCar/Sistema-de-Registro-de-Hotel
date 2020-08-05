@@ -222,6 +222,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="Aceptar_button">
     <property name="geometry">

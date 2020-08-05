@@ -8,6 +8,7 @@
 #include "conexion.h"
 #include "utils.h"
 #include "gui_factura.h"
+#include "singleton.h"
 
 #include <QMessageBox>
 #include <QComboBox>
@@ -36,6 +37,10 @@ Gui_Registro::Gui_Registro(QWidget *parent) :
     Utils utils;
     int id = utils.getLastId("registros", "idregistro") +1;
     ui->LineEdit_idRegis->setText(QString::number(id));
+
+    singleton *s2 = singleton::instance();
+    QString idE = utils.getIds("idpersona", "personas", "dni="+QString::number(s2->getDNI())).at(0);
+    ui->LineEdit_NomEmpleado->setText(idE);
 
     canthabitaciones = 0;
     fillComboBox(); // Metodo para llenar el combobox
@@ -196,7 +201,7 @@ void Gui_Registro::on_Registrar_button_clicked()
 {
     QString idR_str = ui->LineEdit_idRegis->text();
     QString idC_str = ui->LineEdite_idCliente->text();
-    QString idE_str = QString::number(2);
+    QString idE_str = ui->LineEdit_NomEmpleado->text();
     QString fechaE = ui->fechaE->text();
     QString fechaS = ui->fechaS->text();
     int idR=0, idC=0, idE=0;

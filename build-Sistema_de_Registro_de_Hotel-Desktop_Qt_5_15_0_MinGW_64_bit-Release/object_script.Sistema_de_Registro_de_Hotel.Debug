@@ -29,6 +29,7 @@ debug/registraradmin.o
 debug/registro.o
 debug/registro_crud.o
 debug/registro_habitacion_crud.o
+debug/singleton.o
 debug/tipohabitacion.o
 debug/utils.o
 debug/qrc_resources.o

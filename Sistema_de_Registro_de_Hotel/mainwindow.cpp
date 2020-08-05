@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "login.h"
+#include <QDebug>
 #include "gui_registro.h"
 #include "gui_empleado.h"
 #include "gui_menu_cliente.h"

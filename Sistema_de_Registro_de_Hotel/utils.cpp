@@ -36,29 +36,6 @@ int Utils::getLastId(string tablename, string idcolumname){
     return lastId;
 }
 
-//este no funciona bien
-int Utils::contar(string tablename, string where, string value){
-    int contar = 0;
-    Conexion conn;
-
-    QString queryCount;
-    queryCount.append("SELECT COUNT(*) FROM "+QString::fromStdString(tablename)+
-                     " WHERE "+QString::fromStdString(where)+" = "+QString::fromStdString(value)+";");
-
-    conn.Conectar();
-
-    QSqlQuery count;
-    count.prepare(queryCount);
-    count.exec();
-
-    while(count.next()){
-        contar = count.value(0).toInt();
-    }
-
-    conn.Cerrar();
-
-    return contar;
-}
 
 /**
  * @brief Utils::_contar

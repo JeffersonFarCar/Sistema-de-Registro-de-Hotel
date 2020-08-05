@@ -47,6 +47,7 @@ SOURCES += \
     registro.cpp \
     registro_crud.cpp \
     registro_habitacion_crud.cpp \
+    singleton.cpp \
     tipohabitacion.cpp \
     utils.cpp
 
@@ -81,6 +82,7 @@ HEADERS += \
     registro.h \
     registro_crud.h \
     registro_habitacion_crud.h \
+    singleton.h \
     tipohabitacion.h \
     utils.h
 

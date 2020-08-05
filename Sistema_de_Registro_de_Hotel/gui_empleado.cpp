@@ -4,6 +4,8 @@
 #include "empleado.h"
 #include "utils.h"
 #include "empleado_crud.h"
+
+#include <QDate>
 #include <QMessageBox>
 #include <iostream>
 #include <string>
@@ -21,8 +23,10 @@ Gui_Empleado::Gui_Empleado(QWidget *parent) :
     Utils utils;
 
     int id = utils.getLastId("personas", "idpersona") +1;
-
     ui->lineEdit_idEmpleado->setText(QString::number(id));
+
+    QDate q;
+    ui->dateEdit->setDate(q.currentDate());
 
     validarDatos();
 }

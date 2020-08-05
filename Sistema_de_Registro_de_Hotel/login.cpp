@@ -4,6 +4,7 @@
 #include "persona_crud.h"
 #include "empleado.h"
 #include "conexion.h"
+#include "singleton.h"
 #include <QSqlQuery>
 #include <QMessageBox>
 #include <QRegExpValidator>
@@ -65,6 +66,8 @@ void Login::on_buttonBox_accepted()
     }
     //Almacenar DNI de usuario logueado
     dniUserLog = stoi(DNI_str.toLocal8Bit().data());
+    singleton *s1 = singleton::instance();
+    s1->setDNI(dniUserLog);
     //Cierro BD
     conn.Cerrar();
     accept();

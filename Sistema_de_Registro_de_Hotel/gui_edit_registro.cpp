@@ -42,7 +42,7 @@ void GUI_Edit_Registro::setEditRegistro(int _id){
 void GUI_Edit_Registro::cargarDatos(){
     Conexion conn;
     conn.Conectar();
-    QString query = "SELECT idpersona, nombre, fechaE, fechaS "
+    QString query = "SELECT idpersona, nombre, idpersona_e, fechaE, fechaS "
                     "FROM personas INNER JOIN registros "
                     "ON idpersona=idpersona_c "
                     "WHERE idregistro = "+QString::number(idRegistroEdit);
@@ -52,8 +52,9 @@ void GUI_Edit_Registro::cargarDatos(){
     while(sql.next()){
         ui->idC_Edit_LineEdit->setText(sql.value(0).toByteArray());
         ui->nomC_Edit_LineEdit->setText(sql.value(1).toByteArray());
-        QDate dateE = QDate::fromString(sql.value(2).toByteArray(), "d/MM/yyyy");
-        QDate dateS = QDate::fromString(sql.value(3).toByteArray(), "d/MM/yyyy");
+        ui->nomE_Edit_LineEdit->setText(sql.value(2).toByteArray());
+        QDate dateE = QDate::fromString(sql.value(3).toByteArray(), "d/MM/yyyy");
+        QDate dateS = QDate::fromString(sql.value(4).toByteArray(), "d/MM/yyyy");
         ui->Edit_fechaE->setDate(dateE);
         ui->Edit_fechaS->setDate(dateS);
     }

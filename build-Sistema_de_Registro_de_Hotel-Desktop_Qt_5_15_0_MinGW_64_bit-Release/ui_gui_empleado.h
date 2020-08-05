@@ -105,6 +105,7 @@ public:
         dateEdit = new QDateEdit(groupBox);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
         dateEdit->setGeometry(QRect(160, 350, 181, 21));
+        dateEdit->setCalendarPopup(true);
         Aceptar_button = new QPushButton(groupBox);
         Aceptar_button->setObjectName(QString::fromUtf8("Aceptar_button"));
         Aceptar_button->setGeometry(QRect(40, 390, 91, 51));
