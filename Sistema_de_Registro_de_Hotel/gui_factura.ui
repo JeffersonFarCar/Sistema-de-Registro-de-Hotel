@@ -393,7 +393,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Guardar</string>
+    <string>OK</string>
    </property>
   </widget>
  </widget>

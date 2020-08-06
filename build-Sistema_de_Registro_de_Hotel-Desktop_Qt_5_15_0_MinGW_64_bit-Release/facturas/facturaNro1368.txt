@@ -1,0 +1,12 @@
+Factura N1368
+
+Nombre:		Luis
+Apellido:		Aliaga
+Dirección:		no se sabe
+Ciudadania:		Peruano
+Fecha de Ingreso:		5 - 8 - 2020
+Fecha de Salida:		5 - 8 - 2020
+Habitaciones:		Medio			$/100.00
+
+Total de días:		1
+Precio total:		$/100.00

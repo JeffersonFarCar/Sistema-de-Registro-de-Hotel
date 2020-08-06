@@ -182,7 +182,7 @@ public:
         label_13->setText(QCoreApplication::translate("gui_factura", "Cantidad de d\303\255as", nullptr));
         factura_habitaciones_2->setText(QCoreApplication::translate("gui_factura", "Tipo de Hatitacion", nullptr));
         factura_habitaciones_3->setText(QCoreApplication::translate("gui_factura", "Precio por dia", nullptr));
-        pushButton->setText(QCoreApplication::translate("gui_factura", "Guardar", nullptr));
+        pushButton->setText(QCoreApplication::translate("gui_factura", "OK", nullptr));
     } // retranslateUi
 
 };

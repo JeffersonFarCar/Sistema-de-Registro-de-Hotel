@@ -1,6 +1,6 @@
 #ifndef GUI_REGISTRO_H
 #define GUI_REGISTRO_H
-
+#include <string>
 #include <QDialog>
 #include <QStringList>
 
@@ -36,6 +36,9 @@ private:
     QStringList habitacionesSelected;
     int canthabitaciones;
     void fillComboBox();
+    QString nroFactura;
+        std::string NameFactura;
+        std::string factura;
 };
 
 #endif // GUI_REGISTRO_H

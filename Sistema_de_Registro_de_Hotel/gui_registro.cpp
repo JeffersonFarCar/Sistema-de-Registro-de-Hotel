@@ -98,6 +98,8 @@ void Gui_Registro::on_Cliente_cmbox_currentIndexChanged(int index)
  */
 void Gui_Registro::on_Registrar_button_2_clicked()
 {
+    QString facturita;
+         QString NroFactura;
     Conexion conect;
           conect.Conectar();
 
@@ -156,13 +158,20 @@ void Gui_Registro::on_Registrar_button_2_clicked()
                 guiR.setModal(true);
                 guiR.exec();
 
+                facturita=guiR.getFactura();
+                        NroFactura=guiR.getNroFactura();
+                        guiR.close();
+
 
             } catch (invalid_argument const &e) {
                 QMessageBox::warning(this, "Cuidado!!", "Revise los campos de ID.");
             } catch (out_of_range const &oor){
                 QMessageBox::warning(this, "Cuidado!!", oor.what());
             }
-
+            string a2 = "./facturas/facturaNro"+NroFactura.toStdString()+".txt";
+                factura=facturita.toUtf8().constData();
+                nroFactura=NroFactura;
+                NameFactura=a2;
             //fin validacion
 }
 
@@ -223,6 +232,21 @@ void Gui_Registro::on_Registrar_button_clicked()
         Registro r(idR, idC, idE, 2, fechaE.toLocal8Bit().data(), fechaS.toLocal8Bit().data());
         Registro_CRUD rcrud;
         rcrud.createRegistro(r);
+        QString sql;
+                Conexion conn;
+                conn.Conectar();
+                QSqlQuery query;
+                sql="insert into factura (factura_id)values ("+nroFactura+");";
+                query.prepare(sql);
+                query.exec();
+                conn.Cerrar();
+
+
+
+                ofstream f2(NameFactura,ios::out | ios::binary);//f1.open("entrada.dat", ios::binary);
+                f2<<factura<<endl;
+                close();
+
         close();
     } catch (invalid_argument const &e) {
         QMessageBox::warning(this, "Cuidado!!", "Revise los campos de ID.");

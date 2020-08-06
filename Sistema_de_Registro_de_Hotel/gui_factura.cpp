@@ -60,14 +60,6 @@ void gui_factura::on_factura_cliente_nombre_linkActivated(const QString &link)
 void gui_factura::on_pushButton_clicked()
 {
 
-    QString sql;
-        Conexion conn;
-        conn.Conectar();
-        QSqlQuery query;
-        sql="insert into factura (factura_id)values ("+ui->factura_cliente_nro_registro->text()+");";
-        query.prepare(sql);
-        query.exec();
-        conn.Cerrar();
 
         QString nombre = ui->factura_cliente_nombre->text();
         QString apellido = ui->factura_cliente_apellido->text();
@@ -91,14 +83,20 @@ void gui_factura::on_pushButton_clicked()
                         "\nTotal de días:\t\t"+Tdias+
                         "\nPrecio total:\t\t"+Tpay;
 
-         QMessageBox::information(this, "Mensaje", "Se guardó la factura correctamente");
 
 
 
 
-        string a = "./facturas/facturaNro"+ui->factura_cliente_nro_registro->text().toStdString()+".txt";
-        ofstream f2(a,ios::out | ios::binary);//f1.open("entrada.dat", ios::binary);
-        f2<<TFactura.toUtf8().constData()<<endl;
+       // string a = "./facturas/facturaNro"+ui->factura_cliente_nro_registro->text().toStdString()+".txt";
+       // ofstream f2(a,ios::out | ios::binary);//f1.open("entrada.dat", ios::binary);
+       // f2<<TFactura.toUtf8().constData()<<endl;
+
+        Tfactura=TFactura;
+            NroFactura=NFactura;
+
+            close();
+
+
 }
 void gui_factura::setCliente(Cliente _cliente){
     cliente=_cliente;
@@ -248,4 +246,11 @@ int gui_factura::calcularDias(int _d1, int _m1, int _y1,int _d2, int _m2, int _y
 
                 return dif;
 
+}
+
+QString gui_factura::getFactura(){
+    return Tfactura;
+}
+QString gui_factura::getNroFactura(){
+    return NroFactura;
 }

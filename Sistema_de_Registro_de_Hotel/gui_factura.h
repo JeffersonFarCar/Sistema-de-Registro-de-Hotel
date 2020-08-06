@@ -22,6 +22,8 @@ public:
     void setFechas(int _d1, int _m1, int _y1,int _d2, int _m2, int _y2);
     void incializar (int a [], int d);
     int calcularDias(int _d1, int _m1, int _y1,int _d2, int _m2, int _y2);
+    QString getFactura();
+        QString getNroFactura();
 
 private slots:
     void on_factura_cliente_nombre_linkActivated(const QString &link);
@@ -33,6 +35,9 @@ private:
     int d1,m1,y1,d2,m2,y2;
     QDate salida;
     Ui::gui_factura *ui;
+    QString NroFactura;
+        QString Tfactura;
+
 };
 
 #endif // GUI_FACTURA_H

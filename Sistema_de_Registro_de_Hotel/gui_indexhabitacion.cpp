@@ -170,6 +170,9 @@ void gui_indexHabitacion::on_pushButton_3_clicked()
            query.exec(consulta);
 
 
+
+
+
 }
 
 void gui_indexHabitacion::on_tabb_itemClicked(QTableWidgetItem *item)
