@@ -24,7 +24,7 @@ gui_tipo_habitacion::gui_tipo_habitacion(QWidget *parent) :
     ui->setupUi(this);
     Utils utils;
 
-    int id = utils.getLastId("habitaciones", "idhabitacion") +1;
+    int id = utils.getLastId("tipohabitacion", "idtipohab") +1;
     ui->IDTIPOlineEdit->setText(QString::number(id));
 }
 
