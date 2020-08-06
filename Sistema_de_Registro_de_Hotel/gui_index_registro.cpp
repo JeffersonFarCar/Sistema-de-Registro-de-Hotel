@@ -135,9 +135,10 @@ void Gui_Index_Registro::on_delete_registros_button_clicked()
             u.updateEstado("habitaciones", "idestado = 1", "idhabitacion = "+id);
         }
         Registro_CRUD rc;
-        rc.deleteRegistro(f+1);
+
+        rc.deleteRegistro(ui->tableListRegistros->item(f, 0)->text().toInt());
         Registro_Habitacion_CRUD rhc;
-        rhc.DeleteRegistro_Habitacion(QString::number(f+1));
+        rhc.DeleteRegistro_Habitacion(ui->tableListRegistros->item(f, 0)->text());
         f=-1;
         mostrarDatos();
     }
