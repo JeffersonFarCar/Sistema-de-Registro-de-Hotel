@@ -1,0 +1,12 @@
+Factura N3
+
+Nombre:		Jefferson
+Apellido:		Farfan
+Dirección:		Mz D-1 Socabaya
+Ciudadania:		Peruano
+Fecha de Ingreso:		6 - 8 - 2020
+Fecha de Salida:		6 - 8 - 2020
+Habitaciones:		Lujo			$/100.00
+
+Total de días:		1
+Precio total:		$/100.00

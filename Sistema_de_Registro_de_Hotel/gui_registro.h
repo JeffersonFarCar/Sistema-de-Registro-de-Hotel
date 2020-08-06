@@ -39,6 +39,7 @@ private:
     QString nroFactura;
         std::string NameFactura;
         std::string factura;
+        bool flag=false;
 };
 
 #endif // GUI_REGISTRO_H

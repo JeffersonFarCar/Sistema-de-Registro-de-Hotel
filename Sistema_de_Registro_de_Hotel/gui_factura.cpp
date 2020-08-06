@@ -31,10 +31,12 @@ void gui_factura::imprimirFactura(){
         conn.Conectar();
         QSqlQuery query;
         sql="select*from factura order by factura_id Desc limit 1;";
+
         query.prepare(sql);
         query.exec();
         query.next();
         QString NumeroFactura=query.value(0).toByteArray().constData();
+        qDebug()<<NumeroFactura;
         conn.Cerrar();
         int a = NumeroFactura.toInt();
 
@@ -48,6 +50,7 @@ void gui_factura::imprimirFactura(){
         ui->factura_cliente_salida->setText(QString::number(d2)+" - "+QString::number(m2)+" - "+QString::number(y2));
         setDatosPago();
 
+
 }
 
 
@@ -60,8 +63,7 @@ void gui_factura::on_factura_cliente_nombre_linkActivated(const QString &link)
 void gui_factura::on_pushButton_clicked()
 {
 
-
-        QString nombre = ui->factura_cliente_nombre->text();
+    QString nombre = ui->factura_cliente_nombre->text();
         QString apellido = ui->factura_cliente_apellido->text();
         QString direccion = ui->factura_cliente_direccion->text();
         QString ciudadania = ui->factura_cliente_ciudadania->text();
@@ -87,15 +89,14 @@ void gui_factura::on_pushButton_clicked()
 
 
 
-       // string a = "./facturas/facturaNro"+ui->factura_cliente_nro_registro->text().toStdString()+".txt";
-       // ofstream f2(a,ios::out | ios::binary);//f1.open("entrada.dat", ios::binary);
-       // f2<<TFactura.toUtf8().constData()<<endl;
 
+        /*string a = "./facturas/facturaNro"+ui->factura_cliente_nro_registro->text().toStdString()+".txt";
+        ofstream f2(a,ios::out | ios::binary);//f1.open("entrada.dat", ios::binary);
+        f2<<TFactura.toUtf8().constData()<<endl;*/
         Tfactura=TFactura;
-            NroFactura=NFactura;
+        NroFactura=NFactura;
 
-            close();
-
+        close();
 
 }
 void gui_factura::setCliente(Cliente _cliente){

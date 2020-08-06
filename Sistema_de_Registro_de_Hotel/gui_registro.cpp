@@ -100,7 +100,8 @@ void Gui_Registro::on_Registrar_button_2_clicked()
 {
     QString facturita;
          QString NroFactura;
-    Conexion conect;
+
+          Conexion conect;
           conect.Conectar();
 
           //Consulta a la tabla personas, para obtener los datos a partir del id del cliente (clave foranea)
@@ -133,46 +134,60 @@ void Gui_Registro::on_Registrar_button_2_clicked()
 
         //validacion
 
-            QString idR_str = ui->LineEdit_idRegis->text();
-            QString idC_str = ui->LineEdite_idCliente->text();
-            QString idE_str = QString::number(2);
-            QString fechaE = ui->fechaE->text();
-            QString fechaS = ui->fechaS->text();
-            int idR=0, idC=0, idE=0;
-            try {
-                idR = stoi(idR_str.toLocal8Bit().data());
-                idC = stoi(idC_str.toLocal8Bit().data());
-                idE = stoi(idE_str.toLocal8Bit().data());
+        QString idR_str = ui->LineEdit_idRegis->text();
+        QString idC_str = ui->LineEdite_idCliente->text();
+        QString idE_str = QString::number(2);
+        QString fechaE = ui->fechaE->text();
+        QString fechaS = ui->fechaS->text();
+        int idR=0, idC=0, idE=0;
+        try {
+            idR = stoi(idR_str.toLocal8Bit().data());
+            idC = stoi(idC_str.toLocal8Bit().data());
+            idE = stoi(idE_str.toLocal8Bit().data());
 
-                if(clientes_nomape.indexOf(ui->Cliente_cmbox->currentText()) == -1){
-                    throw out_of_range("Seleccione un nombre de cliente.");
-                }
-                if(ui->fechaE->date() > ui->fechaS->date()){
-                    throw invalid_argument("La fecha de Salida no es válida.");
-                }
-                if(canthabitaciones < 1)
-                    throw out_of_range("Debe seleccionar una habitación.");
-                gui_factura guiR;
-                guiR.setCliente(cliente);
-                guiR.setFechas(d1,m1,y1,d2,m2,y2);
-                guiR.setModal(true);
-                guiR.exec();
-
-                facturita=guiR.getFactura();
-                        NroFactura=guiR.getNroFactura();
-                        guiR.close();
-
-
-            } catch (invalid_argument const &e) {
-                QMessageBox::warning(this, "Cuidado!!", "Revise los campos de ID.");
-            } catch (out_of_range const &oor){
-                QMessageBox::warning(this, "Cuidado!!", oor.what());
+            if(clientes_nomape.indexOf(ui->Cliente_cmbox->currentText()) == -1){
+                throw out_of_range("Seleccione un nombre de cliente.");
             }
-            string a2 = "./facturas/facturaNro"+NroFactura.toStdString()+".txt";
-                factura=facturita.toUtf8().constData();
-                nroFactura=NroFactura;
-                NameFactura=a2;
-            //fin validacion
+            if(ui->fechaE->date() > ui->fechaS->date()){
+                throw invalid_argument("La fecha de Salida no es válida.");
+            }
+            if(canthabitaciones < 1)
+                throw out_of_range("Debe seleccionar una habitación.");
+            gui_factura guiR;
+            guiR.setCliente(cliente);
+            guiR.setFechas(d1,m1,y1,d2,m2,y2);
+            guiR.setModal(true);
+            guiR.exec();
+            facturita=guiR.getFactura();
+            //NroFactura=guiR.getNroFactura();
+            guiR.close();
+
+
+        } catch (invalid_argument const &e) {
+            QMessageBox::warning(this, "Cuidado!!", "Revise los campos de ID.");
+        } catch (out_of_range const &oor){
+            QMessageBox::warning(this, "Cuidado!!", oor.what());
+        }
+
+        QString sql;
+        Conexion conn;
+        conn.Conectar();
+        QSqlQuery query2;
+        sql="select*from factura order by factura_id Desc limit 1;";
+        query2.prepare(sql);
+        query2.exec();
+        query2.next();
+        QString NumeroFactura2=query2.value(0).toByteArray().constData();
+        conn.Cerrar();
+        NroFactura=QString::number((NumeroFactura2).toInt()+1);
+        string a2 = "./facturas/facturaNro"+NroFactura.toStdString()+".txt";
+        factura=facturita.toUtf8().constData();
+        nroFactura=NroFactura;
+        NameFactura=a2;
+        flag=true;
+
+
+        //fin validacion
 }
 
 //Aqui      <--------------
@@ -208,6 +223,8 @@ void Gui_Registro::on_Hab_Reg_Button_clicked()
  */
 void Gui_Registro::on_Registrar_button_clicked()
 {
+    if(flag){
+
     QString idR_str = ui->LineEdit_idRegis->text();
     QString idC_str = ui->LineEdite_idCliente->text();
     QString idE_str = ui->LineEdit_NomEmpleado->text();
@@ -242,7 +259,6 @@ void Gui_Registro::on_Registrar_button_clicked()
                 conn.Cerrar();
 
 
-
                 ofstream f2(NameFactura,ios::out | ios::binary);//f1.open("entrada.dat", ios::binary);
                 f2<<factura<<endl;
                 close();
@@ -253,6 +269,9 @@ void Gui_Registro::on_Registrar_button_clicked()
     } catch (out_of_range const &oor){
         QMessageBox::warning(this, "Cuidado!!", oor.what());
     }
+    }else{
+        QMessageBox::warning(this, "Cuidado!!", "Verifique primero la factura, por favor.");
+     }
 }
 
 /**
