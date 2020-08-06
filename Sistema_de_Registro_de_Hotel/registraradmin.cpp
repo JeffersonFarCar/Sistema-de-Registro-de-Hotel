@@ -42,8 +42,8 @@ void RegistrarAdmin::on_buttonBox_accepted()
             QMessageBox::critical(this, "Error", "Las contraseñas no coinciden");
             return;
         }
+        accept();
     }
-    accept();
 }
 
 void RegistrarAdmin::on_buttonBox_rejected()
