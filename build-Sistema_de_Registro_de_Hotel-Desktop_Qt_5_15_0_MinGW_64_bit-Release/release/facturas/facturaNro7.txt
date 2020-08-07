@@ -1,0 +1,13 @@
+Factura N7
+
+Nombre:		Jose 
+Apellido:		Cortez
+Dirección:		Av. Larco
+Ciudadania:		EspaÃ±ol
+Fecha de Ingreso:		6 - 8 - 2020
+Fecha de Salida:		14 - 8 - 2020
+Habitaciones:		Medio			$/50.00
+Lujo			$/100.00
+
+Total de días:		8
+Precio total:		$/1200.00

@@ -1,0 +1,12 @@
+Factura N8
+
+Nombre:		Mario
+Apellido:		Lopez
+Dirección:		Av. Venezuela
+Ciudadania:		Peruano
+Fecha de Ingreso:		6 - 8 - 2020
+Fecha de Salida:		10 - 8 - 2020
+Habitaciones:		Medio			$/50.00
+
+Total de días:		4
+Precio total:		$/200.00

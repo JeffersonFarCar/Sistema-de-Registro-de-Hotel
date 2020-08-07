@@ -91,7 +91,7 @@ public:
 
     void retranslateUi(QDialog *Gui_Index_Registro)
     {
-        Gui_Index_Registro->setWindowTitle(QCoreApplication::translate("Gui_Index_Registro", "Dialog", nullptr));
+        Gui_Index_Registro->setWindowTitle(QCoreApplication::translate("Gui_Index_Registro", "Lista de Registros", nullptr));
         New_Registro_Button->setText(QCoreApplication::translate("Gui_Index_Registro", "Registrar", nullptr));
         groupBox->setTitle(QString());
         Regresar_->setText(QCoreApplication::translate("Gui_Index_Registro", "Cancelar", nullptr));

@@ -1,0 +1,12 @@
+Factura N3
+
+Nombre:		Pedro
+Apellido:		Suarez
+Dirección:		Av Las Galaxias
+Ciudadania:		Peruano
+Fecha de Ingreso:		6 - 8 - 2020
+Fecha de Salida:		30 - 8 - 2020
+Habitaciones:		VIP			$/150.00
+
+Total de días:		24
+Precio total:		$/3600.00

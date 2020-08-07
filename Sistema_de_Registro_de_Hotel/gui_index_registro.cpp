@@ -130,7 +130,7 @@ void Gui_Index_Registro::on_delete_registros_button_clicked()
     action = QMessageBox::question(this, "Cuidado", "¿Está seguro que desa borrar el dato?");
     if(action == QMessageBox::Yes){
         Utils u;
-        QStringList ids = u.getIds("idhabitacion", "registro_habitacion","idregistro = "+QString::number(f+1));
+        QStringList ids = u.getIds("idhabitacion", "registro_habitacion","idregistro = "+ui->tableListRegistros->item(f, 0)->text());
         for(QString id:ids){
             u.updateEstado("habitaciones", "idestado = 1", "idhabitacion = "+id);
         }
